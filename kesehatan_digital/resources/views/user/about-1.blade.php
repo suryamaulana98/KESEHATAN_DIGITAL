@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/contact-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:25 GMT -->
+<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/about-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:14 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,23 +14,23 @@
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="css/myslider.css">
+    <link rel="stylesheet" href="{{ asset('css/myslider.css')}}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
     <!-- slick css -->
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
     <!-- reset css -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="{{ asset('css/reset.css')}}">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css')}}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -149,6 +149,7 @@
                         </li>
                     </ul>
                     <ul class="nav social-link navbar-right navbar-nav">
+                        
                         <li>
                             <a href="#portfolio" class="fa fa-facebook"></a>
                         </li>
@@ -177,10 +178,10 @@
                     <div class="row">
                         <div class="col-sm-6 text-left">
                             <div class="page-title">
-                                <h2>CONTACT US NOW</h2>
+                                <h2>ABOUT MEDICARE</h2>
                                 <ol class="breadcrumb">
                                     <li><a href="#">Home</a></li>
-                                    <li class="active"><a href="#">Contact Us</a></li>
+                                    <li class="active"><a href="#">About Us</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -189,47 +190,226 @@
             </div>
         </div>
     </section>
-    <section class="contact-page section-padding">
+    <section class="get-quote-area">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 text-left">
-                    <div class="contact-title">
-                        <h4>SERVICES AT A GLANCE</h4>
-                        <h1>Find<span> Us Here</span></h1>
-                    </div>
-                    <div class="contact-map">
-                        <div id="gmap"></div>
+                <div class="col-sm-8 text-left">
+                    <div class="get-quate-content">
+                        <h2>Providing Total Health Care Solutoin</h2>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
                     </div>
                 </div>
-                <div class="col-sm-6 margin-top-resposnive">
-
-                    <div class="contact-title">
-                        <h4>THROUGH US A LINE</h4>
-                        <h1>Contact<span> Our Team</span></h1>
-                    </div>
-                    <div class="media-carea-contact contact-pageform">
-                        <form action="https://www.kazierfan.com/themes/medicre/medicre/index.html">
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Name">
-                            </div>
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Email">
-                            </div>
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Phone number">
-                            </div>
-                            <div class="single-text-area">
-                                <textarea class="form-control" name="message" id="message3" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="single-submit">
-                                <input class="form-control text-center" type="submit" value="submit now">
-                            </div>
-                        </form>
+                <div class="col-sm-4 text-right">
+                    <div class="get-btn">
+                        <a href="#">GET AN APPOINTMENT</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- end of get quote area -->
+    <!-- start about us section -->
+    <section class="aboutUs-area single-aboutpage v2 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="section-title">
+                        <h1><span>who</span> we are</h1>
+                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor blandit </p>
+                        <p>sapien aenean quis ven natis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="about-img">
+                        <img src="img/aboutimg.jpg" alt="jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="aboutUs-contant marign-top">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type love the specimen book. </p>
+                        <p>It has survived not only five centuries, It has survived not only five centuries, but also the leap into electronic typesetting, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently.</p>
+                        <div class="row">
+                            <div class="col-sm-4 text-left">
+                                <div class="about-list">
+                                    <ul>
+                                        <li>Metal</li>
+                                        <li>Responsive</li>
+                                        <li>Excavating</li>
+                                        <li>Fully</li>
+                                        <li>Multiple</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-left">
+                                <div class="about-list">
+                                    <ul>
+                                        <li>Dragger</li>
+                                        <li>Retina</li>
+                                        <li>Flexible</li>
+                                        <li>Customize</li>
+                                        <li>IDesign</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-left">
+                                <div class="about-list">
+                                    <ul>
+                                        <li>Dragger</li>
+                                        <li>Retina</li>
+                                        <li>Flexible</li>
+                                        <li>Customize</li>
+                                        <li>IDesign</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="about-btn">view doctors</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about us section -->
+    <section class="mediacare-whychoose-us section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="best-feature-title">
+                        <h2 class="text-uppercase">Why <span>Choose Us ?</span></h2>
+                    </div>
+                    <div class="whychoose-us-content">
+                        <div class="single-chose">
+                            <h4><span class="fa fa-check"></span>HANDLE WITH PROFESSIONALISM</h4>
+                            <p>It has always been a debate whether to buy new or used construction equipment. Small fleets prefer to buy used construction equipment as they attract less capital and what to investments.</p>
+                        </div>
+                        <div class="single-chose">
+                            <h4><span class="fa fa-check"></span>WE LOVE WHAT WE DO</h4>
+                            <p>It has always been a debate whether to buy new or used construction equipment. Smaller fleets prefer to buy used construction equipment as they attract less capital how to do investments.</p>
+                        </div>
+                        <div class="single-chose">
+                            <h4><span class="fa fa-check"></span>HANDLE WITH PROFESSIONALISM</h4>
+                            <p>Smaller fleets prefer to buy used construction equipment as they attract less capital so do investments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-left">
+                    <div class="best-feature-title">
+                        <h2 class="text-uppercase">best <span>features</span></h2>
+                    </div>
+                    <div class="best-features-accoudion">
+                        <div class="panel-group" id="Abaccordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="AbheadingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#Abaccordion" href="#AbcollapseOne" aria-expanded="true" aria-controls="AbcollapseOne">
+                                          PROFESSIONAL PLANNING
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="AbcollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="AbheadingOne">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="AbheadingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#Abaccordion" href="#AbcollapseTwo" aria-expanded="false" aria-controls="AbcollapseTwo">
+                                          HOME MAINTENANCE
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="AbcollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="AbheadingTwo">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="AbheadingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#Abaccordion" href="#AbcollapseThree" aria-expanded="false" aria-controls="AbcollapseThree">
+                                          EVERYTHING IN BUDGET
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="AbcollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="AbheadingThree">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.</p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="brand-section v2 singlepage section-padding">
+        <div class="container">
+            <div class="row text-center active-brand-slider">
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-1.png" alt="Jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-2.png" alt="Jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-3.png" alt="Jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-4.png" alt="Jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-5.png" alt="Jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-6.png" alt="Jigsawlab">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-brand">
+                        <img src="img/brand-1.png" alt="Jigsawlab">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- start footer top section -->
+    <section class="constructo-footer-top section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="footer-top-content">
+                        <h2>Ok ! Let's Get Started Now.</h2>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien.</p>
+                        <a href="#" class="contat-usf">CONTACT US</a>
+                        <a href="#" class="learn-moref">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of latest news event section -->
+    <!-- end of footer top div -->
     <footer class="footer-area section-padding">
         <div class="container">
             <div class="row">
@@ -243,7 +423,7 @@
                                 <div class="footer-about">
                                     <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra, quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
                                     <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
-                                    <a href="#"> <span class="fa fa-angle-right"></span>read more</a>
+                                    <a href="single.html"> <span class="fa fa-angle-right"></span>read more</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -329,25 +509,22 @@
             </div>
         </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn4uayw359fjMh4P9i2rKKZYHzXaqTRNs"></script>
     <!-- jquery min js -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js')}}"></script>
     <!-- jquery easing js -->
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js')}}"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js')}}"></script>
     <!-- jquery mignific js -->
-    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js')}}"></script>
     <!-- jquery slick js -->
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/slick.min.js')}}"></script>
     <!-- jquery nicescroll -->
-    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-    <!-- jquery google map -->
-    <script type="text/javascript" src="js/gmap.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js')}}"></script>
     <!-- jquery active js -->
-    <script type="text/javascript" src="js/active.js"></script>
+    <script type="text/javascript" src="{{ asset('js/active.js')}}"></script>
 </body>
 
 
-<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/contact-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:26 GMT -->
+<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/about-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:17 GMT -->
 </html>
