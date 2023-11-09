@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/medical-stuff-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:21 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,23 +15,23 @@
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="css/myslider.css">
+    <link rel="stylesheet" href="{{ asset('css/myslider.css') }}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <!-- reset css -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -81,7 +82,8 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -164,7 +166,8 @@
                 <div class="col-sm-8 text-left">
                     <div class="get-quate-content">
                         <h2>Providing Total Health Care Solutoin</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-right">
@@ -200,33 +203,39 @@
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#dentalcare" aria-controls="dentalcare" role="tab" data-toggle="tab">
+                                    <a href="#dentalcare" aria-controls="dentalcare" role="tab"
+                                        data-toggle="tab">
                                         <div class="navimg">
                                             <img src="img/nav-icon-2.png" alt="jigsawlab">
                                         </div>
-                                        <h4>DENTAL CARE</h4></a>
+                                        <h4>DENTAL CARE</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#diseases" aria-controls="diseases" role="tab" data-toggle="tab">
                                         <div class="navimg"><img src="img/nav-icon-3.png" alt="jigsawlab"></div>
-                                        <h4>ALLERGIC DISEASES</h4></a>
+                                        <h4>ALLERGIC DISEASES</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#eaycare" aria-controls="eaycare" role="tab" data-toggle="tab">
                                         <div class="navimg"><img src="img/nav-icon-4.png" alt="jigsawlab"></div>
-                                        <h4>EYE CARE</h4></a>
+                                        <h4>EYE CARE</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#cancer" aria-controls="cancer" role="tab" data-toggle="tab">
                                         <div class="navimg"><img src="img/nav-icon-5.png" alt="jigsawlab"></div>
-                                        <h4>CANCER</h4></a>
+                                        <h4>CANCER</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#nurology" aria-controls="nurology" role="tab" data-toggle="tab">
                                         <div class="navimg">
                                             <img src="img/nav-icon-6.png" alt="jigsawlab">
                                         </div>
-                                        <h4>nurology</h4></a>
+                                        <h4>nurology</h4>
+                                    </a>
                                 </li>
                             </ul>
                             <!-- Tab panes -->
@@ -238,10 +247,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -253,10 +262,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -268,10 +277,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -285,10 +294,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -300,10 +309,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -315,10 +324,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -341,10 +350,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -356,10 +365,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -371,10 +380,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -388,10 +397,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -403,10 +412,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -418,10 +427,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -444,10 +453,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -459,10 +468,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -474,10 +483,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -491,10 +500,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -506,10 +515,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -521,10 +530,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -547,10 +556,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -562,10 +571,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -577,10 +586,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -594,10 +603,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -609,10 +618,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -624,10 +633,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -650,10 +659,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -665,10 +674,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -680,10 +689,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -697,10 +706,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -712,10 +721,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -727,10 +736,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -753,10 +762,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -768,10 +777,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -783,10 +792,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -800,10 +809,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-1.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -815,10 +824,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-2.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -830,10 +839,10 @@
                                                 <div class="specialist-img">
                                                     <img src="img/spacialist-3.png" alt="jigsawlab">
                                                     <div class="speacialist-link v2">
-                                                        <a href="#"><span  class="fa fa-facebook"></span></a>
-                                                        <a href="#"><span  class="fa fa-twitter"></span></a>
-                                                        <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                                        <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                                        <a href="#"><span class="fa fa-facebook"></span></a>
+                                                        <a href="#"><span class="fa fa-twitter"></span></a>
+                                                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                                                        <a href="#"><span class="fa fa-google-plus"></span></a>
                                                     </div>
                                                 </div>
                                                 <h4>DR. JOHN STANTON</h4>
@@ -864,7 +873,8 @@
                 <div class="col-xs-12 text-center">
                     <div class="footer-top-content">
                         <h2>Ok ! Let's Get Started Now.</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien.</p>
                         <a href="#" class="contat-usf">CONTACT US</a>
                         <a href="#" class="learn-moref">LEARN MORE</a>
                     </div>
@@ -884,7 +894,10 @@
                                     <img src="img/logo.png" alt="mdimran41">
                                 </div>
                                 <div class="footer-about">
-                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra, quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
+                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra,
+                                        quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque
+                                        ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis
+                                        aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
                                     <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
                                     <a href="#"> <span class="fa fa-angle-right"></span>read more</a>
                                 </div>
@@ -896,7 +909,9 @@
                                             <img class="media-object" src="img/recen-1.png" alt="jigsawlab">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cosmology</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Cosmology</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -906,7 +921,9 @@
                                             <img class="media-object" src="img/recen-2.png" alt="jigsawlab">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cancer Facts</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Cancer Facts</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -916,7 +933,9 @@
                                             <img class="media-object" src="img/recen-3.png" alt="jigsawlab">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Dental Services</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Dental Services</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -973,21 +992,22 @@
         </div>
     </div>
     <!-- jquery min js -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- jquery easing js -->
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- jquery mignific js -->
-    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js') }}"></script>
     <!-- jquery slick js -->
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
     <!-- jquery nicescroll -->
-    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
     <!-- jquery active js -->
-    <script type="text/javascript" src="js/active.js"></script>
+    <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
 </body>
 
 
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/medical-stuff-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:21 GMT -->
+
 </html>

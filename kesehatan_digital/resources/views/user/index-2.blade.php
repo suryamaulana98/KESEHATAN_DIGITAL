@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:16:19 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,23 +15,23 @@
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="css/myslider.css">
+    <link rel="stylesheet" href="{{ asset('css/myslider.css') }}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <!-- reset css -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -81,7 +82,8 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -149,8 +151,10 @@
                             <div class="col-xs-12 v2 slider-content-area text-center">
                                 <div class="welcome-text">
                                     <h1>WELCOME TO <span>MEDICARE</span></h1>
-                                    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The industry's standard dummy text ever since the </h4>
-                                    <h4> 1500,  lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit</h4>
+                                    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The
+                                        industry's standard dummy text ever since the </h4>
+                                    <h4> 1500, lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare
+                                        placerat tempus. In turpis nisi, viverra hendrerit</h4>
                                     <h4> dolor vel, auctor blandit sapien.</h4>
                                     <a href="#" class="v2 read-more">GET STARTED NOW</a>
                                     <a href="#" class="v2 read-more">LEARN MORE</a>
@@ -169,8 +173,10 @@
                             <div class="col-xs-12 v2 slider-content-area text-center">
                                 <div class="welcome-text">
                                     <h1>WELCOME TO <span>MEDICARE</span></h1>
-                                    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The industry's standard dummy text ever since the </h4>
-                                    <h4> 1500,  lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit</h4>
+                                    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The
+                                        industry's standard dummy text ever since the </h4>
+                                    <h4> 1500, lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare
+                                        placerat tempus. In turpis nisi, viverra hendrerit</h4>
                                     <h4> dolor vel, auctor blandit sapien.</h4>
                                     <a href="#" class="v2 read-more">GET STARTED NOW</a>
                                     <a href="#" class="v2 read-more">LEARN MORE</a>
@@ -190,7 +196,8 @@
                 <div class="col-sm-8 text-left">
                     <div class="get-quate-content">
                         <h2>Providing Total Health Care Solutoin</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-right">
@@ -266,9 +273,14 @@
                             <h1>About <span>Medicare</span></h1>
                         </div>
                         <h4><span class="fa fa-check"></span>Handle With Professionalism</h4>
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor ablandit sapien. Aenean quis ven natis felis, adipiscing pretium nunc. Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal.</p>
+                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal,
+                            auctor ablandit sapien. Aenean quis ven natis felis, adipiscing pretium nunc. Maecenas
+                            scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal.</p>
                         <h4><span class="fa fa-check"></span>We Love What We Do</h4>
-                        <p>Which replenish a forth green, him every over subdue won't give them there them. Can't had upon. Which midst. Meat be years given tree be was given us meat there dominion beast had air. Said open land form moved air his signs moveth creepeth appear appear it. Said open land form moved air his signs moveth creepeth appear appear it.</p>
+                        <p>Which replenish a forth green, him every over subdue won't give them there them. Can't had
+                            upon. Which midst. Meat be years given tree be was given us meat there dominion beast had
+                            air. Said open land form moved air his signs moveth creepeth appear appear it. Said open
+                            land form moved air his signs moveth creepeth appear appear it.</p>
                         <a href="services-2.html" class="about-btn">VIEW SERVICES</a>
                     </div>
                 </div>
@@ -333,33 +345,39 @@
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#dentalcare" aria-controls="dentalcare" role="tab" data-toggle="tab">
+                                    <a href="#dentalcare" aria-controls="dentalcare" role="tab"
+                                        data-toggle="tab">
                                         <div class="navimg">
                                             <img src="img/nav-icon-2.png" alt="theimran.com">
                                         </div>
-                                        <h4>DENTAL CARE</h4></a>
+                                        <h4>DENTAL CARE</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#diseases" aria-controls="diseases" role="tab" data-toggle="tab">
                                         <div class="navimg"><img src="img/nav-icon-3.png" alt="theimran.com"></div>
-                                        <h4>ALLERGIC DISEASES</h4></a>
+                                        <h4>ALLERGIC DISEASES</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#eaycare" aria-controls="eaycare" role="tab" data-toggle="tab">
                                         <div class="navimg"><img src="img/nav-icon-4.png" alt="theimran.com"></div>
-                                        <h4>EYE CARE</h4></a>
+                                        <h4>EYE CARE</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#cancer" aria-controls="cancer" role="tab" data-toggle="tab">
                                         <div class="navimg"><img src="img/nav-icon-5.png" alt="theimran.com"></div>
-                                        <h4>CANCER</h4></a>
+                                        <h4>CANCER</h4>
+                                    </a>
                                 </li>
                                 <li role="presentation">
                                     <a href="#nurology" aria-controls="nurology" role="tab" data-toggle="tab">
                                         <div class="navimg">
                                             <img src="img/nav-icon-6.png" alt="theimran.com">
                                         </div>
-                                        <h4>nurology</h4></a>
+                                        <h4>nurology</h4>
+                                    </a>
                                 </li>
                             </ul>
                             <!-- Tab panes -->
@@ -373,9 +391,20 @@
                                         </div>
                                         <div class="col-sm-6 department-content">
                                             <h2 class="text-uppercase">details of cancer</h2>
-                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante hendrerit gravida ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
-                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet</p>
-                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac...</p>
+                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus
+                                                iaculis odio id vestibulum. Nam at justo ante. Aenean nec condimentum
+                                                nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante
+                                                hendrerit gravida ligula, id lacinia sapien tristique eget. In elit
+                                                ipsum, vestibulum eu pulvinar sed,</p>
+                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at
+                                                tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie
+                                                magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam
+                                                velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id
+                                                risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor
+                                                elit, non luctus felis tristique sit amet</p>
+                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet
+                                                purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam
+                                                pellentesque justo ipsum, et pretium felis vulputate ac...</p>
                                             <a href="#" class="read-more">Read More</a>
                                         </div>
                                     </div>
@@ -389,9 +418,19 @@
                                         </div>
                                         <div class="col-sm-6 department-content">
                                             <h2 class="text-uppercase">details of cancer</h2>
-                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
-                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet</p>
-                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac...</p>
+                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus
+                                                iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida
+                                                ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu
+                                                pulvinar sed,</p>
+                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at
+                                                tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie
+                                                magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam
+                                                velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id
+                                                risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor
+                                                elit, non luctus felis tristique sit amet</p>
+                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet
+                                                purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam
+                                                pellentesque justo ipsum, et pretium felis vulputate ac...</p>
                                             <a href="#" class="read-more">Read More</a>
                                         </div>
                                     </div>
@@ -405,9 +444,19 @@
                                         </div>
                                         <div class="col-sm-6 department-content">
                                             <h2 class="text-uppercase">details of cancer</h2>
-                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
-                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet</p>
-                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac...</p>
+                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus
+                                                iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida
+                                                ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu
+                                                pulvinar sed,</p>
+                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at
+                                                tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie
+                                                magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam
+                                                velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id
+                                                risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor
+                                                elit, non luctus felis tristique sit amet</p>
+                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet
+                                                purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam
+                                                pellentesque justo ipsum, et pretium felis vulputate ac...</p>
                                             <a href="#" class="read-more">Read More</a>
                                         </div>
                                     </div>
@@ -421,9 +470,19 @@
                                         </div>
                                         <div class="col-sm-6 department-content">
                                             <h2 class="text-uppercase">details of cancer</h2>
-                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
-                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet</p>
-                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac...</p>
+                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus
+                                                iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida
+                                                ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu
+                                                pulvinar sed,</p>
+                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at
+                                                tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie
+                                                magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam
+                                                velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id
+                                                risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor
+                                                elit, non luctus felis tristique sit amet</p>
+                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet
+                                                purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam
+                                                pellentesque justo ipsum, et pretium felis vulputate ac...</p>
                                             <a href="#" class="read-more">Read More</a>
                                         </div>
                                     </div>
@@ -437,9 +496,19 @@
                                         </div>
                                         <div class="col-sm-6 department-content">
                                             <h2 class="text-uppercase">details of cancer</h2>
-                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
-                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet</p>
-                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac...</p>
+                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus
+                                                iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida
+                                                ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu
+                                                pulvinar sed,</p>
+                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at
+                                                tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie
+                                                magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam
+                                                velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id
+                                                risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor
+                                                elit, non luctus felis tristique sit amet</p>
+                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet
+                                                purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam
+                                                pellentesque justo ipsum, et pretium felis vulputate ac...</p>
                                             <a href="#" class="read-more">Read More</a>
                                         </div>
                                     </div>
@@ -453,9 +522,19 @@
                                         </div>
                                         <div class="col-sm-6 department-content">
                                             <h2 class="text-uppercase">details of cancer</h2>
-                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
-                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit amet</p>
-                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis vulputate ac...</p>
+                                            <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus
+                                                iaculis odio id vestibulum. Nam at justo ante. Aenean hendrerit gravida
+                                                ligula, id lacinia sapien tristique eget. In elit ipsum, vestibulum eu
+                                                pulvinar sed,</p>
+                                            <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at
+                                                tortor a odio vestibulum suscipit non sit amet dolor. Morbi molestie
+                                                magna nec metus facilisis, at iaculis mi adipiscing. Praesent ac diam
+                                                velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id
+                                                risus vitae fermentum. Aenean eu euismod justo. Aliquam sodales tortor
+                                                elit, non luctus felis tristique sit amet</p>
+                                            <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet
+                                                purus malesuada blandit. Quisque scelerisque a lectus vel ornare. Etiam
+                                                pellentesque justo ipsum, et pretium felis vulputate ac...</p>
                                             <a href="#" class="read-more">Read More</a>
                                         </div>
                                     </div>
@@ -519,7 +598,11 @@
                         <div class="col-sm-8 text-center">
                             <div class="imrn-client-details v2">
                                 <i class="fa fa-quote-left"></i>
-                                <p>This rank tracker has the best UI out of all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends overhosted trackers I have used. Plus it's cheap and fast, I'll send my friends over. This rank tracker has the best UI out of all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends overhosted.</p>
+                                <p>This rank tracker has the best UI out of all hosted trackers I have used. Plus it's
+                                    cheap and fast, I'll send my friends overhosted trackers I have used. Plus it's
+                                    cheap and fast, I'll send my friends over. This rank tracker has the best UI out of
+                                    all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends
+                                    overhosted.</p>
                                 <p> I'll send my friends over.</p>
                                 <div class="client-name">
                                     <h4>Emma Watt</h4>
@@ -530,7 +613,11 @@
                         <div class="col-sm-8 text-center">
                             <div class="imrn-client-details v2">
                                 <i class="fa fa-quote-left"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor commodi cupiditate obcaecati officia saepe ad eos, asperiores officiis quibusdam aut beatae, unde. Aspernatur ex, blanditiis! Natus accusamus beatae tempore explicabo reprehenderit. Officia quibusdam illo quas incidunt molestiae et quia eum perferendis ab sapiente!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor commodi cupiditate
+                                    obcaecati officia saepe ad eos, asperiores officiis quibusdam aut beatae, unde.
+                                    Aspernatur ex, blanditiis! Natus accusamus beatae tempore explicabo reprehenderit.
+                                    Officia quibusdam illo quas incidunt molestiae et quia eum perferendis ab sapiente!
+                                </p>
                                 <div class="client-name">
                                     <h4>Emma Watt</h4>
                                     <p>- Kingfisher, CEO</p>
@@ -540,7 +627,11 @@
                         <div class="col-sm-8 text-center">
                             <div class="imrn-client-details v2">
                                 <i class="fa fa-quote-left"></i>
-                                <p>This rank tracker has the best UI out of all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends overhosted trackers I have used. Plus it's cheap and fast, I'll send my friends over. This rank tracker has the best UI out of all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends overhosted.</p>
+                                <p>This rank tracker has the best UI out of all hosted trackers I have used. Plus it's
+                                    cheap and fast, I'll send my friends overhosted trackers I have used. Plus it's
+                                    cheap and fast, I'll send my friends over. This rank tracker has the best UI out of
+                                    all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends
+                                    overhosted.</p>
                                 <div class="client-name">
                                     <h4>Emma Watt</h4>
                                     <p>- Kingfisher, CEO</p>
@@ -550,7 +641,11 @@
                         <div class="col-sm-8 text-center">
                             <div class="imrn-client-details v2">
                                 <i class="fa fa-quote-left"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor commodi cupiditate obcaecati officia saepe ad eos, asperiores officiis quibusdam aut beatae, unde. Aspernatur ex, blanditiis! Natus accusamus beatae tempore explicabo reprehenderit. Officia quibusdam illo quas incidunt molestiae et quia eum perferendis ab sapiente!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor commodi cupiditate
+                                    obcaecati officia saepe ad eos, asperiores officiis quibusdam aut beatae, unde.
+                                    Aspernatur ex, blanditiis! Natus accusamus beatae tempore explicabo reprehenderit.
+                                    Officia quibusdam illo quas incidunt molestiae et quia eum perferendis ab sapiente!
+                                </p>
                                 <p></p>
                                 <div class="client-name">
                                     <h4>Emma Watt</h4>
@@ -561,7 +656,11 @@
                         <div class="col-sm-8 text-center">
                             <div class="imrn-client-details v2">
                                 <i class="fa fa-quote-left"></i>
-                                <p>This rank tracker has the best UI out of all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends overhosted trackers I have used. Plus it's cheap and fast, I'll send my friends over. This rank tracker has the best UI out of all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends overhosted.</p>
+                                <p>This rank tracker has the best UI out of all hosted trackers I have used. Plus it's
+                                    cheap and fast, I'll send my friends overhosted trackers I have used. Plus it's
+                                    cheap and fast, I'll send my friends over. This rank tracker has the best UI out of
+                                    all hosted trackers I have used. Plus it's cheap and fast, I'll send my friends
+                                    overhosted.</p>
                                 <div class="client-name">
                                     <h4>Emma Watt</h4>
                                     <p>- Kingfisher, CEO</p>
@@ -571,7 +670,11 @@
                         <div class="col-sm-8 text-center">
                             <div class="imrn-client-details v2">
                                 <i class="fa fa-quote-left"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor commodi cupiditate obcaecati officia saepe ad eos, asperiores officiis quibusdam aut beatae, unde. Aspernatur ex, blanditiis! Natus accusamus beatae tempore explicabo reprehenderit. Officia quibusdam illo quas incidunt molestiae et quia eum perferendis ab sapiente!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor commodi cupiditate
+                                    obcaecati officia saepe ad eos, asperiores officiis quibusdam aut beatae, unde.
+                                    Aspernatur ex, blanditiis! Natus accusamus beatae tempore explicabo reprehenderit.
+                                    Officia quibusdam illo quas incidunt molestiae et quia eum perferendis ab sapiente!
+                                </p>
                                 <div class="client-name">
                                     <h4>Emma Watt</h4>
                                     <p>- Kingfisher, CEO</p>
@@ -590,8 +693,9 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="section-title">
-                        <h1><span>Meet Our </span>  Specialists</h1>
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor blandit</p>
+                        <h1><span>Meet Our </span> Specialists</h1>
+                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal,
+                            auctor blandit</p>
                         <p>sapien aenean quis ven natis.</p>
                     </div>
                 </div>
@@ -602,10 +706,10 @@
                         <div class="specialist-img">
                             <img src="img/spacialist-1.png" alt="theimran.com">
                             <div class="speacialist-link v2">
-                                <a href="#"><span  class="fa fa-facebook"></span></a>
-                                <a href="#"><span  class="fa fa-twitter"></span></a>
-                                <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                <a href="#"><span class="fa fa-facebook"></span></a>
+                                <a href="#"><span class="fa fa-twitter"></span></a>
+                                <a href="#"><span class="fa fa-linkedin"></span></a>
+                                <a href="#"><span class="fa fa-google-plus"></span></a>
                             </div>
                         </div>
                         <h4>DR. JOHN STANTON</h4>
@@ -617,10 +721,10 @@
                         <div class="specialist-img">
                             <img src="img/spacialist-2.png" alt="theimran.com">
                             <div class="speacialist-link v2">
-                                <a href="#"><span  class="fa fa-facebook"></span></a>
-                                <a href="#"><span  class="fa fa-twitter"></span></a>
-                                <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                <a href="#"><span class="fa fa-facebook"></span></a>
+                                <a href="#"><span class="fa fa-twitter"></span></a>
+                                <a href="#"><span class="fa fa-linkedin"></span></a>
+                                <a href="#"><span class="fa fa-google-plus"></span></a>
                             </div>
                         </div>
                         <h4>DR. JOHN STANTON</h4>
@@ -632,10 +736,10 @@
                         <div class="specialist-img">
                             <img src="img/spacialist-3.png" alt="theimran.com">
                             <div class="speacialist-link v2">
-                                <a href="#"><span  class="fa fa-facebook"></span></a>
-                                <a href="#"><span  class="fa fa-twitter"></span></a>
-                                <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                <a href="#"><span  class="fa fa-google-plus"></span></a>
+                                <a href="#"><span class="fa fa-facebook"></span></a>
+                                <a href="#"><span class="fa fa-twitter"></span></a>
+                                <a href="#"><span class="fa fa-linkedin"></span></a>
+                                <a href="#"><span class="fa fa-google-plus"></span></a>
                             </div>
                         </div>
                         <h4>DR. JOHN STANTON</h4>
@@ -660,7 +764,8 @@
                 <div class="col-xs-12 text-center">
                     <div class="section-title">
                         <h1><span>Latest</span> News & Events</h1>
-                        <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially </p>
+                        <p> It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially </p>
                         <p>specimen book unchanged.</p>
                     </div>
                 </div>
@@ -674,7 +779,7 @@
                             </a>
                             <div class="news-content-title">
                                 <h2>YOUR news TITLE Lorem ipsum</h2>
-                                <p>27th JULY 2016   |   WORDPRESS   |   ADMIN</p>
+                                <p>27th JULY 2016 | WORDPRESS | ADMIN</p>
                             </div>
                         </div>
                         <div class="single-news-v2">
@@ -683,7 +788,7 @@
                             </a>
                             <div class="news-content-title">
                                 <h2>YOUR news TITLE Lorem ipsum</h2>
-                                <p>27th JULY 2016   |   WORDPRESS   |   ADMIN</p>
+                                <p>27th JULY 2016 | WORDPRESS | ADMIN</p>
                             </div>
                         </div>
                     </div>
@@ -697,9 +802,11 @@
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Therapy Processes</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut interdum mauris sem, non aliquet felis interdum sit</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
+                                    interdum mauris sem, non aliquet felis interdum sit</p>
                                 <div class="about-news">
-                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span> /</span></a><a href="#">Read more</a>
+                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span>
+                                            /</span></a><a href="#">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -709,9 +816,11 @@
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Dental Care</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut interdum mauris sem, non aliquet felis interdum sit</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
+                                    interdum mauris sem, non aliquet felis interdum sit</p>
                                 <div class="about-news">
-                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span> /</span></a><a href="#">Read more</a>
+                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span>
+                                            /</span></a><a href="#">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -721,9 +830,11 @@
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Cardiology</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut interdum mauris sem, non aliquet felis interdum sit</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
+                                    interdum mauris sem, non aliquet felis interdum sit</p>
                                 <div class="about-news">
-                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span> /</span></a><a href="#">Read more</a>
+                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span>
+                                            /</span></a><a href="#">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -794,7 +905,10 @@
                                     <img src="img/logo.png" alt="mdimran41">
                                 </div>
                                 <div class="footer-about">
-                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra, quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
+                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra,
+                                        quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque
+                                        ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis
+                                        aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
                                     <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
                                     <a href="#"> <span class="fa fa-angle-right"></span>read more</a>
                                 </div>
@@ -806,7 +920,9 @@
                                             <img class="media-object" src="img/recen-1.png" alt="theimran.com">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cosmology</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Cosmology</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -816,7 +932,9 @@
                                             <img class="media-object" src="img/recen-2.png" alt="theimran.com">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cancer Facts</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Cancer Facts</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -826,7 +944,9 @@
                                             <img class="media-object" src="img/recen-3.png" alt="theimran.com">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Dental Services</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Dental Services</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -883,21 +1003,22 @@
         </div>
     </div>
     <!-- jquery min js -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js')}}"></script>
     <!-- jquery easing js -->
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js')}}"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js')}}"></script>
     <!-- jquery mignific js -->
-    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js')}}"></script>
     <!-- jquery slick js -->
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/slick.min.js')}}"></script>
     <!-- jquery nicescroll -->
-    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js')}}"></script>
     <!-- jquery active js -->
-    <script type="text/javascript" src="js/active.js"></script>
+    <script type="text/javascript" src="{{ asset('js/active.js')}}"></script>
 </body>
 
 
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:16:58 GMT -->
+
 </html>

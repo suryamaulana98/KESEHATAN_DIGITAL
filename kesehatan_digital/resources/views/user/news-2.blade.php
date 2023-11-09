@@ -2,35 +2,36 @@
 <html lang="en">
 
 
-<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/about-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:17 GMT -->
+<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/news-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:23 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Medicare | Responsive HTML5 Template</title>
-    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <!-- google fonts lato -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="css/myslider.css">
+    <link rel="stylesheet" href="{{ asset('css/myslider.css') }}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <!-- reset css -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -60,7 +61,7 @@
                         <li>
                             <a href="#team" class="fa fa-twitter"></a>
                         </li>
-                        
+
                         <li>
                             <a href="#blog" class="fa fa-dribbble"></a>
                         </li>
@@ -82,7 +83,8 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -94,18 +96,18 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav menu navbar-right navbar-nav">
                         <li class="current-menu-item"><a href="#home">home <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="index.html">Home Page 1</a></li>
-                            <li><a href="index-2.html">Home Page 2</a></li>
-                            <li><a href="index-3.html">Home Page 3</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="index.html">Home Page 1</a></li>
+                                <li><a href="index-2.html">Home Page 2</a></li>
+                                <li><a href="index-3.html">Home Page 3</a></li>
+                            </ul>
                         </li>
                         <li><a href="#about">about <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="about-1.html">About Page 1</a></li>
-                            <li><a href="about-2.html">About Page 2</a></li>
-                            <li><a href="about-3.html">About Page 3</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="about-1.html">About Page 1</a></li>
+                                <li><a href="about-2.html">About Page 2</a></li>
+                                <li><a href="about-3.html">About Page 3</a></li>
+                            </ul>
 
                         </li>
                         <li><a href="#portfolio">MEDICAL STUFFS <span class="fa fa-angle-down"></span> </a>
@@ -130,11 +132,11 @@
                             </ul>
                         </li>
                         <li><a href="#contact">contact <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="contact-1.html">Contact Page 1</a></li>
-                            <li><a href="contact-2.html">Contact Page 2</a></li>
-                            <li><a href="contact-3.html">Contact Page 3</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="contact-1.html">Contact Page 1</a></li>
+                                <li><a href="contact-2.html">Contact Page 2</a></li>
+                                <li><a href="contact-3.html">Contact Page 3</a></li>
+                            </ul>
 
                         </li>
                     </ul>
@@ -151,9 +153,9 @@
                             <div class="page-title">
                                 <ol class="breadcrumb">
                                     <li><a href="#">Home</a></li>
-                                    <li class="active"><a href="#">About Us</a></li>
+                                    <li class="active"><a href="#">News</a></li>
                                 </ol>
-                                <h2>ABOUT <span>MEDICARE</span></h2>
+                                <h2>LATEST <span>NEWS & EVENTS</span></h2>
                             </div>
                         </div>
                     </div>
@@ -161,13 +163,14 @@
             </div>
         </div>
     </section>
-    <section class="get-quote-area">
+    <section class="get-quote-area newsv2page">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 text-left">
                     <div class="get-quate-content">
                         <h2>Providing Total Health Care Solutoin</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-right">
@@ -179,164 +182,100 @@
         </div>
     </section>
     <!-- end of get quote area -->
-    <section class="aboutUs-area v2 singlepage section-padding">
+    <section class="v2news-page section-padding">
         <div class="container">
-            <div class="row">
+            <div class="row v2single-post">
                 <div class="col-sm-6">
-                    <div class="aboutUs-contant">
-                        <div class="about-title">
-                            <h4>SERVICES AT A GLANCE</h4>
-                            <h1>About <span>Medicare</span></h1>
-                        </div>
-                        <h4><span class="fa fa-check"></span>Handle With Professionalism</h4>
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor ablandit sapien. Aenean quis ven natis felis, adipiscing pretium nunc. Maecenas scelerisque.</p>
-                        <h4><span class="fa fa-check"></span>We Love What We Do</h4>
-                        <p>Which replenish a forth green, him every over subdue won't give them there them. Can't had upon. Which midst. Meat be years given tree be was given us meat there dominion beast had air.  </p>
-                        <a href="single.html" class="about-btn">VIEW SERVICESE</a>
+                    <div class="department-img">
+                        <img src="img/v2tab.png" alt="jigsawlab">
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="aboutv2-imaage-slider">
-                        <div class="singleAbv2-slider">
-                            <img src="img/news.png" alt="jigsawlab">
-                        </div>
-                        
+                <div class="col-sm-6 department-content">
+                    <h2 class="text-uppercase">details of dental care</h2>
+                    <div class="date">
+                        <p>Posted by : <span>Emma Walt</span> // On : <span>01 Jan, 2015</span></p>
                     </div>
+                    <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id
+                        vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique
+                        eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
+                    <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum
+                        suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing.
+                        Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae
+                        fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit
+                        amet</p>
+                    <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit.
+                        Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis
+                        vulputate ac...</p>
+                    <a href="single.html" class="read-more">Read More</a>
                 </div>
             </div>
-            <div class="row margin-top">
-
+            <div class="row v2single-post">
                 <div class="col-sm-6">
-                    <div class="whychoseus-img">
-                        <img src="img/aboutv2img-2.jpg" alt="jigsawlab">
+                    <div class="department-img">
+                        <img src="img/v2n-1.png" alt="jigsawlab">
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="aboutUs-contant">
-                        <div class="about-title">
-                            <h4>SERVICES AT A GLANCE</h4>
-                            <h1>why <span>choose us</span></h1>
-                        </div>
-                        
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor ablandit sapien. Aenean quis ven natis felis, adipiscing pretium nunc. Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal.</p>
-                        
-                        <p>Which replenish a forth green, him every over subdue won't give them there them. Can't had upon. Which midst. Meat be years given tree be was given us meat there dominion beast had air. Said open land form moved air his signs moveth creepeth appear appear it. Said open land form moved air.</p>
-                        <p>It has always been a debate whether to buy new or used construction equipment. Small fleets prefer to buy used construction equipment as they attract less capital and what to investments they attract less capital and what to investments.</p>
+                <div class="col-sm-6 department-content">
+                    <h2 class="text-uppercase">details of cancer</h2>
+                    <div class="date">
+                        <p>Posted by : <span>Emma Walt</span> // On : <span>01 Jan, 2015</span></p>
                     </div>
+                    <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id
+                        vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique
+                        eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
+                    <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum
+                        suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing.
+                        Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae
+                        fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit
+                        amet</p>
+                    <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit.
+                        Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis
+                        vulputate ac...</p>
+                    <a href="single.html" class="read-more">Read More</a>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- end of about us section -->
-    <section class="speacialist-area singlepage v2 section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <div class="section-title">
-                        <h1><span>Meet Our </span>  Specialists</h1>
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor blandit</p>
-                        <p>sapien aenean quis ven natis.</p>
+            <div class="row v2single-post">
+                <div class="col-sm-6">
+                    <div class="department-img">
+                        <img src="img/v2n-1.png" alt="jigsawlab">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 text-center">
-                    <div class="single-speacialist">
-                        <div class="specialist-img">
-                            <img src="img/spacialist-1.png" alt="jigsawlab">
-                            <div class="speacialist-link v2">
-                                <a href="#"><span  class="fa fa-facebook"></span></a>
-                                <a href="#"><span  class="fa fa-twitter"></span></a>
-                                <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                <a href="#"><span  class="fa fa-google-plus"></span></a>
-                            </div>
-                        </div>
-                        <h4>DR. JOHN STANTON</h4>
-                        <p>Cardiologist</p>
+                <div class="col-sm-6 department-content">
+                    <h2 class="text-uppercase">details of surgery</h2>
+                    <div class="date">
+                        <p>Posted by : <span>Emma Walt</span> // On : <span>01 Jan, 2015</span></p>
                     </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="single-speacialist">
-                        <div class="specialist-img">
-                            <img src="img/spacialist-2.png" alt="jigsawlab">
-                            <div class="speacialist-link v2">
-                                <a href="#"><span  class="fa fa-facebook"></span></a>
-                                <a href="#"><span  class="fa fa-twitter"></span></a>
-                                <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                <a href="#"><span  class="fa fa-google-plus"></span></a>
-                            </div>
-                        </div>
-                        <h4>DR. JOHN STANTON</h4>
-                        <p>Cardiologist</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <div class="single-speacialist">
-                        <div class="specialist-img">
-                            <img src="img/spacialist-3.png" alt="jigsawlab">
-                            <div class="speacialist-link v2">
-                                <a href="#"><span  class="fa fa-facebook"></span></a>
-                                <a href="#"><span  class="fa fa-twitter"></span></a>
-                                <a href="#"><span  class="fa fa-linkedin"></span></a>
-                                <a href="#"><span  class="fa fa-google-plus"></span></a>
-                            </div>
-                        </div>
-                        <h4>DR. JOHN STANTON</h4>
-                        <p>Cardiologist</p>
-                    </div>
+                    <p>Aliquam pulvinar pellentesque purus, nec condimentum nibh. Aenean dapibus iaculis odio id
+                        vestibulum. Nam at justo ante. Aenean hendrerit gravida ligula, id lacinia sapien tristique
+                        eget. In elit ipsum, vestibulum eu pulvinar sed,</p>
+                    <p>Maecenas eros mi, lacinia eu ultricies vel, elementum et justo. Ut at tortor a odio vestibulum
+                        suscipit non sit amet dolor. Morbi molestie magna nec metus facilisis, at iaculis mi adipiscing.
+                        Praesent ac diam velit. Curabitur lacinia tristique velit ut laoreet. Nam pretium id risus vitae
+                        fermentum. Aenean eu euismod justo. Aliquam sodales tortor elit, non luctus felis tristique sit
+                        amet</p>
+                    <p>Nunc et risus in massa mattis lacinia. Pellentesque ornare mi sit amet purus malesuada blandit.
+                        Quisque scelerisque a lectus vel ornare. Etiam pellentesque justo ipsum, et pretium felis
+                        vulputate ac...</p>
+                    <a href="single.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <div class="view-alldoctors">
-                        <a href="single.html" class="read-more">view all doctors</a>
-                    </div>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li><a href="#" class="fa fa-angle-left"></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#" class="fa fa-angle-right"></a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </section>
-<!-- end of specialist area -->
-    <div class="brand-section v2 singlepage section-padding">
-        <div class="container">
-            <div class="row text-center active-brand-slider">
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-1.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-2.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-3.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-4.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-5.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-6.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand-1.png" alt="Jigsawlab">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- start footer top section -->
     <section class="constructo-footer-top section-padding">
         <div class="container">
@@ -344,7 +283,8 @@
                 <div class="col-xs-12 text-center">
                     <div class="footer-top-content">
                         <h2>Ok ! Let's Get Started Now.</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien.</p>
                         <a href="#" class="contat-usf">CONTACT US</a>
                         <a href="#" class="learn-moref">LEARN MORE</a>
                     </div>
@@ -364,7 +304,10 @@
                                     <img src="img/logo.png" alt="mdimran41">
                                 </div>
                                 <div class="footer-about">
-                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra, quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
+                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra,
+                                        quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque
+                                        ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis
+                                        aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
                                     <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
                                     <a href="#"> <span class="fa fa-angle-right"></span>read more</a>
                                 </div>
@@ -376,7 +319,9 @@
                                             <img class="media-object" src="img/recen-1.png" alt="jigsawlab">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cosmology</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Cosmology</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -386,7 +331,9 @@
                                             <img class="media-object" src="img/recen-2.png" alt="jigsawlab">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cancer Facts</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Cancer Facts</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -396,7 +343,9 @@
                                             <img class="media-object" src="img/recen-3.png" alt="jigsawlab">
                                         </a>
                                         <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Dental Services</h4></a>
+                                            <a href="#">
+                                                <h4 class="media-heading">Dental Services</h4>
+                                            </a>
                                             <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
                                             <p>21 December, 2017</p>
                                         </div>
@@ -453,21 +402,22 @@
         </div>
     </div>
     <!-- jquery min js -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- jquery easing js -->
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- jquery mignific js -->
-    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js') }}"></script>
     <!-- jquery slick js -->
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
     <!-- jquery nicescroll -->
-    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
     <!-- jquery active js -->
-    <script type="text/javascript" src="js/active.js"></script>
+    <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
 </body>
 
 
-<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/about-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:18 GMT -->
+<!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/news-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:25 GMT -->
+
 </html>
