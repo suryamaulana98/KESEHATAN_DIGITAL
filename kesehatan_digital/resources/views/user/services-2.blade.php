@@ -40,43 +40,7 @@
 
 <body class="js">
     <div id="preloader"></div>
-    <!-- start topbar area -->
-    <div class="topbar-area v2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-left">
-                    <div class="topaddress-v2">
-                        <ul>
-                            <li><span class="fa fa-phone"></span> +200 100 5678 </li>
-                            <li> <span class="fa fa-envelope"></span> jhon_doe@gmail.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <ul class="nav social-link navbar-right navbar-nav">
-                        <li>
-                            <a href="#portfolio" class="fa fa-facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#team" class="fa fa-twitter"></a>
-                        </li>
-
-                        <li>
-                            <a href="#blog" class="fa fa-dribbble"></a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="fa fa-behance"></a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="fa fa-linkedin"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of topbar area -->
+    @include('partials.topbar_user')
     <section class="home-area v2 single-title-area">
         <!-- navbare area -->
         <nav class="navbar navbar-area v2">
