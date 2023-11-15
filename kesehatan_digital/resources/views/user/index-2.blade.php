@@ -40,42 +40,7 @@
 
 <body class="js">
     <div id="preloader"></div>
-    <!-- start topbar area -->
-    <div class="topbar-area v2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 text-left">
-                    <div class="topaddress-v2">
-                        <ul>
-                            <li><span class="fa fa-phone"></span> +200 100 5678 </li>
-                            <li> <span class="fa fa-envelope"></span> jhon_doe@gmail.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <ul class="nav social-link navbar-right navbar-nav">
-                        <li>
-                            <a href="https://facebook.com/" class="fa fa-facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#team" class="fa fa-twitter"></a>
-                        </li>
-                        <li>
-                            <a href="#blog" class="fa fa-dribbble"></a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="fa fa-behance"></a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="fa fa-linkedin"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of topbar area -->
+    @include('partials.topbar_user')
     <section class="home-area v2">
         <!-- navbare area -->
         <nav class="navbar navbar-area v2">
@@ -894,92 +859,7 @@
         </div>
     </div>
     <!-- end of brand area -->
-    <footer class="footer-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="footer-content">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="footer-logo">
-                                    <img src="img/logo.png" alt="mdimran41">
-                                </div>
-                                <div class="footer-about">
-                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra,
-                                        quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque
-                                        ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis
-                                        aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
-                                    <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
-                                    <a href="#"> <span class="fa fa-angle-right"></span>read more</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="footer-recent-post">
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="img/recen-1.png" alt="theimran.com">
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h4 class="media-heading">Cosmology</h4>
-                                            </a>
-                                            <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
-                                            <p>21 December, 2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="img/recen-2.png" alt="theimran.com">
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h4 class="media-heading">Cancer Facts</h4>
-                                            </a>
-                                            <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
-                                            <p>21 December, 2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="img/recen-3.png" alt="theimran.com">
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h4 class="media-heading">Dental Services</h4>
-                                            </a>
-                                            <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
-                                            <p>21 December, 2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="media-carea-contact">
-                        <form action="https://www.kazierfan.com/themes/medicre/medicre/index.html">
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Name">
-                            </div>
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Email">
-                            </div>
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Phone number">
-                            </div>
-                            <div class="single-text-area">
-                                <textarea class="form-control" name="message" id="messages" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="single-submit">
-                                <input class="form-control text-center" type="submit" value="submit now">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('partials.footer_user')
     <div class="copyriht-area">
         <div class="container">
             <div class="row">
