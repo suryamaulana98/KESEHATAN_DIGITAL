@@ -14,23 +14,23 @@
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/bootstrap.min.css')}}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/font-awesome.min.css')}}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/animate.min.css')}}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="{{ asset('css/myslider.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/myslider.css')}}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/magnific-popup.css')}}">
     <!-- slick css -->
-    <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/slick.css')}}">
     <!-- reset css -->
-    <link rel="stylesheet" href="{{ asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/reset.css')}}">
     <!-- style css -->
     <link rel="stylesheet" href="{{ asset('style.css')}}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/responsive.css')}}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -39,54 +39,7 @@
 
 <body class="js">
     <div id="preloader"></div>
-    <!-- start topbar area -->
-    <div class="topbar-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-4">
-                    <div class="site-logo">
-                        <img src="img/logo.png" alt="jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-9 col-md-8 topmedia">
-                    <div class="col-sm-4">
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/top-icon-1.png" alt="jigsawlab">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">16th Avenue</h4>
-                                <p>Sydney, WW2 3XXXE</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/top-icon-2.png" alt="jigsawlab">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Mon - Fri 08:00-19:00</h4>
-                                <p>Sat & Sun - CLOSED</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/top-icon-3.png" alt="jigsawlab">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Call Us</h4>
-                                <p>+0800 2456 7917</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of topbar area -->
+    @include('partials.topbar_user')
     <section class="home-area single-title-area">
         <!-- navbare area -->
         <nav class="navbar navbar-area">
@@ -410,83 +363,7 @@
     </section>
     <!-- end of latest news event section -->
     <!-- end of footer top div -->
-    <footer class="footer-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="footer-content">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="footer-logo">
-                                    <img src="img/logo.png" alt="mdimran41">
-                                </div>
-                                <div class="footer-about">
-                                    <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra, quam eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque ac arcu egestas, convallis risus vitae, gravida enim quam eros commodo est, quis aliquam lectus. Nam interdum, nulla id sodales viverra.</p>
-                                    <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
-                                    <a href="single.html"> <span class="fa fa-angle-right"></span>read more</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="footer-recent-post">
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="img/recen-1.png" alt="jigsawlab">
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cosmology</h4></a>
-                                            <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
-                                            <p>21 December, 2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="img/recen-2.png" alt="jigsawlab">
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Cancer Facts</h4></a>
-                                            <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
-                                            <p>21 December, 2017</p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object" src="img/recen-3.png" alt="jigsawlab">
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#"><h4 class="media-heading">Dental Services</h4></a>
-                                            <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
-                                            <p>21 December, 2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="media-carea-contact">
-                        <form action="https://www.kazierfan.com/themes/medicre/medicre/index.html">
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Name">
-                            </div>
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Email">
-                            </div>
-                            <div class="single-form">
-                                <input class="form-control" type="text" placeholder="Phone number">
-                            </div>
-                            <div class="single-text-area">
-                                <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="single-submit">
-                                <input class="form-control text-center" type="submit" value="submit now">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('partials.footer_user')
     <div class="copyriht-area">
         <div class="container">
             <div class="row">
