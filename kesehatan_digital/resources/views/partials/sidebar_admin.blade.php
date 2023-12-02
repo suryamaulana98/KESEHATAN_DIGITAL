@@ -29,15 +29,15 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li>
-                    <a class="" href="{{ route('dashboardAdmin.index') }}" aria-expanded="false">
+                <li class="{{ request()->is('dashboard-admin') ? 'active' : '' }}">
+                    <a href="{{ route('dashboardAdmin.index') }}" aria-expanded="false">
                         <i class="icon-speedometer"></i>
-                        <span class="hide-menu">Dashboard
-                        </span>
+                        <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
-                <li>
-                    <a class="" href="{{ route('artikelAdmin.index') }}" aria-expanded="false">
+
+                <li class="{{ request()->routeIs('artikelAdmin.index', 'artikelAdmin.create') ? 'active' : '' }}">
+                    <a href="{{ route('artikelAdmin.index') }}" aria-expanded="false">
                         <i class="ti-layout-grid2"></i>
                         <span class="hide-menu">Data Artikel</span>
                     </a>
@@ -50,13 +50,16 @@
                 </li>
                 <li>
                     <a class="" href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
-                        <i class="ti-email"></i>
-                        <span class="hide-menu">Data Dapodik</span>
-                    </a>
+                        <a class="{{ request()->is('dapodikAdmin.index') ? 'active' : '' }}"
+                            href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
+                            <i class="ti-email"></i>
+                            <span class="hide-menu">Data Dapodik</span>
+                        </a>
 
                 </li>
                 <li>
-                    <a class="" href="{{ route('userAdmin.index') }}" aria-expanded="false">
+                    <a class="{{ request()->is('userAdmin.index') ? 'active' : '' }}"
+                        href="{{ route('userAdmin.index') }}" aria-expanded="false">
                         <i class="ti-user"></i>
                         <span class="hide-menu">Data User
                         </span>
