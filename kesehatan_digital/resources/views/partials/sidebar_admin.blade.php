@@ -49,7 +49,9 @@
                     <i class="fa-solid fa-person"></i>
                         <span class="hide-menu">Data Dapodik</span>
                     </a> 
-                    <a class="" href="{{ route('kategoriAdmin.index') }}" aria-expanded="false">
+                </li>
+                <li>
+                    <a class="{{ request()->is('kategoriAdmin.index') ? 'active' : '' }}" href="{{ route('kategoriAdmin.index') }}" aria-expanded="false">
                         <i class="ti-layout-grid2"></i>
                         <span class="hide-menu">Data Kategori</span>
                     </a>
