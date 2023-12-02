@@ -19,10 +19,10 @@
     <!-- page css -->
     <link href="{{ asset('template_admin/inverse/dist/css/pages/file-upload.css') }}" rel="stylesheet">
     <!-- Add this to the head section -->
-    <link href="{{ asset('css/summernote-bs4.css') }}" rel="stylesheet">
+<link href="{{ asset('css/summernote-bs4.css') }}" rel="stylesheet">
 
-    <!-- Add this just before the closing </body> tag -->
-    <script src="{{ asset('js/summernote-bs4.js') }}"></script>
+<!-- Add this just before the closing </body> tag -->
+<script src="{{ asset('js/summernote-bs4.js') }}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
