@@ -19,10 +19,7 @@
     <!-- page css -->
     <link href="{{ asset('template_admin/inverse/dist/css/pages/file-upload.css') }}" rel="stylesheet">
     <!-- Add this to the head section -->
-<link href="{{ asset('css/summernote-bs4.css') }}" rel="stylesheet">
 
-<!-- Add this just before the closing </body> tag -->
-<script src="{{ asset('js/summernote-bs4.js') }}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -114,7 +111,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Text area</label>
-                                    <textarea id="summernote" class="content form-control" rows="5"></textarea>
+                                    <textarea name="content" class="content form-control" rows="5"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Read only input</label>
@@ -374,14 +371,12 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#summernote').summernote();
-        });
+        CKEDITOR.replace('content');
     </script>
-
     <script src="{{ asset('template_admin/assets/node_modules/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('template_admin/assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
