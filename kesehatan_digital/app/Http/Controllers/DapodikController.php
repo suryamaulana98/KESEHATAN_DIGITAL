@@ -14,6 +14,18 @@ class DapodikController extends Controller
         return view('admin.dapodik');
     }
 
+    public function ttd(){
+        return view('admin.ttd');
+    }
+
+    public function kelas(){
+        return view('admin.kelas');
+    }
+
+    public function vaksin(){
+        return view('admin.vaksin');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

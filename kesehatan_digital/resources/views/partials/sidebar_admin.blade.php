@@ -1,5 +1,6 @@
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
+<script src="https://kit.fontawesome.com/d448aebe56.js" crossorigin="anonymous"></script>
 <aside class="left-sidebar">
     <!-- Sidebar scroll-->
     <div class="scroll-sidebar">
@@ -31,42 +32,61 @@
             <ul id="sidebarnav">
                 <li class="{{ request()->is('dashboard-admin') ? 'active' : '' }}">
                     <a href="{{ route('dashboardAdmin.index') }}" aria-expanded="false">
-                        <i class="icon-speedometer"></i>
+                        <i class="fa-solid fa-gauge"></i>
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="{{ request()->routeIs('artikelAdmin.index', 'artikelAdmin.create') ? 'active' : '' }}">
                     <a href="{{ route('artikelAdmin.index') }}" aria-expanded="false">
-                        <i class="ti-layout-grid2"></i>
+                        <i class="fa-solid fa-newspaper"></i>
                         <span class="hide-menu">Data Artikel</span>
                     </a>
                 </li>
                 <li>
+                    <a class="{{ request()->is('dapodikAdmin.index') ? 'active' : '' }}"
+                        href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
+                    <i class="fa-solid fa-person"></i>
+                        <span class="hide-menu">Data Dapodik</span>
+                    </a> 
                     <a class="" href="{{ route('kategoriAdmin.index') }}" aria-expanded="false">
                         <i class="ti-layout-grid2"></i>
                         <span class="hide-menu">Data Kategori</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
-                        <a class="{{ request()->is('dapodikAdmin.index') ? 'active' : '' }}"
-                            href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
-                            <i class="ti-email"></i>
-                            <span class="hide-menu">Data Dapodik</span>
-                        </a>
-
-                </li>
-                <li>
+          
                     <a class="{{ request()->is('userAdmin.index') ? 'active' : '' }}"
                         href="{{ route('userAdmin.index') }}" aria-expanded="false">
-                        <i class="ti-user"></i>
-                        <span class="hide-menu">Data User
+                        <i class="fa-solid fa-user"></i>
+                        <span class="hide-menu">Data Admin
                         </span>
                     </a>
-
                 </li>
-
+                <li>
+                    <a class="{{ request()->is('ttd') ? 'active' : '' }}"
+                        href="{{ route('ttd') }}" aria-expanded="false">
+                        <i class="fa-solid fa-tablets"></i>
+                        <span class="hide-menu">Ttd
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->is('kelas') ? 'active' : '' }}"
+                        href="{{ route('kelas') }}" aria-expanded="false">
+                       <i class="fa-solid fa-people-line"></i>
+                        <span class="hide-menu">Kelas
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->is('vaksin') ? 'active' : '' }}"
+                        href="{{ route('vaksin') }}" aria-expanded="false">
+                        <i class="fa-solid fa-virus-covid"></i>
+                        <span class="hide-menu">Vaksinasi
+                        </span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
