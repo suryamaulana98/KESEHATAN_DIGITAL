@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="javascript:void(0)" aria-expanded="false">
+                    <a class="" href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
                         <i class="ti-email"></i>
                         <span class="hide-menu">Data Dapodik</span>
                     </a>
