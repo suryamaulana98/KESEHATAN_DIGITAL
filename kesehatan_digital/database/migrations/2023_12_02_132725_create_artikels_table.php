@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('artikel', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_kategori');
+            $table->foreign('id_kategori')->references('id')->on('kategori')->onUpdate('cascade')->onDelete('cascade');
             $table->string('judul');
             $table->string('penulis');
             $table->text('deskripsi');
