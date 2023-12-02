@@ -43,6 +43,12 @@
                     </a>
                 </li>
                 <li>
+                    <a class="" href="{{ route('kategoriAdmin.index') }}" aria-expanded="false">
+                        <i class="ti-layout-grid2"></i>
+                        <span class="hide-menu">Data Kategori</span>
+                    </a>
+                </li>
+                <li>
                     <a class="" href="{{ route('dapodikAdmin.index') }}" aria-expanded="false">
                         <i class="ti-email"></i>
                         <span class="hide-menu">Data Dapodik</span>
