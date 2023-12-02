@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\userController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DashboardAdminController;
-use App\Http\Controllers\userController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin.dashboard');
 });
+
 Route::resource('/artikelAdmin', ArtikelController::class);
 Route::resource('/dashboardAdmin', DashboardAdminController::class);
 Route::resource('/userAdmin', userController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
