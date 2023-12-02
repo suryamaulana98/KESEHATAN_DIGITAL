@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('nis')->nullable();
             $table->string('tinggi_badan')->nullable();
             $table->string('berat_badan')->nullable();
+            $table->string('d_vaksin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

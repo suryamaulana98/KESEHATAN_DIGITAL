@@ -32,3 +32,7 @@ Route::resource('/dapodikAdmin', DapodikController::class);
 Route::resource('/artikelAdmin', ArtikelController::class);
 Route::resource('/dashboardAdmin', DashboardAdminController::class);
 Route::resource('/userAdmin', UserController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
