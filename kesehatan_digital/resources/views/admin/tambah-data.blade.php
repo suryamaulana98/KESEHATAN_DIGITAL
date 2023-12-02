@@ -33,12 +33,7 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader__figure"></div>
-            <p class="loader__label">Elite admin</p>
-        </div>
-    </div>
+
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -56,7 +51,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Basic Form</h4>
+                        <h4 class="text-themecolor">ARTIKEL</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-end">
                         <div class="d-flex justify-content-end align-items-center">
@@ -64,10 +59,8 @@
                                 <li class="breadcrumb-item">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">Basic Form</li>
+                                <li class="breadcrumb-item active">Tambah Artikel</li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15 text-white">
-                                <i class="fa fa-plus-circle"></i> Create New</button>
                         </div>
                     </div>
                 </div>
@@ -87,116 +80,31 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card card-body">
-                            <h4 class="card-title">Default Forms</h4>
-                            <h5 class="card-subtitle"> All bootstrap element classies </h5>
+                            <h4 class="card-title">Tambah Artikel</h4>
                             <form class="form-horizontal mt-4">
                                 <div class="form-group">
-                                    <label class="form-label">Default Text <span class="help"> e.g. "George
-                                            deo"</span></label>
-                                    <input type="text" class="form-control" value="George deo...">
+                                    <label class="form-label">Judul</label>
+                                    <input type="text" class="form-control" placeholder="Masukkan judul">
                                 </div>
                                 <div class="form-group">
-                                    <label for="example-email">Email <span class="help"> e.g.
-                                            "example@gmail.com"</span></label>
-                                    <input type="email" id="example-email" name="example-email" class="form-control"
-                                        placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" class="form-control" value="password">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Placeholder</label>
-                                    <input type="text" class="form-control" placeholder="placeholder">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Text area</label>
-                                    <textarea name="content" class="content form-control" rows="5"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Read only input</label>
-                                    <input class="form-control" type="text" placeholder="Readonly input here…"
-                                        readonly>
-                                </div>
-                                <div class="form-group">
-                                    <fieldset disabled>
-                                        <label for="disabledTextInput">Disabled input</label>
-                                        <input type="text" id="disabledTextInput" class="form-control"
-                                            placeholder="Disabled input">
-                                    </fieldset>
-                                </div>
-                                <div class="form-group row pt-3">
-                                    <div class="col-sm-4">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="customCheck1">
-                                            <label class="form-check-label" for="customCheck1">Check this custom
-                                                checkbox</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="customCheck2">
-                                            <label class="form-check-label" for="customCheck2">Check this custom
-                                                checkbox</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="customCheck3">
-                                            <label class="form-check-label" for="customCheck3">Check this custom
-                                                checkbox</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio1" name="customRadio"
-                                                class="form-check-input">
-                                            <label class="form-check-label" for="customRadio1">Toggle this custom
-                                                radio</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio2" name="customRadio"
-                                                class="form-check-input">
-                                            <label class="form-check-label" for="customRadio2">Toggle this custom
-                                                radio</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input type="checkbox" class="form-check-input" id="customSwitch1">
-                                    <label class="form-check-label" for="customSwitch1">Toggle this switch
-                                        element</label>
-                                </div>
-                                <div class="form-check form-switch mb-3">
-                                    <input type="checkbox" class="form-check-input" disabled id="customSwitch2">
-                                    <label class="form-check-label" for="customSwitch2">Disabled switch
-                                        element</label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Input Select</label>
+                                    <label class="form-label">Kategori</label>
                                     <select class="form-select col-12" id="inlineFormCustomSelect">
-                                        <option selected>Choose...</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <option selected>--Pilih--</option>
+                                        <option value="1">Horror</option>
+                                        <option value="2">Komedi</option>
+                                        <option value="3">Romance</option>
                                     </select>
                                 </div>
+                               
                                 <div class="form-group">
-                                    <label class="form-label">Default file upload</label>
-                                    <input type="file" class="form-control">
+                                    <label class="form-label">Penulis</label>
+                                    <input type="text" class="form-control" placeholder="Masukkan Penulis">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Custom File upload</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                                        <div class="custom-file">
-                                            <input type="file" class="form-control" id="inputGroupFile01"
-                                                aria-describedby="inputGroupFileAddon01">
-                                        </div>
-                                    </div>
+                                    <label class="form-label">Deskripsi</label>
+                                    <textarea name="content" class="content form-control" rows="5"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Helping text</label>
-                                    <input type="text" class="form-control" placeholder="Helping text">
-                                    <span class="help-block"><small>A block of help text that breaks onto a new line
-                                            and may extend beyond one line.</small></span>
-                                </div>
+                                <button class="btn btn-success" style="float: right;">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -356,11 +264,7 @@
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer">
-            © 2021 Eliteadmin by themedesigner.in
-            <a href="https://www.wrappixel.com/">WrapPixel</a>
-        </footer>
+@include('partials.footer_admin')
         <!-- ============================================================== -->
         <!-- End footer -->
         <!-- ============================================================== -->
