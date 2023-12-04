@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class ArtikelController extends Controller
@@ -11,8 +13,8 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.artikel');
+        $data  = Artikel::with('kategori')->get();
+        return view('admin.artikel',compact('data'));
     }
 
     /**
@@ -20,7 +22,8 @@ class ArtikelController extends Controller
      */
     public function create()
     {
-        return view('admin.tambah-data');
+        $data = Kategori::all();
+        return view('admin.tambah-data',compact('data'));
     }
 
     /**
@@ -28,7 +31,26 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        ]);
+
+
+        $nm = $request->file('foto'); 
+
+        $extension = $nm->getClientOriginalExtension();
+        $namaFile = hash('sha256', time() . rand(100, 999)) . '.' . $extension;
+        $nm->move(public_path().'/foto', $namaFile);
+        
+       $kat = new Artikel;
+       $kat->judul = $request->judul;
+       $kat->id_kategori = $request->kategori;
+       $kat->deskripsi = $request->content;
+       $kat->penulis = $request->penulis;
+       $kat->foto = $namaFile;
+            
+       $kat->save();
+       
+       return redirect('artikelAdmin');
     }
 
     /**

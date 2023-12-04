@@ -10,7 +10,7 @@ class Artikel extends Model
 {
     protected $table = 'artikel';
     protected $primarykey = 'id';
-    protected $fillable = ['id_kategori', 'judul', 'penulis', 'deskripsi'];
+    protected $fillable = ['id_kategori', 'judul', 'penulis', 'deskripsi','foto'];
     public $timestamps = true;
 
     public function kategori()
