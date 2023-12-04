@@ -47,78 +47,115 @@
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb justify-content-end">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Data Artikel</li>
+                                <li class="breadcrumb-item active">Data Kelas</li>
                             </ol>
-                            <a href="{{ route('artikelAdmin.create') }}"
-                                class="btn btn-info d-none d-lg-block m-l-15 text-white">+ Tambah
-                                Artikel</a>
+                            <a href="#" class="btn btn-info d-none d-lg-block m-l-15 text-white"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah
+                                Kelas</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Kelas</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{ route('kelas.store') }}" method="post">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label class="form-label"><span class="help">Nama Kelas</span></label>
+                                        <input type="text" class="form-control" name="kelas">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @forelse ($kelas as $item)
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal22{{ $item->id }}" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit Kelas</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="{{ route('kelas.update', $item->id) }}" method="post">
+                                        @csrf
+                                        @method('PUT')
+                                        <div class="form-group">
+                                            <label class="form-label"><span class="help">Nama Kelas</span></label>
+                                            <input type="text" class="form-control" name="kelas"
+                                                value="{{ old('kelas', $item->kelas) }}">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                @empty
+                @endforelse
+
+
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Artikel</h4>
-                            <h6 class="card-subtitle">Create responsive tables by wrapping any <code>.table</code> in
-                                <code>.table-responsive </code>
-                            </h6>
+                            <h4 class="card-title">Data Kelas</h4>
+
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Invoice</th>
-                                            <th>User</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                            <th>Status</th>
-                                            <th>Country</th>
+                                            <th>ID</th>
+                                            <th>Kelas</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #26589</a></td>
-                                            <td>Herman Beck</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 16,
-                                                    2017</span> </td>
-                                            <td>$45.00</td>
-                                            <td>
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td>EN</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #58746</a></td>
-                                            <td>Mary Adams</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 12,
-                                                    2017</span> </td>
-                                            <td>$245.30</td>
-                                            <td>
-                                                <div class="label label-table label-danger">Shipped</div>
-                                            </td>
-                                            <td>CN</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #98458</a></td>
-                                            <td>Caleb Richards</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> May 18,
-                                                    2017</span> </td>
-                                            <td>$38.00</td>
-                                            <td>
-                                                <div class="label label-table label-info">Shipped</div>
-                                            </td>
-                                            <td>AU</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #32658</a></td>
-                                            <td>June Lane</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Apr 28,
-                                                    2017</span> </td>
-                                            <td>$77.99</td>
-                                            <td>
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td>FR</td>
-                                        </tr>
+                                        @forelse ($kelas as $item)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->kelas }}</td>
+                                                <td>
+                                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                                        action="{{ route('kelas.destroy', $item->id) }}"
+                                                        method="POST">
+                                                        <a href="#exampleModal22{{ $item->id }}"
+                                                            class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                            data-target="#exampleModal22{{ $item->id }}">EDIT</a>
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                            class="btn btn-sm btn-danger">HAPUS</button>
+                                                    </form>
+                                                </td>
+
+                                            </tr>
+
+                                        @empty
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>
@@ -129,7 +166,9 @@
             @extends('partials.footer_admin')
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <script src="{{ asset('template_admin/assets/node_modules/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('template_admin/assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
