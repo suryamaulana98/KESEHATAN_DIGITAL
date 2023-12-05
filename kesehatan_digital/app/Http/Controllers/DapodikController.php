@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelas;
+use App\Models\Ttd;
 use Illuminate\Http\Request;
 
 class DapodikController extends Controller
@@ -17,7 +18,28 @@ class DapodikController extends Controller
 
     public function ttd(){
         $data = Kelas::all();
-        return view('admin.ttd',compact('data'));
+        $ttd = Ttd::with('kelas')->get();
+        return view('admin.ttd',compact('data','ttd'));
+    }
+
+    public function create_ttd(Request $request){
+        $request->validate([
+
+        ]);
+
+        Ttd::create([
+            'id_kelas'=>$request->id_kelas,
+            'status'=>$request->status
+        ]);
+        return redirect('ttd');
+    }
+
+    public function destroy_ttd($id){
+        $kategori = Ttd::findOrFail($id);
+        $kategori->delete();
+
+        return redirect()->back();
+
     }
 
     public function kelas(){

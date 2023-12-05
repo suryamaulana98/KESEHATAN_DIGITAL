@@ -54,18 +54,20 @@
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah
                                 Ttd</button>
             
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Ttd</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Ttd</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('create_ttd') }}" method="POST">
+                        @csrf
                                 <div class="form-group">
                                     <label class="form-label" style="float: left;">Kelas</label>
-                                    <select class="form-select col-12" name="kategori" id="inlineFormCustomSelect">
+                                    <select class="form-select col-12" name="id_kelas" id="inlineFormCustomSelect">
                                         <option selected>--Pilih--</option>
                                         @foreach ($data as $item)
                                             
@@ -73,24 +75,41 @@
                                         @endforeach
                                     </select>
                                 </div>
-<div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1">
-    <label class="form-check-label" for="flexRadioDefault1">
-        SUDAH
-    </label>
-</div>
-<div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2">
-    <label class="form-check-label" for="flexRadioDefault2">
-        BELUM
-    </label>
-</div>
+                        <div style="float: left; margin-right: 10px;">
+                            <label class="form-check-label" style="margin-left: 5px;" for="flexRadioDefault1">
+                                Status
+                            </label><br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="sudah">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    SUDAH
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value="belum">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    BELUM
+                                </label>
+                            </div>
+                        </div>
 
+                        <script>
+                            const radioButtons = document.querySelectorAll('input[name="status"]');
+                            radioButtons.forEach(button => {
+                                button.addEventListener('change', () => {
+                                    radioButtons.forEach(otherButton => {
+                                        otherButton.checked = false;
+                                    });
+                                    button.checked = true;
+                                });
+                            });
+                        </script>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </div>            
+        </form>
                                 </div>
                             </div>
                             </div>
@@ -101,66 +120,35 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Data Tablet Tambah Darah</h4>
-                            <h6 class="card-subtitle">Create responsive tables by wrapping any <code>.table</code> in
-                                <code>.table-responsive </code>
-                            </h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Invoice</th>
-                                            <th>User</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
+                                            <th>No</th>
+                                            <th>Kelas</th>
                                             <th>Status</th>
-                                            <th>Country</th>
+                                            <th>Tanggal</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($ttd as $item)
+                                            
                                         <tr>
-                                            <td><a href="javascript:void(0)">Order #26589</a></td>
-                                            <td>Herman Beck</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 16,
-                                                    2017</span> </td>
-                                            <td>$45.00</td>
-                                            <td>
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td>EN</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #58746</a></td>
-                                            <td>Mary Adams</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 12,
-                                                    2017</span> </td>
-                                            <td>$245.30</td>
-                                            <td>
-                                                <div class="label label-table label-danger">Shipped</div>
-                                            </td>
-                                            <td>CN</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #98458</a></td>
-                                            <td>Caleb Richards</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> May 18,
-                                                    2017</span> </td>
-                                            <td>$38.00</td>
-                                            <td>
-                                                <div class="label label-table label-info">Shipped</div>
-                                            </td>
-                                            <td>AU</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #32658</a></td>
-                                            <td>June Lane</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Apr 28,
-                                                    2017</span> </td>
-                                            <td>$77.99</td>
-                                            <td>
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td>FR</td>
-                                        </tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->kelas->kelas }}</td>
+                                            <td>{{ $item->status }}</td>
+                                            <td>{{ $item->created_at }}</td>
+                                                <td> <form action="{{ route('destroy_ttd',$item->id) }}" method="POST" id="myId{{ $item->id }}">
+                                                    @csrf
+                                                    @method('delete') 
+                                                </a> 
+                                                    <button type="submit" class="btn btn-outline-danger btn-icon-text">
+                                                    <i class="mdi mdi-delete btn-icon-prepend"></i> Delete</button> 
+                                                </form> </td>
+                                            </tr>
+                                            @endforeach
+                                        
                                     </tbody>
                                 </table>
                             </div>
