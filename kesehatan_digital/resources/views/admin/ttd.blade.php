@@ -26,7 +26,9 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
 <![endif]-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
 <body class="skin-default fixed-layout">
@@ -47,18 +49,58 @@
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb justify-content-end">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Data Artikel</li>
-                            </ol>
-                            <a href="{{ route('artikelAdmin.create') }}"
-                                class="btn btn-info d-none d-lg-block m-l-15 text-white">+ Tambah
-                                Artikel</a>
+                                <li class="breadcrumb-item active">Data Ttd</li>
+                            </ol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah
+                                Ttd</button>
+            
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Ttd</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="form-label" style="float: left;">Kelas</label>
+                                    <select class="form-select col-12" name="kategori" id="inlineFormCustomSelect">
+                                        <option selected>--Pilih--</option>
+                                        @foreach ($data as $item)
+                                            
+                                        <option value="{{ $item->id }}">{{ $item->kelas }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+        SUDAH
+    </label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2">
+    <label class="form-check-label" for="flexRadioDefault2">
+        BELUM
+    </label>
+</div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Artikel</h4>
+                            <h4 class="card-title">Data Tablet Tambah Darah</h4>
                             <h6 class="card-subtitle">Create responsive tables by wrapping any <code>.table</code> in
                                 <code>.table-responsive </code>
                             </h6>

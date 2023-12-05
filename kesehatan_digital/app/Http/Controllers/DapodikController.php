@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 
 class DapodikController extends Controller
@@ -15,7 +16,8 @@ class DapodikController extends Controller
     }
 
     public function ttd(){
-        return view('admin.ttd');
+        $data = Kelas::all();
+        return view('admin.ttd',compact('data'));
     }
 
     public function kelas(){
