@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ArtikelController extends Controller
 {
@@ -66,7 +67,9 @@ class ArtikelController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data2  = Artikel::with('kategori')->findOrFail($id);
+        $data = Kategori::all();
+        return view('admin.edit-artikel',compact('data','data2'));
     }
 
     /**
@@ -74,7 +77,32 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+
+        ]);
+
+        $ubah = Artikel::findOrFail($id);
+        $awal = $ubah->foto;
+
+        if($request->hasFile('foto')){
+            if (File::exists(public_path().'/foto/'.$awal)){
+                File::delete(public_path().'/foto/'.$awal);
+            }
+            $awal= $request->foto->hashName();
+            $request->foto->move(public_path().'/foto',$awal);
+        }
+
+        $data = [
+       'id_kategori' => $request['kategori'],
+       'judul' => $request['judul'],
+       'deskripsi' => $request['content'],
+       'penulis' => $request['penulis'],
+       'foto' => $awal
+        ];
+
+        $ubah->update($data);
+
+        return redirect('artikelAdmin');
     }
 
     /**
@@ -82,6 +110,12 @@ class ArtikelController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $hapus = Artikel::findOrFail($id);
+        $file = public_path('/foto/').$hapus->foto;
+        if(file_exists($file)){
+            @unlink($file);
+        }
+        $hapus->delete();
+        return redirect('artikelAdmin');
     }
 }

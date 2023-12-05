@@ -78,9 +78,18 @@
                                             <td>{{ $item->judul }}</td>
                                             <td>{{ $item->kategori->kategori }}</td>
                                                 <td>{{ $item->penulis }}</td>
-                                                <td><img src="{{ asset('foto/'.$item->foto) }}"  width="10%" height="10%">
+                                                <td><img src="{{ asset('foto/'.$item->foto) }}"  width="30px" height="30px">
                                                 </td>
-                                                <td>HAPUS | EDIT</td>
+                                                <td>
+                                                <form action="{{ route('artikelAdmin.destroy',$item->id) }}" method="POST" id="myId{{ $item->id }}">
+                                                    @csrf
+                                                    @method('delete') 
+                                                <a href="{{ route('artikelAdmin.edit',$item->id) }}" class="btn btn-outline-secondary btn-icon-text"> Edit <i class="mdi mdi-file-check btn-icon-append"></i>
+                                                </a> 
+                                                    <button type="submit" class="btn btn-outline-danger btn-icon-text">
+                                                    <i class="mdi mdi-delete btn-icon-prepend"></i> Delete</button> 
+                                                </form>  
+                                                </td>
                                             </tr>
                                             @endforeach
                                     </tbody>
