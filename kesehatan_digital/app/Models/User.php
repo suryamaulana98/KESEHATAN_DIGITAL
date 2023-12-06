@@ -29,7 +29,6 @@ class User extends Authenticatable
         'tinggi_badan',
         'berat_badan',
         'd_vaksin',
-        'id_kelas'
     ];
 
     public function kelas(){
@@ -56,8 +55,4 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-        public function kelas()
-    {
-        return $this->belongsTo(Kelas::class, 'id_kelas');
-    }
 }

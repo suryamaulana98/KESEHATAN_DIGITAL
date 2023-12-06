@@ -79,7 +79,7 @@
                                            <div class="form-group">
                                                <label class="form-label"><span class="help">Masukan Email</span></label>
                                                <input type="text" class="form-control" name="email"
-                                                   value="{{ old('emai', Auth::user()->email) }}">
+                                                   value="{{ old('email', Auth::user()->email) }}">
                                            </div>
                                            <div class="form-group">
                                                <label class="form-label"><span class="help">Masukan NISN</span></label>

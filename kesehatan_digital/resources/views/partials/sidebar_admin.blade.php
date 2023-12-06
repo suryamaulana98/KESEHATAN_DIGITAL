@@ -12,16 +12,23 @@
                 </div>
                 <div class="dropdown">
                     <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu"
-                        data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Steave
-                        Gection
+                        data-bs-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">{{ Auth::user()->name }}
                         <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu animated flipInY">
                         <!-- text-->
-                        <a href="javascript:void(0)" class="dropdown-item">
+                        <a href="{{ route('profilAdmin.index') }}" class="dropdown-item">
                             <i class="ti-user"></i> My Profile</a>
-                        <a href="pages-login.html" class="dropdown-item">
-                            <i class="fa fa-power-off"></i> Logout</a>
+                        <a href="#">
+                            <form action="{{ route('logout') }}" onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                method="POST" id="logout-form">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i
+                                        class="fa fa-power-off"></i>Logout</button>
+                            </form>
+                        </a>
+
                         <!-- text-->
                     </div>
                 </div>
