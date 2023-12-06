@@ -46,7 +46,7 @@ User::create([
     'nis' => $request->nis,
 ]);
 
-return redirect('userAdmin');
+return redirect('userAdmin')->with('success','Berhasil Menambah Admin');
 
     }
 
@@ -81,7 +81,7 @@ return redirect('userAdmin');
     'id_kelas' => $request->id_kelas,
     'nis' => $request->nis,
         ]);
-        return redirect('userAdmin');
+        return redirect('userAdmin')->with('success','Berhasil Merubah data Admin');
     }
 
     /**
@@ -91,6 +91,6 @@ return redirect('userAdmin');
     {
         $data = User::findOrFail($id);
         $data->delete();
-        return back();
+        return back()->with('success','Berhasil Menghapus Admin');
     }
 }

@@ -88,7 +88,7 @@ class KategoriController extends Controller
         $kategori = Kategori::findOrFail($id);
         $kategori->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus kategori');
 
     }
 }
