@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Models\Kategori;
+use App\Models\Komentar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -16,6 +17,24 @@ class ArtikelController extends Controller
     {
         $data  = Artikel::with('kategori')->get();
         return view('admin.artikel',compact('data'));
+    }
+
+    
+    public function berita(){
+        $data = Artikel::with('kategori')->paginate('3');
+        return view('user.news-2',compact('data'));
+    }
+
+    public function detail_berita($id){
+        $data = Artikel::findOrFail($id);
+        $kat = Kategori::all();
+        $data2 = Artikel::all();
+        $kom = Komentar::where('id_artikel', $id)->get();
+        return view('user.detail-berita',compact('data','kat','data2','kom'));
+    }
+
+    public function about(){
+        return view('user.about-2');
     }
 
     public function getDataPerkembanganArtikel()

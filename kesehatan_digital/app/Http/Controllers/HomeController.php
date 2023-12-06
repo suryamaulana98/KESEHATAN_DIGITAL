@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
+use App\Models\Kategori;
+use App\Models\Komentar;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -29,7 +32,22 @@ class HomeController extends Controller
     {   
         $user = User::findOrFail($id);
         $user = User::all();
-        return view('user.index_user', compact('user'));
+        $data = Artikel::with('kategori')->paginate('3');
+        return view('user.index_user', compact('user','data'));
+    }
+
+
+    public function komentar(Request $request){
+    $request->validate([
+        'komentar' => 'required'
+    ]);
+        $user = Auth::user();
+        Komentar::create([
+            'id_artikel' => $request->id_artikel,
+            'id_user' => $user->id,
+            'komentar' => $request->komentar
+        ]);
+        return back();
     }
 
     public function show($id){

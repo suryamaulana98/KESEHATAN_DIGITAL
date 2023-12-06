@@ -1,16 +1,18 @@
 <?php
 
+use App\Models\User;
+use App\Models\Artikel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DapodikController;
-use App\Http\Controllers\DashboardAdminController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\KelasController;
 use App\Http\Controllers\profilAdminController;
 use App\Http\Controllers\ProfileUserController;
+use App\Http\Controllers\DashboardAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +28,10 @@ use App\Http\Controllers\ProfileUserController;
 
 
 Route::get('/', function () {
-    return view('user.index_user');
-});
+        $user = User::all();
+        $data = Artikel::with('kategori')->paginate('3');
+    return view('user.index_user',compact('user','data'));
+})->name('home2');
 
 
 Route::resource('/home', HomeController::class);
@@ -65,6 +69,17 @@ Auth::routes();
 
 
 
+
+Route::get('/berita', [App\Http\Controllers\ArtikelController::class, 'berita'])->name('berita');
+Route::get('/detail-berita/{id}', [App\Http\Controllers\ArtikelController::class, 'detail_berita'])->name('detail_berita');
+
+Route::post('/komentar', [App\Http\Controllers\HomeController::class, 'komentar'])->name('komentar');
+
+Route::get('/about', [App\Http\Controllers\ArtikelController::class, 'about'])->name('about');
+
+
+Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'show']);
+Route::put('/updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

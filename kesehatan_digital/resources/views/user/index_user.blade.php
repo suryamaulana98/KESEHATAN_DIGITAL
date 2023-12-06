@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <!-- style css -->
     <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!--[if lt IE 9]>
@@ -54,13 +55,13 @@
                             <div class="col-xs-12 v2 slider-content-area text-center">
                                 <div class="welcome-text">
                                     <h1>UKS <span>SMAKENSA</span></h1>
-                                    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The
-                                        industry's standard dummy text ever since the </h4>
-                                    <h4> 1500, lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare
-                                        placerat tempus. In turpis nisi, viverra hendrerit</h4>
-                                    <h4> dolor vel, auctor blandit sapien.</h4>
-                                    <a href="#" class="v2 read-more">GET STARTED NOW</a>
-                                    <a href="#" class="v2 read-more">LEARN MORE</a>
+                                    <h4>Unit Kesehatan Sekolah (UKS) di SMK Negeri 1 Lumajang bertujuan untuk
+                                        meningkatkan kesadaran kesehatan dan memberikan layanan kesehatan dasar kepada
+                                        siswa. UKS biasanya melibatkan kegiatan seperti penyuluhan kesehatan,
+                                        pemeriksaan kesehatan rutin, kampanye kesehatan, dan kegiatan edukasi tentang
+                                        gaya hidup sehat. </h4>
+                                    <a href="#" class="v2 read-more">Join sekarang</a>
+                                    <a href="#" class="v2 read-more">baca selengkapnya</a>
                                 </div>
                             </div>
                         </div>
@@ -75,12 +76,11 @@
                         <div class="row">
                             <div class="col-xs-12 v2 slider-content-area text-center">
                                 <div class="welcome-text">
-                                    <h1>WELCOME TO <span>MEDICARE</span></h1>
-                                    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The
-                                        industry's standard dummy text ever since the </h4>
-                                    <h4> 1500, lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare
-                                        placerat tempus. In turpis nisi, viverra hendrerit</h4>
-                                    <h4> dolor vel, auctor blandit sapien.</h4>
+                                    <h1>WELCOME TO <span>UKS SMKN 1 LUMAJANG</span></h1>
+                                    <h4>The School Health Unit (UKS) at SMK Negeri 1 Lumajang aims to increase health
+                                        awareness and provide basic health services to students. UKS usually involves
+                                        activities such as health education, routine health checks, health campaigns,
+                                        and educational activities about healthy lifestyles.</h4>
                                     <a href="#" class="v2 read-more">GET STARTED NOW</a>
                                     <a href="#" class="v2 read-more">LEARN MORE</a>
                                 </div>
@@ -107,11 +107,10 @@
                                 <img src="img/service-3.png" alt="theimran.com">
                             </div>
                         </div>
-                        <h4>Qualified Doctors</h4>
-                        <p>If you need a doctor for to consectetuer Lorem </p>
-                        <p>ipsum dolor, consectetur adipiscing elit Lorem </p>
-                        <p>ipsum dolor, consectetur Ut volutpat eros.</p>
-                        <a href="#" class="service-link">READ MORE +</a>
+                        <h4>PELAYANAN</h4>
+                        <p>UKS menyediakan berbagai kegiatan dan fasilitas, termasuk penyuluhan kesehatan,
+                            pemeriksaan kesehatan rutin, penanganan kasus ringan, dan kolaborasi dengan lembaga
+                            kesehatan setempat.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
@@ -122,11 +121,10 @@
                                 <img src="img/service-1.png" alt="theimran.com">
                             </div>
                         </div>
-                        <h4>Operation Theater</h4>
-                        <p>If you need a doctor for to consectetuer Lorem </p>
-                        <p>ipsum dolor, consectetur adipiscing elit Lorem </p>
-                        <p>ipsum dolor, consectetur Ut volutpat eros.</p>
-                        <a href="#" class="service-link">READ MORE +</a>
+                        <h4>Petugas yang terpilih</h4>
+                        <p>Petugas UKS yang terpilih dan yang terbaik biasanya memiliki kualifikasi dan karakteristik
+                            tertentu yang mendukung efektivitas dan keberhasilan layanan kesehatan di lingkungan
+                            sekolah.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center">
@@ -137,11 +135,9 @@
                                 <img src="img/service-2.png" alt="theimran.com">
                             </div>
                         </div>
-                        <h4>Emergency Services</h4>
-                        <p>If you need a doctor for to consectetuer Lorem </p>
-                        <p>ipsum dolor, consectetur adipiscing elit Lorem </p>
-                        <p>ipsum dolor, consectetur Ut volutpat eros.</p>
-                        <a href="#" class="service-link">READ MORE +</a>
+                        <h4>LAYANAN DARURAT</h4>
+                        <p>Layanan darurat Unit Kesehatan Sekolah (UKS) dirancang untuk memberikan tanggapan cepat dan
+                            efektif dalam situasi keadaan darurat atau kecelakaan di lingkungan sekolah.</p>
                     </div>
                 </div>
             </div>
@@ -149,61 +145,7 @@
     </section>
     <!-- end of features area -->
     <!-- start about us section -->
-    <section class="aboutUs-area v2 section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="aboutUs-contant">
-                        <div class="about-title">
-                            <h4>SERVICES AT A GLANCE</h4>
-                            <h1>About <span>Medicare</span></h1>
-                        </div>
-                        <h4><span class="fa fa-check"></span>Handle With Professionalism</h4>
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal,
-                            auctor ablandit sapien. Aenean quis ven natis felis, adipiscing pretium nunc. Maecenas
-                            scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal.</p>
-                        <h4><span class="fa fa-check"></span>We Love What We Do</h4>
-                        <p>Which replenish a forth green, him every over subdue won't give them there them. Can't had
-                            upon. Which midst. Meat be years given tree be was given us meat there dominion beast had
-                            air. Said open land form moved air his signs moveth creepeth appear appear it. Said open
-                            land form moved air his signs moveth creepeth appear appear it.</p>
-                        <a href="services-2.html" class="about-btn">VIEW SERVICES</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="about-form">
-                        <div class="form-title text-center">
-                            <h2>BOOK AN <span>APPOINTMENT</span></h2>
-                        </div>
-                        <div class="v2-about-input">
-                            <input type="text" placeholder="Name">
-                        </div>
-                        <div class="v2-about-input mr0">
-                            <input type="email" placeholder="Email">
-                        </div>
-                        <div class="v2-about-input">
-                            <input type="text" placeholder="Email">
-                        </div>
-                        <div class="v2-about-input mr0">
-                            <div class="v2-about-select">
-                                <select>
-                                    <option value="Preferred Date & Time">Preferred Date & Time</option>
-                                    <option value="Preferred Date & Time">Preferred Date & Time</option>
-                                    <option value="Preferred Date & Time">Preferred Date & Time</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="v2-about-textarea">
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your comment here..."></textarea>
-                        </div>
-                        <div class="v2-about-submit">
-                            <input type="submit" value="SUBMIT NOW">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- end of about us section -->
     <!-- start specialist area -->
     <!-- end of specialist  area -->
@@ -223,10 +165,8 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="section-title">
-                        <h1><span>Latest</span> News & Events</h1>
-                        <p> It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially </p>
-                        <p>specimen book unchanged.</p>
+                        <h1><span>Berita</span> dan acara terkini</h1>
+                        <p> Berikut ini adalah rekomendasi berita terbaru</p>
                     </div>
                 </div>
             </div>
@@ -238,17 +178,17 @@
                                 <img src="img/blog-larg.png" alt="mdimran41">
                             </a>
                             <div class="news-content-title">
-                                <h2>YOUR news TITLE Lorem ipsum</h2>
-                                <p>27th JULY 2016 | WORDPRESS | ADMIN</p>
+                                <h2>Kesehatan Digital</h2>
+                                <p>27th December 2023 | WORDPRESS | ADMIN</p>
                             </div>
                         </div>
                         <div class="single-news-v2">
-                            <a href="news-2.html">
+                            <a href="news-2.blade.php">
                                 <img src="img/blog-larg.png" alt="mdimran41">
                             </a>
                             <div class="news-content-title">
-                                <h2>YOUR news TITLE Lorem ipsum</h2>
-                                <p>27th JULY 2016 | WORDPRESS | ADMIN</p>
+                                <h2>Artikel dan Event kesehatan</h2>
+                                <p>20th December 2023 | WORDPRESS | ADMIN</p>
                             </div>
                         </div>
                     </div>
@@ -256,55 +196,25 @@
                 <!-- end of news slider area -->
                 <div class="col-sm-12 col-md-6">
                     <div class="nesws-media">
+                    @foreach ($data as $item)
                         <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/blog-1.png" alt="theimran.com">
-                            </a>
                             <div class="media-body">
-                                <h4 class="media-heading">Therapy Processes</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
-                                    interdum mauris sem, non aliquet felis interdum sit</p>
+                                <h4 class="media-heading">{{ $item->judul }}</h4>
+                                <p>{!! Str::limit($item->deskripsi, 200) !!}</p>
                                 <div class="about-news">
-                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span>
-                                            /</span></a><a href="#">Read more</a>
+                                    <a href="#">{{ $item->kategori->kategori }} <span>/</span></a>
+                                    <a href="{{ route('berita') }}">Baca Selengkapnya >></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/blog-2.png" alt="theimran.com">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Dental Care</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
-                                    interdum mauris sem, non aliquet felis interdum sit</p>
-                                <div class="about-news">
-                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span>
-                                            /</span></a><a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/blog-3.png" alt="theimran.com">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Cardiology</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a aliquet orci. Ut
-                                    interdum mauris sem, non aliquet felis interdum sit</p>
-                                <div class="about-news">
-                                    <a href="#">21 comments <span>/</span></a><a href="#">Therapy <span>
-                                            /</span></a><a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
+                    @endforeach
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <div class="view-alldoctors">
-                        <a href="news-2.html" class="read-more">view all news</a>
+                        <a href="{{ route('berita') }}" class="read-more">Lihat semua berita</a>
                     </div>
                 </div>
             </div>

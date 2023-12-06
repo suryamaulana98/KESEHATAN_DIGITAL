@@ -14,17 +14,21 @@
                    <span class="icon-bar"></span>
                    <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="#"><img src="img/logo.png" alt="theimran.com"></a>
+               <a class="navbar-brand" href="#"><img src="{{ asset('img/logo.png') }}" alt="theimran.com"></a>
            </div>
            <!-- Collect the nav links, forms, and other content for toggling -->
            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav menu navbar-right navbar-nav">
-                   <li class="current-menu-item"><a href="#home">Beranda</a>
-                   </li>
-                   <li><a href="#about">Tentang Kami</a>
+                   <li class="{{ request()->routeIs('home2') ? 'current-menu-item' : '' }}">
+                       <a href="{{ route('home2') }}">Beranda</a>
                    </li>
 
-                   <li><a href="#pricing">Berita</a>
+                   <li class="{{ request()->routeIs('about') ? 'current-menu-item' : '' }}">
+                       <a href="{{ route('about') }}">Tentang Kami</a>
+                   </li>
+
+                   <li class="{{ request()->routeIs('berita', 'detail_berita') ? 'current-menu-item' : '' }}">
+                       <a href="{{ route('berita') }}">Berita</a>
                    </li>
                    <li><a href="#contact">Kontak</a>
 
@@ -38,8 +42,8 @@
                    @auth
                        <li>
                            <a href="#">
-                               <img src="img/testimonial-1.png" class="rounded" style="margin-left: 20px;" width="50px"
-                                   srcset="">
+                               <img src="{{ asset('img/testimonial-1.png') }}" class="rounded" style="margin-left: 20px;"
+                                   width="50px" srcset="">
                            </a>
                            <ul>
                                <li>
