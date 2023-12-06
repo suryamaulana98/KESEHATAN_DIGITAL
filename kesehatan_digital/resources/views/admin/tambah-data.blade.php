@@ -94,8 +94,7 @@
                                     <select class="form-select col-12" name="kategori" id="inlineFormCustomSelect">
                                         <option selected>--Pilih--</option>
                                         @foreach ($data as $item)
-                                            
-                                        <option value="{{ $item->id }}">{{ $item->kategori }}</option>
+                                            <option value="{{ $item->id }}">{{ $item->kategori }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -112,7 +111,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Deskripsi</label>
-                                    <textarea name="content"  class="content form-control" rows="5"></textarea>
+                                    <textarea name="content" class="content form-control" rows="5"></textarea>
                                 </div>
                                 <button class="btn btn-success" style="float: right;">Submit</button>
                             </form>

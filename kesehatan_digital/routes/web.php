@@ -6,8 +6,10 @@ use App\Http\Controllers\userController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DapodikController;
 use App\Http\Controllers\DashboardAdminController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\ProfileUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +22,11 @@ use App\Http\Controllers\KelasController;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.dashboard');
-});
 
+
+Route::get('/', function () {
+    return view('user.index_user');
+});
 
 Route::resource('/dashboardAdmin', DashboardAdminController::class);
 Route::resource('/userAdmin', userController::class);
@@ -34,6 +37,7 @@ Auth::routes();
 
 Route::get('/getDataPerkembanganArtikel', [App\Http\Controllers\ArtikelController::class, 'getDataPerkembanganArtikel'])->name('getDataPerkembanganArtikel');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/dapodikAdmin', DapodikController::class);
 Route::get('/ttd', [App\Http\Controllers\DapodikController::class, 'ttd'])->name('ttd');
 Route::post('/create_ttd', [App\Http\Controllers\DapodikController::class, 'create_ttd'])->name('create_ttd');
@@ -46,6 +50,12 @@ Route::resource('/dashboardAdmin', DashboardAdminController::class);
 Route::resource('/userAdmin', UserController::class);
 Route::resource('/kategoriAdmin', KategoriController::class);
 
-Auth::routes();
+Route::resource('/profilUser', ProfileUserController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('/home', HomeController::class);
+Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'show']);
+Route::put('/updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

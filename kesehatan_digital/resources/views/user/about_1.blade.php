@@ -3,34 +3,35 @@
 
 
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/about-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:14 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Medicare | Responsive HTML5 Template</title>
-    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <!-- google fonts lato -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/bootstrap.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/animate.min.css') }}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/myslider.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/myslider.css') }}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/magnific-popup.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/slick.css') }}">
     <!-- reset css -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/reset.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/reset.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="{{ asset('style.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{ asset('template_user/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/responsive.css') }}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -46,7 +47,8 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle blacknav collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -57,18 +59,18 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav menu navbar-left navbar-nav">
                         <li class="current-menu-item"><a href="#home">home <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="index.html">Home Page 1</a></li>
-                            <li><a href="index-2.html">Home Page 2</a></li>
-                            <li><a href="index-3.html">Home Page 3</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="index.html">Home Page 1</a></li>
+                                <li><a href="index-2.html">Home Page 2</a></li>
+                                <li><a href="index-3.html">Home Page 3</a></li>
+                            </ul>
                         </li>
                         <li><a href="#about">about <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="about-1.html">About Page 1</a></li>
-                            <li><a href="about-2.html">About Page 2</a></li>
-                            <li><a href="about-3.html">About Page 3</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="about-1.html">About Page 1</a></li>
+                                <li><a href="about-2.html">About Page 2</a></li>
+                                <li><a href="about-3.html">About Page 3</a></li>
+                            </ul>
 
                         </li>
                         <li><a href="#portfolio">MEDICAL STUFFS <span class="fa fa-angle-down"></span> </a>
@@ -93,23 +95,23 @@
                             </ul>
                         </li>
                         <li><a href="#contact">contact <span class="fa fa-angle-down"></span></a>
-                        <ul>
-                            <li><a href="contact-1.html">Contact Page 1</a></li>
-                            <li><a href="contact-2.html">Contact Page 2</a></li>
-                            <li><a href="contact-3.html">Contact Page 3</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="contact-1.html">Contact Page 1</a></li>
+                                <li><a href="contact-2.html">Contact Page 2</a></li>
+                                <li><a href="contact-3.html">Contact Page 3</a></li>
+                            </ul>
 
                         </li>
                     </ul>
                     <ul class="nav social-link navbar-right navbar-nav">
-                        
+
                         <li>
                             <a href="#portfolio" class="fa fa-facebook"></a>
                         </li>
                         <li>
                             <a href="#team" class="fa fa-twitter"></a>
                         </li>
-                        
+
                         <li>
                             <a href="#blog" class="fa fa-dribbble"></a>
                         </li>
@@ -149,7 +151,8 @@
                 <div class="col-sm-8 text-left">
                     <div class="get-quate-content">
                         <h2>Providing Total Health Care Solutoin</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien. Aenean quis venenatis felis, adipiscing pretium nunc.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-right">
@@ -168,7 +171,8 @@
                 <div class="col-xs-12 text-center">
                     <div class="section-title">
                         <h1><span>who</span> we are</h1>
-                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal, auctor blandit </p>
+                        <p>Maecenas scelerisque felis ornare placer tempus. In turpis nisi, viverra hendrerit dolo veal,
+                            auctor blandit </p>
                         <p>sapien aenean quis ven natis.</p>
                     </div>
                 </div>
@@ -181,8 +185,16 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="aboutUs-contant marign-top">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type love the specimen book. </p>
-                        <p>It has survived not only five centuries, It has survived not only five centuries, but also the leap into electronic typesetting, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. t was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type love the specimen book. </p>
+                        <p>It has survived not only five centuries, It has survived not only five centuries, but also
+                            the leap into electronic typesetting, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of Lorem Ipsum. t was popularised in the
+                            1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                            recently.</p>
                         <div class="row">
                             <div class="col-sm-4 text-left">
                                 <div class="about-list">
@@ -235,15 +247,20 @@
                     <div class="whychoose-us-content">
                         <div class="single-chose">
                             <h4><span class="fa fa-check"></span>HANDLE WITH PROFESSIONALISM</h4>
-                            <p>It has always been a debate whether to buy new or used construction equipment. Small fleets prefer to buy used construction equipment as they attract less capital and what to investments.</p>
+                            <p>It has always been a debate whether to buy new or used construction equipment. Small
+                                fleets prefer to buy used construction equipment as they attract less capital and what
+                                to investments.</p>
                         </div>
                         <div class="single-chose">
                             <h4><span class="fa fa-check"></span>WE LOVE WHAT WE DO</h4>
-                            <p>It has always been a debate whether to buy new or used construction equipment. Smaller fleets prefer to buy used construction equipment as they attract less capital how to do investments.</p>
+                            <p>It has always been a debate whether to buy new or used construction equipment. Smaller
+                                fleets prefer to buy used construction equipment as they attract less capital how to do
+                                investments.</p>
                         </div>
                         <div class="single-chose">
                             <h4><span class="fa fa-check"></span>HANDLE WITH PROFESSIONALISM</h4>
-                            <p>Smaller fleets prefer to buy used construction equipment as they attract less capital so do investments.</p>
+                            <p>Smaller fleets prefer to buy used construction equipment as they attract less capital so
+                                do investments.</p>
                         </div>
                     </div>
                 </div>
@@ -256,46 +273,66 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="AbheadingOne">
                                     <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#Abaccordion" href="#AbcollapseOne" aria-expanded="true" aria-controls="AbcollapseOne">
-                                          PROFESSIONAL PLANNING
+                                        <a role="button" data-toggle="collapse" data-parent="#Abaccordion"
+                                            href="#AbcollapseOne" aria-expanded="true" aria-controls="AbcollapseOne">
+                                            PROFESSIONAL PLANNING
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="AbcollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="AbheadingOne">
+                                <div id="AbcollapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                    aria-labelledby="AbheadingOne">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur
+                                            adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.
+                                            consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac
+                                            justo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur
+                                            adipiscing elit.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="AbheadingTwo">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#Abaccordion" href="#AbcollapseTwo" aria-expanded="false" aria-controls="AbcollapseTwo">
-                                          HOME MAINTENANCE
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#Abaccordion" href="#AbcollapseTwo" aria-expanded="false"
+                                            aria-controls="AbcollapseTwo">
+                                            HOME MAINTENANCE
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="AbcollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="AbheadingTwo">
+                                <div id="AbcollapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="AbheadingTwo">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur
+                                            adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.
+                                            consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac
+                                            justo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur
+                                            adipiscing elit.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="AbheadingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#Abaccordion" href="#AbcollapseThree" aria-expanded="false" aria-controls="AbcollapseThree">
-                                          EVERYTHING IN BUDGET
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#Abaccordion" href="#AbcollapseThree" aria-expanded="false"
+                                            aria-controls="AbcollapseThree">
+                                            EVERYTHING IN BUDGET
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="AbcollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="AbheadingThree">
+                                <div id="AbcollapseThree" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="AbheadingThree">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo. consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur
+                                            adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac justo.
+                                            consectetur adipiscing elit. Nulla id dolor ut mauris tempor dapibus ut ac
+                                            justo.</p>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit. Nulla id dolor ut mauris tempor.</p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur
+                                            adipiscing elit. Nulla id dolor ut mauris tempor.</p>
                                     </div>
                                 </div>
                             </div>
@@ -353,7 +390,8 @@
                 <div class="col-xs-12 text-center">
                     <div class="footer-top-content">
                         <h2>Ok ! Let's Get Started Now.</h2>
-                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor vel, auctor blandit sapien.</p>
+                        <p>Maecenas scelerisque felis ornare placerat tempus. In turpis nisi, viverra hendrerit dolor
+                            vel, auctor blandit sapien.</p>
                         <a href="#" class="contat-usf">CONTACT US</a>
                         <a href="#" class="learn-moref">LEARN MORE</a>
                     </div>
@@ -387,21 +425,22 @@
         </div>
     </div>
     <!-- jquery min js -->
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/jquery.min.js') }}"></script>
     <!-- jquery easing js -->
-    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/jquery.easing.1.3.js') }}"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/bootstrap.min.js') }}"></script>
     <!-- jquery mignific js -->
-    <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/magnific-popup.min.js') }}"></script>
     <!-- jquery slick js -->
-    <script type="text/javascript" src="{{ asset('js/slick.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/slick.min.js') }}"></script>
     <!-- jquery nicescroll -->
-    <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/jquery.nicescroll.min.js') }}"></script>
     <!-- jquery active js -->
-    <script type="text/javascript" src="{{ asset('js/active.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/active.js') }}"></script>
 </body>
 
 
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/about-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:17 GMT -->
+
 </html>

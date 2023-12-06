@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -26,7 +28,36 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+
+    public function index(){
+        return view('auth.login');
+    }
+
+    public function login(Request $request)
+     {
+         $this->validate($request, [
+             'email' => 'required|email|exists:users,email|max:255',
+             'password' => 'required',
+         ]);
+         $credentials = $request->only('email', 'password');
+ 
+         if (Auth::attempt($credentials)) {
+             $user = Auth::user();
+ 
+             if ($user->role === 'admin') {
+                 return redirect()->route('dashboardAdmin.index');
+             } elseif ($user->role === 'user') {
+                 return redirect()->route('home.index');
+             } else {
+                 // Role tidak dikenali, lakukan sesuatu sesuai kebijakan Anda
+                 Auth::logout();
+                 return back()->withErrors(['email' => 'Role tidak valid']);
+             }
+         } else {
+             return back()->withErrors(['email' => 'Email atau password salah']);
+         }
+     }
+ 
 
     /**
      * Create a new controller instance.
