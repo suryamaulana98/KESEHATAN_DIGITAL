@@ -40,10 +40,7 @@ class HomeController extends Controller
     public function updateProfile(Request $request){
 
          $this->validate($request,[
-            'd_vaksin' => [
-                'required',
-                Rule::in(['Vaksin Pertama', 'Vaksin Kedua', 'Vaksin']),
-            ],
+            
         ]);
 
         // $user = User::findOrFail($id);
@@ -55,7 +52,7 @@ class HomeController extends Controller
             'nis' => $request->nis,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-           'd_vaksin', ['vaksi_pertama', 'vaksin_kedua', 'vaksi_ketiga'] => $request->d_vaksin,
+           'd_vaksin' => $request->d_vaksin,
         ]);
 
 

@@ -36,17 +36,26 @@
                        </ul>
                    </li>
                    @auth
-                       <li><img src="img/testimonial-2.png" class="rounded" style="margin-bottom: -70px; margin-left: 40px;"
-                               width="50px" srcset="">
+                       <li>
+                           <a href="#">
+                               <img src="img/testimonial-1.png" class="rounded" style="margin-left: 20px;" width="50px"
+                                   srcset="">
+                           </a>
                            <ul>
                                <li>
-                                   <button type="submit" id="showModalButton" style="background: none">Profile</button>
+                                   <a href="#">
+                                       <button type="submit" id="showModalButton" style="background: none">Profile</button>
+                                   </a>
                                </li>
                                <li>
-                                   <form action="{{ route('logout') }}" method="POST" id="logout-form">
-                                       @csrf
-                                       <button type="submit" class="dropdown-item d-none">Logout</button>
-                                   </form>
+                                   <a href="#">
+                                       <form action="{{ route('logout') }}"
+                                           onsubmit="return confirm('Apakah Anda Yakin ?');" method="POST"
+                                           id="logout-form">
+                                           @csrf
+                                           <button type="submit" class="dropdown-item d-none">Logout</button>
+                                       </form>
+                                   </a>
                                </li>
                            </ul>
                        </li>
@@ -55,9 +64,8 @@
                            <div class="modal-dialog">
                                <div class="modal-content">
                                    <div class="modal-header">
-                                       <h5 class="modal-title" id="exampleModalLabel">Profil Anda</h5>
-                                       <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                           aria-label="Close"></button>
+                                       <h2 class="modal-title" id="exampleModalLabel" class="help">Profil Anda</h2>
+
                                    </div>
                                    <div class="modal-body">
                                        <form action="{{ route('updateProfile', Auth::user()->id) }}" method="post">
@@ -93,18 +101,24 @@
                                            </div>
                                            <div class="form-group">
                                                <label class="form-label"><span class="help">Pilih Data
-                                                       Vaksin</span></label>
+                                                       Vaksin</span></label><br>
                                                <select class="form-select" name="d_vaksin"
                                                    aria-label="Default select example">
                                                    <option selected disabled>{{ Auth::user()->d_vaksin }}</option>
-                                                   <option value="vaksi Pertama">vaksin Pertama</option>
-                                                   <option value="vaksin Kedua">vaksin Kedua</option>
-                                                   <option value="Vaksin Ketiga">Vaksin Ketiga</option>
+                                                   <option value="Vaksin Pertama"
+                                                       {{ old('d_vaksin') === 'Vaksin Pertama' ? 'selected' : '' }}>Vaksin
+                                                       Pertama</option>
+                                                   <option value="Vaksin Kedua"
+                                                       {{ old('d_vaksin') === 'Vaksin Kedua' ? 'selected' : '' }}>Vaksin
+                                                       Kedua</option>
+                                                   <option value="Vaksin Ketiga"
+                                                       {{ old('d_vaksin') === 'Vaksin Ketiga' ? 'selected' : '' }}>Vaksin
+                                                       Ketiga</option>
                                                </select>
                                            </div>
                                            <div class="modal-footer">
-                                               <button type="button" class="btn btn-secondary close"
-                                                   data-bs-dismiss="modal">Close</button>
+                                               <button type="button" class="btn btn-secondary" data-bs-dismiss="myModal"
+                                                   id="closeButton">Close</button>
                                                <button type="submit" class="btn btn-primary">Edit Profile</button>
                                            </div>
                                        </form>
@@ -113,9 +127,25 @@
                            </div>
                        </div>
 
+
                        <!-- Script JavaScript -->
                        <script>
-                           // Dapatkan referensi elemen-elemen yang dibutuhkan
+                           // Mendapatkan referensi tombol "Close" menggunakan ID
+                           var closeButton = document.getElementById('closeButton');
+
+                           // Menambahkan event listener pada tombol "Close"
+                           closeButton.addEventListener('click', function() {
+                               // Mendapatkan referensi modal menggunakan ID
+                               var modal = document.getElementById('myModal');
+
+                               // Menutup modal dengan menghapus kelas "show" dari elemen modal
+                               modal.classList.remove('show');
+
+                               // Menghapus atribut "aria-modal" dan "style" dari elemen modal
+                               modal.removeAttribute('aria-modal');
+                               modal.removeAttribute('style');
+
+                           }); // Dapatkan referensi elemen-elemen yang dibutuhkan
                            var modal = document.getElementById("myModal");
                            var showModalButton = document.getElementById("showModalButton");
                            var closeButton = document.getElementsByClassName("close")[0];

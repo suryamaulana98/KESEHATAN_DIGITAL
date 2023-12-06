@@ -22,14 +22,11 @@ use App\Http\Controllers\ProfileUserController;
 |
 */
 
-Route::get('/user', function () {
-    return view('user.index');
-});
+
 
 Route::get('/', function () {
     return view('user.index_user');
 });
-
 
 Route::resource('/dashboardAdmin', DashboardAdminController::class);
 Route::resource('/userAdmin', userController::class);

@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-xs-12 v2 slider-content-area text-center">
                                 <div class="welcome-text">
-                                    <h1>WELCOME TO <span>MEDICARE</span></h1>
+                                    <h1>UKS <span>SMAKENSA</span></h1>
                                     <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. The
                                         industry's standard dummy text ever since the </h4>
                                     <h4> 1500, lorem Ipsum is simply dummy text. Maecenas scelerisque felis ornare
