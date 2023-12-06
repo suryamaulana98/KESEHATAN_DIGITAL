@@ -51,7 +51,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">ARTIKEL</h4>
+                        <h4 class="text-themecolor">Admin</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-end">
                         <div class="d-flex justify-content-end align-items-center">
@@ -59,7 +59,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">Edit Artikel</li>
+                                <li class="breadcrumb-item active">Tambah Admin</li>
                             </ol>
                         </div>
                     </div>
@@ -80,42 +80,46 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card card-body">
-                            <h4 class="card-title">Tambah Artikel</h4>
-                            <form action="{{ route('artikelAdmin.update',$data2->id) }}" method="POST"
+                            <h4 class="card-title">Tambah Admin</h4>
+                            <form action="{{ route('artikelAdmin.store') }}" method="POST"
                                 enctype="multipart/form-data" class="form-horizontal mt-4">
                                 @csrf
-                                @method('put')
                                 <div class="form-group">
-                                    <label class="form-label">Judul</label>
-                                    <input type="text" value="{{ $data2->judul }}" name="judul" class="form-control"
-                                        placeholder="Masukkan judul">
+                                    <label class="form-label">Nama</label>
+                                    <input type="text" name="nama" class="form-control"
+                                        placeholder="Masukkan Nama">
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="form-label">Kategori</label>
-                                    <select class="form-select col-12" name="kategori" id="inlineFormCustomSelect">
-                                        <option value="{{ $data2->id_kategori }}">{{ $data2->kategori->kategori }}</option>
+                                    <label class="form-label">NIS</label>
+                                    <input type="text" name="nis" class="form-control"
+                                        placeholder="Masukkan NIS">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control"
+                                        placeholder="Masukkan Email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" name="password" class="form-control"
+                                        placeholder="Masukkan Password">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Role</label>
+                                    <select class="form-select col-12" name="role" id="inlineFormCustomSelect">
+                                        <option selected>--Pilih--</option>
                                         @foreach ($data as $item)
-                                        <option value="{{ $item->id }}">{{ $item->kategori }}</option>
+                                            
+                                        <option value="{{ $item->id }}">{{ $item->role }}</option>
                                         @endforeach
                                     </select>
                                 </div>
 
-                                <div class="form-group">
-                                    <label class="form-label">Penulis</label>
-                                    <input type="text" value="{{ $data2->penulis }}" name="penulis" class="form-control"
-                                        placeholder="Masukkan Penulis">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Foto</label>
-                                    <input type="file" name="foto" class="form-control"
-                                        placeholder="Masukkan Penulis">
-                                        <img src="{{ asset('foto/'.$data2->foto) }}"  width="10%" height="10%">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Deskripsi</label>
-                                    <textarea name="content"   class="content form-control" rows="5">{{ $data2->deskripsi }}</textarea>
-                                </div>
-                                <button class="btn btn-success" style="float: right;">Update</button>
+                                <button class="btn btn-success" style="float: right;">Submit</button>
                             </form>
                         </div>
                     </div>

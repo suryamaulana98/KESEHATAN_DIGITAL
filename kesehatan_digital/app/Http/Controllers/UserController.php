@@ -19,7 +19,8 @@ class userController extends Controller
      */
     public function create()
     {
-        //
+    $data = []; 
+    return view('admin.tambah-admin', compact('data'));
     }
 
     /**

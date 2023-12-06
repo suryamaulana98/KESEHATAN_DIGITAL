@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_kelas');
             $table->foreign('id_kelas')->references('id')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
-            $table->enum('status',['selesai','belum']);
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -33,11 +33,14 @@ Route::get('/', function () {
 
 Route::resource('/dashboardAdmin', DashboardAdminController::class);
 Route::resource('/userAdmin', userController::class);
+
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/dapodikAdmin', DapodikController::class);
 Route::get('/ttd', [App\Http\Controllers\DapodikController::class, 'ttd'])->name('ttd');
+Route::post('/create_ttd', [App\Http\Controllers\DapodikController::class, 'create_ttd'])->name('create_ttd');
+Route::delete('/destroy_ttd/{id}', [App\Http\Controllers\DapodikController::class, 'destroy_ttd'])->name('destroy_ttd');
 // Route::get('/kelas', [App\Http\Controllers\KelasController::class, 'kelas'])->name('kelas');
 Route::get('/vaksin', [App\Http\Controllers\DapodikController::class, 'vaksin'])->name('vaksin');
 Route::resource('/artikelAdmin', ArtikelController::class);
