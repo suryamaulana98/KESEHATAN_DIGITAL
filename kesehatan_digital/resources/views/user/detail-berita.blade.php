@@ -108,6 +108,11 @@
                                     <h5 class="card-title">{{ $item->user->name }}</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">{{ $item->created_at->format('d M Y H:i') }}</h6>
                                     <p class="card-text">{{ $item->komentar }}</p>
+                                    <form action="{{ route('delete_komentar',$item->id) }}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn" style="float: right; margin-top:-4%;">Hapus</button>
+                                    </form>
                                 </div>
                             @endforeach
                         @endif
