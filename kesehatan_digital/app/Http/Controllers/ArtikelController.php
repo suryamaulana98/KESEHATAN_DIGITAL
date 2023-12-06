@@ -18,6 +18,15 @@ class ArtikelController extends Controller
         return view('admin.artikel',compact('data'));
     }
 
+    public function getDataPerkembanganArtikel()
+{
+    $dataPerkembanganArtikel = Artikel::selectRaw("DATE_FORMAT(created_at, '%Y-%m') as period, COUNT(*) as jumlah_artikel")
+        ->groupBy('period')
+        ->orderBy('period')
+        ->get();
+
+    return response()->json($dataPerkembanganArtikel);
+}
     /**
      * Show the form for creating a new resource.
      */

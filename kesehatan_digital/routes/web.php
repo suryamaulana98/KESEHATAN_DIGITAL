@@ -30,6 +30,9 @@ Route::resource('/userAdmin', userController::class);
 
 Auth::routes();
 
+
+
+Route::get('/getDataPerkembanganArtikel', [App\Http\Controllers\ArtikelController::class, 'getDataPerkembanganArtikel'])->name('getDataPerkembanganArtikel');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/dapodikAdmin', DapodikController::class);
 Route::get('/ttd', [App\Http\Controllers\DapodikController::class, 'ttd'])->name('ttd');

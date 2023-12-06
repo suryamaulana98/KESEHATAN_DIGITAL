@@ -25,6 +25,7 @@ class User extends Authenticatable
         'nis',
         'tinggi_badan',
         'berat_badan',
+        'id_kelas'
     ];
 
     /**
@@ -46,4 +47,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+        public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'id_kelas');
+    }
 }

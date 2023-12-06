@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Artikel;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class DashboardAdminController extends Controller
@@ -11,7 +14,11 @@ class DashboardAdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $artikel = Artikel::count();
+        $jumlahSudahVaksin = User::whereIn('d_vaksin', ['ketiga', 'pertama', 'kedua'])->count();
+        $user = User::count();
+        $kategori = Kategori::count();
+        return view('admin.dashboard',compact('artikel','jumlahSudahVaksin','user','kategori'));
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kelas;
 use App\Models\Ttd;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DapodikController extends Controller
@@ -13,7 +14,8 @@ class DapodikController extends Controller
      */
     public function index()
     {
-        return view('admin.dapodik');
+        $data = User::where('role','user')->get();
+        return view('admin.dapodik',compact('data'));
     }
 
     public function ttd(){
@@ -47,7 +49,8 @@ class DapodikController extends Controller
     }
 
     public function vaksin(){
-        return view('admin.vaksin');
+        $data = User::where('role','user')->get();
+        return view('admin.vaksin',compact('data'));
     }
 
     /**
@@ -87,7 +90,16 @@ class DapodikController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+
+        ]);
+
+        $data = User::findOrFail($id);
+        $data->update([
+            'tinggi_badan'=>$request->tinggi_badan,
+            'berat_badan'=>$request->berat_badan
+        ]);
+        return redirect('dapodikAdmin');
     }
 
     /**

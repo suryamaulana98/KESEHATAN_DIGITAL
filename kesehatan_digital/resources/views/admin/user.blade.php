@@ -49,8 +49,8 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Data Admin</li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15 text-white">+ Tambah
-                                Admin</button>
+                            <a href="{{ route('userAdmin.create') }}" class="btn btn-info d-none d-lg-block m-l-15 text-white">+ Tambah
+                                Admin</a>
                         </div>
                     </div>
                 </div>
@@ -67,10 +67,28 @@
                                             <th>Email</th>
                                             <th>Role</th>
                                             <th>NIS</th>
+                                            <th>AKSI</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- isi -->
+                                       @foreach ($data as $item)
+                                       <tr>
+                                           <td>{{ $loop->iteration }}</td>
+                                           <td>{{ $item->name }}</td>
+                                           <td>{{ $item->email }}</td>
+                                           <td>{{ $item->role }}</td>
+                                           <td>{{ $item->nis }}</td>
+                                           <td>                     
+                                            <form action="{{ route('userAdmin.destroy',$item->id) }}" method="POST" id="myId{{ $item->id }}">
+                                                    @csrf
+                                                    @method('delete') 
+                                                <a href="{{ route('userAdmin.edit',$item->id) }}" class="btn btn-outline-secondary btn-icon-text"> Edit <i class="mdi mdi-file-check btn-icon-append"></i>
+                                                </a> 
+                                                    <button type="submit" class="btn btn-outline-danger btn-icon-text">
+                                                    <i class="mdi mdi-delete btn-icon-prepend"></i> Delete</button> 
+                                                </form>  </td>
+                                           </tr>
+                                       @endforeach
                                     </tbody>
                                 </table>
                             </div>

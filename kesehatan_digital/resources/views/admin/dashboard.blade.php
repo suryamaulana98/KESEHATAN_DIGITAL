@@ -71,19 +71,49 @@
                                         <div class="d-flex no-block align-items-center">
                                             <div>
                                                 <h3><i class="icon-grid"></i></h3>
-                                                <p class="text-muted">Data Artikel</p>
+                                                <p class="text-muted">Data Kategori</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <h2 class="counter text-primary">23</h2>
+                                                <h2 class="counter text-primary">{{ $kategori }}</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-primary" role="progressbar"
-                                                style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                        <div class="progress" id="kategoriProgressBar">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $kategori }}%; height: 6px;" aria-valuenow="{{ $kategori }}" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
+                                        <script>
+                                            // Simpan nilai counter dan inisialisasi progress bar
+                                            var counterValue = {{ $kategori }};
+                                            var progressBar = $('#kategoriProgressBar .progress-bar');
+
+                                            // Fungsi untuk mengupdate nilai dan lebar progress bar
+                                            function updateProgressBar() {
+                                                // Menghitung persentase nilai terhadap maksimum (misal, 100)
+                                                var percentage = (counterValue / 100) * 100;
+
+                                                // Mengupdate nilai dan lebar progress bar
+                                                progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
+
+                                                // Mengupdate teks counter
+                                                $('#kategoriCounter').text(counterValue);
+                                            }
+
+                                            // Panggil fungsi untuk pertama kali
+                                            updateProgressBar();
+
+                                            // Contoh: Update counter setiap 1 detik
+                                            setInterval(function() {
+                                                // Simulasikan peningkatan nilai counter
+                                                counterValue += 5;
+
+                                                // Batasi nilai maksimal (misal, 100)
+                                                counterValue = Math.min(counterValue, 100);
+
+                                                // Panggil fungsi untuk mengupdate progress bar
+                                                updateProgressBar();
+                                            }, 1000);
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -101,17 +131,30 @@
                                                 <p class="text-muted">Data Vaksin</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <h2 class="counter text-cyan">169</h2>
+                                                <h2 class="counter text-cyan">{{ $jumlahSudahVaksin }}</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-cyan" role="progressbar"
-                                                style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                        <div class="progress" id="vaksinProgressBar">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $jumlahSudahVaksin }}%; height: 6px;" aria-valuenow="{{ $jumlahSudahVaksin }}" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
+                                    <script>
+                                            var counterValue = {{ $jumlahSudahVaksin }};
+                                            var progressBar = $('#vaksinProgressBar .progress-bar');
+                                            function updateProgressBar() {
+                                                var percentage = (counterValue / 100) * 100;
+                                                progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
+                                                $('#vaksinCounter').text(counterValue);
+                                            }
+                                            updateProgressBar();
+                                            setInterval(function() {
+                                                counterValue += 5;
+                                                counterValue = Math.min(counterValue, 100);
+                                                updateProgressBar();
+                                            }, 1000);
+                                        </script>
                                 </div>
                             </div>
                         </div>
@@ -125,19 +168,32 @@
                                         <div class="d-flex no-block align-items-center">
                                             <div>
                                                 <h3><i class="icon-doc"></i></h3>
-                                                <p class="text-muted">Data Dapodik</p>
+                                                <p class="text-muted">Data Artikel</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <h2 class="counter text-purple">157</h2>
+                                                <h2 class="counter text-purple">{{ $artikel }}</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-purple" role="progressbar"
-                                                style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                        <div class="progress" id="artikelProgressBar">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $artikel }}%; height: 6px;" aria-valuenow="{{ $artikel }}" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
+                                        <script>
+                                            var counterValue = {{ $artikel }};
+                                            var progressBar = $('#artikelProgressBar .progress-bar');
+                                            function updateProgressBar() {
+                                                var percentage = (counterValue / 100) * 100;
+                                                progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
+                                                $('#artikelCounter').text(counterValue);
+                                            }
+                                            updateProgressBar();
+                                            setInterval(function() {
+                                                counterValue += 5;
+                                                counterValue = Math.min(counterValue, 100);
+                                                updateProgressBar();
+                                            }, 1000);
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -155,17 +211,30 @@
                                                 <p class="text-muted">Data User</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <h2 class="counter text-success">431</h2>
+                                                <h2 class="counter text-success">{{ $user }}</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar"
-                                                style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                        <div class="progress" id="userProgressBar">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $user }}%; height: 6px;" aria-valuenow="{{ $user }}" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
+                                      <script>
+                                            var counterValue = {{ $user }};
+                                            var progressBar = $('#userProgressBar .progress-bar');
+                                            function updateProgressBar() {
+                                                var percentage = (counterValue / 100) * 100;
+                                                progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
+                                                $('#userCounter').text(counterValue);
+                                            }
+                                            updateProgressBar();
+                                            setInterval(function() {
+                                                counterValue += 5;
+                                                counterValue = Math.min(counterValue, 100);
+                                                updateProgressBar();
+                                            }, 1000);
+                                        </script>
                                 </div>
                             </div>
                         </div>
@@ -183,13 +252,8 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex m-b-40 align-items-center no-block">
-                                    <h5 class="card-title ">YEARLY SALES</h5>
+                                    <h5 class="card-title ">Data Tahunan Artikel</h5>
                                     <div class="ms-auto">
-                                        <ul class="list-inline font-12">
-                                            <li><i class="fa fa-circle text-cyan"></i> Iphone</li>
-                                            <li><i class="fa fa-circle text-primary"></i> Ipad</li>
-                                            <li><i class="fa fa-circle text-purple"></i> Ipod</li>
-                                        </ul>
                                     </div>
                                 </div>
                                 <div id="morris-area-chart" style="height: 340px;"></div>

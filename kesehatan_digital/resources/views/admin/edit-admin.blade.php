@@ -81,45 +81,45 @@
                     <div class="col-sm-12">
                         <div class="card card-body">
                             <h4 class="card-title">Tambah Admin</h4>
-                            <form action="{{ route('userAdmin.store') }}" method="POST"
+                            <form action="{{ route('userAdmin.update',$data->id) }}" method="POST"
                                 enctype="multipart/form-data" class="form-horizontal mt-4">
                                 @csrf
+                                @method('put')
                                 <div class="form-group">
                                     <label class="form-label">Nama</label>
-                                    <input type="text" name="name" class="form-control"
+                                    <input type="text" value="{{ $data->name }}" name="name" class="form-control"
                                         placeholder="Masukkan Nama">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">NIS</label>
-                                    <input type="text" name="nis" class="form-control"
+                                    <input type="text" value="{{ $data->nis }}" name="nis" class="form-control"
                                         placeholder="Masukkan NIS">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control"
+                                    <input type="email" value="{{ $data->email }}" name="email" class="form-control"
                                         placeholder="Masukkan Email">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">Password</label>
                                     <input type="password" name="password" class="form-control"
-                                        placeholder="Masukkan Password">
+                                        placeholder="Masukkan Password baru">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">Kelas</label>
                                     <select class="form-select col-12" name="id_kelas" id="inlineFormCustomSelect">
-                                        <option selected>--Pilih--</option>
-                                        @foreach ($data as $item)
-                                            
-                                        <option value="{{ $item->id }}">{{ $item->kelas }}</option>
+                                        <option value="{{ $data->id_kelas }}">{{ $data->kelas->kelas }}</option>
+                                        @foreach ($kelas as $item)
+                                        <option value="{{ $item->id_kelas }}">{{$item->kelas }}</option>
                                         @endforeach
                                     </select>
                                 </div>
 
-                                <button class="btn btn-success" style="float: right;">Submit</button>
+                                <button class="btn btn-success" style="float: right;">Update</button>
                             </form>
                         </div>
                     </div>

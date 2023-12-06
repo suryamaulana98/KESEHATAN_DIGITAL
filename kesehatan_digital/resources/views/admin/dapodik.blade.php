@@ -47,77 +47,81 @@
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb justify-content-end">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Data Artikel</li>
+                                <li class="breadcrumb-item active">Data Dapodik</li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15 text-white">+ Tambah
-                                Artikel</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Artikel</h4>
-                            <h6 class="card-subtitle">Create responsive tables by wrapping any <code>.table</code> in
-                                <code>.table-responsive </code>
-                            </h6>
+                            <h4 class="card-title">Data Dapodik</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Invoice</th>
-                                            <th>User</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                            <th>Status</th>
-                                            <th>Country</th>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Nis</th>
+                                            <th>Tinggi</th>
+                                            <th>Berat</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($data as $item)
+                                            
                                         <tr>
-                                            <td><a href="javascript:void(0)">Order #26589</a></td>
-                                            <td>Herman Beck</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 16,
-                                                    2017</span> </td>
-                                            <td>$45.00</td>
-                                            <td>
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td>EN</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #58746</a></td>
-                                            <td>Mary Adams</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Oct 12,
-                                                    2017</span> </td>
-                                            <td>$245.30</td>
-                                            <td>
-                                                <div class="label label-table label-danger">Shipped</div>
-                                            </td>
-                                            <td>CN</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #98458</a></td>
-                                            <td>Caleb Richards</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> May 18,
-                                                    2017</span> </td>
-                                            <td>$38.00</td>
-                                            <td>
-                                                <div class="label label-table label-info">Shipped</div>
-                                            </td>
-                                            <td>AU</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="javascript:void(0)">Order #32658</a></td>
-                                            <td>June Lane</td>
-                                            <td><span class="text-muted"><i class="fa fa-clock-o"></i> Apr 28,
-                                                    2017</span> </td>
-                                            <td>$77.99</td>
-                                            <td>
-                                                <div class="label label-table label-success">Paid</div>
-                                            </td>
-                                            <td>FR</td>
-                                        </tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->nis }}</td>
+                                                <td>{{ $item->tinggi_badan }}</td>
+                                                <td>{{ $item->berat_badan }}</td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $item->id }}">
+                                                Update
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Data Dapodik</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="{{ route('dapodikAdmin.update',$item->id) }}" method="post">
+                                                        @csrf
+                                                        @method('put')
+                                                        <div class="form-group">
+                                                            <label class="form-label">Nama</label>
+                                                            <input type="text" value="{{ $item->name }}" name="berat_badan" class="form-control"
+                                                                disabled>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Berat Badan</label>
+                                                            <input type="text" value="{{ $item->berat_badan }}" name="berat_badan" class="form-control"
+                                                                placeholder="Masukkan Bb">
+                                                        </div>
+                                                         <div class="form-group">
+                                                            <label class="form-label">Tinggi Badan</label>
+                                                            <input type="text" value="{{ $item->tinggi_badan }}" name="tinggi_badan" class="form-control"
+                                                                placeholder="Masukkan tinggi">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </form>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                </td>
+                                            </tr>
+                                            @endforeach
                                     </tbody>
                                 </table>
                             </div>
