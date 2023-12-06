@@ -90,6 +90,6 @@ class KelasController extends Controller
         $kelas = kelas::findOrFail($id);
         $kelas->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Data Kelas');
     }
 }

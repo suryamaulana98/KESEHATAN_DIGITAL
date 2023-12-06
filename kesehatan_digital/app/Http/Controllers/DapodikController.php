@@ -33,14 +33,14 @@ class DapodikController extends Controller
             'id_kelas'=>$request->id_kelas,
             'status'=>$request->status
         ]);
-        return redirect('ttd');
+        return redirect('ttd')->with('success','Berhasil Menambah Ttd');
     }
 
     public function destroy_ttd($id){
         $kategori = Ttd::findOrFail($id);
         $kategori->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Berhasil Menghapus Ttd');
 
     }
 
@@ -99,7 +99,7 @@ class DapodikController extends Controller
             'tinggi_badan'=>$request->tinggi_badan,
             'berat_badan'=>$request->berat_badan
         ]);
-        return redirect('dapodikAdmin');
+        return redirect('dapodikAdmin')->with('success','Berhasil Merubah Data');
     }
 
     /**

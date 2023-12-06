@@ -73,6 +73,7 @@ Route::get('/berita', [App\Http\Controllers\ArtikelController::class, 'berita'])
 Route::get('/detail-berita/{id}', [App\Http\Controllers\ArtikelController::class, 'detail_berita'])->name('detail_berita');
 
 Route::post('/komentar', [App\Http\Controllers\HomeController::class, 'komentar'])->name('komentar');
+Route::delete('/delete_komentar/{id}', [App\Http\Controllers\HomeController::class, 'delete_komentar'])->name('delete_komentar');
 
 Route::get('/about', [App\Http\Controllers\ArtikelController::class, 'about'])->name('about');
 

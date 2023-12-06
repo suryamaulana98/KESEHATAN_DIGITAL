@@ -83,7 +83,7 @@ class ArtikelController extends Controller
             
        $kat->save();
        
-       return redirect('artikelAdmin');
+       return redirect('artikelAdmin')->with('success','Berhasil Menambah artikel');
     }
 
     /**
@@ -134,7 +134,7 @@ class ArtikelController extends Controller
 
         $ubah->update($data);
 
-        return redirect('artikelAdmin');
+        return redirect('artikelAdmin')->with('success','Berhasil Update artikel');
     }
 
     /**
@@ -148,6 +148,6 @@ class ArtikelController extends Controller
             @unlink($file);
         }
         $hapus->delete();
-        return redirect('artikelAdmin');
+        return redirect('artikelAdmin')->with('success','Berhasil Menghapus artikel');
     }
 }

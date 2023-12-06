@@ -50,6 +50,13 @@ class HomeController extends Controller
         return back();
     }
 
+    public function delete_komentar($id){
+        $ubah = Komentar::findOrFail($id);
+        $ubah->delete();
+        return redirect()->back()->with('success','Berhasil Menghapus Komentar');
+    }
+
+
     public function show($id){
         $user = User::findOrFail($id);
         return view('partials.topbar_user', compact('user'));

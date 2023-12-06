@@ -9,12 +9,14 @@
                                 <img src="{{ asset('img/logo.png') }}" alt="mdimran41">
                             </div>
                             <div class="footer-about">
-                                <p>Am interdum, nulla id sodales viverra, Nam interdum, nulla id sodales viverra, quam
-                                    eros commodo est, quis aliquam lectus feugiat enim lorem quis nisl. Quisque ac arcu
-                                    egestas, convallis risus vitae, gravida enim quam eros commodo est, quis aliquam
-                                    lectus. Nam interdum, nulla id sodales viverra.</p>
-                                <p>Praesent iaculis ut lacus a mattis. Nam interdum, nulla id sodales viverra.</p>
-                                <a href="single.html"> <span class="fa fa-angle-right"></span>read more</a>
+                                <p>Dengan penuh dedikasi, Unit Kesehatan Sekolah (UKS) SMKN 1 Lumajang hadir untuk
+                                    membantu mewujudkan lingkungan pendidikan yang sehat dan berkualitas. Kami
+                                    memprioritaskan kesejahteraan siswa dan memberikan layanan kesehatan yang terbaik.
+                                    Bersama-sama, mari kita jaga kesehatan, tingkatkan prestasi, dan ciptakan masa depan
+                                    yang cerah. UKS SMKN 1 Lumajang, wadah untuk mengembangkan pola hidup sehat dan
+                                    bahagia. Bergabunglah dengan kami dalam perjalanan menuju kesejahteraan dan
+                                    kesuksesan. Peduli, Sehat, Unggul – itulah motto kami.</p>
+                                <a href="{{ route('about') }}"> <span class="fa fa-angle-right"></span>read more</a>
                             </div>
                         </div>
                         <div class="col-md-6">
