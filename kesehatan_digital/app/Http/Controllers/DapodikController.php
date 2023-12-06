@@ -26,7 +26,9 @@ class DapodikController extends Controller
 
     public function create_ttd(Request $request){
         $request->validate([
-
+            'id_kelas'=>'required'
+        ],[
+            'id_kelas.require'=>'status harus terisi'
         ]);
 
         Ttd::create([
@@ -91,7 +93,11 @@ class DapodikController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-
+            'tinggi_badan'=>'min:1',
+            'berat_badan'=>'min:1'
+        ],[
+            'tinggi_badan.min'=>'Data tidak boleh kosong',
+            'berat_badan.min'=>'Data tidak boleh kosong'
         ]);
 
         $data = User::findOrFail($id);
