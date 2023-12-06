@@ -34,20 +34,19 @@ Route::get('/', function () {
 })->name('home2');
 
 
-Route::resource('/home', HomeController::class);
+
 Auth::routes();
 
     Route::middleware(['auth'])->group(function () {
+// ini bagian admin
+    Route::middleware(['role:admin'])->group(function () {
     Route::resource('/dashboardAdmin', DashboardAdminController::class);
-    Route::resource('/userAdmin', userController::class);
     Route::get('/getDataPerkembanganArtikel', [App\Http\Controllers\ArtikelController::class, 'getDataPerkembanganArtikel'])->name('getDataPerkembanganArtikel');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/dapodikAdmin', DapodikController::class);
     Route::get('/ttd', [App\Http\Controllers\DapodikController::class, 'ttd'])->name('ttd');
     Route::post('/create_ttd', [App\Http\Controllers\DapodikController::class, 'create_ttd'])->name('create_ttd');
     Route::delete('/destroy_ttd/{id}', [App\Http\Controllers\DapodikController::class, 'destroy_ttd'])->name('destroy_ttd');
-    // Route::get('/kelas', [App\Http\Controllers\KelasController::class, 'kelas'])->name('kelas');
     Route::get('/vaksin', [App\Http\Controllers\DapodikController::class, 'vaksin'])->name('vaksin');
     Route::resource('/artikelAdmin', ArtikelController::class);
     Route::resource('/kelas', KelasController::class);
@@ -55,18 +54,18 @@ Auth::routes();
     Route::resource('/userAdmin', UserController::class);
     Route::resource('/kategoriAdmin', KategoriController::class);
     Route::resource('/profilAdmin', profilAdminController::class);
-
+});
+// ini bagian user
+Route::middleware(['role:user'])->group(function () {
+    Route::resource('/home', HomeController::class);
     Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'show']);
     Route::put('/updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+    });
 });
 
-
-
-
-
-
-
-
+Route::get('error-403', function () {
+    return view('403');
+})->name('unauthorized');
 
 
 
@@ -77,9 +76,18 @@ Route::post('/komentar', [App\Http\Controllers\HomeController::class, 'komentar'
 
 Route::get('/about', [App\Http\Controllers\ArtikelController::class, 'about'])->name('about');
 
+Route::get('/kontak', [App\Http\Controllers\ArtikelController::class, 'kontak'])->name('kontak');
 
-Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'show']);
-Route::put('/updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+
+
+
+
+
+
+
+
+
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

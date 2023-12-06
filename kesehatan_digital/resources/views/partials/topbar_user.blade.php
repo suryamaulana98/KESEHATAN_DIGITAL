@@ -30,10 +30,10 @@
                    <li class="{{ request()->routeIs('berita', 'detail_berita') ? 'current-menu-item' : '' }}">
                        <a href="{{ route('berita') }}">Berita</a>
                    </li>
-                   <li><a href="#contact">Kontak</a>
+                   <li><a href="{{ route('kontak') }}">Kontak</a>
 
                    </li>
-                   <li><a href="#contact">Akun<span class="fa fa-angle-down"></span></a>
+                   <li><a href="#">Akun<span class="fa fa-angle-down"></span></a>
                        <ul>
                            <li><a href="{{ route('login') }}">Login</a></li>
                            <li><a href="{{ route('register') }}">Register</a></li>

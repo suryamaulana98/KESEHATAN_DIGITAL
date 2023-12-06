@@ -25,6 +25,10 @@ class ArtikelController extends Controller
         return view('user.news-2',compact('data'));
     }
 
+    public function kontak(){
+        return view('user.kontak');
+    }
+
     public function detail_berita($id){
         $data = Artikel::findOrFail($id);
         $kat = Kategori::all();
