@@ -61,6 +61,18 @@ class ArtikelController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'judul'=>'required',
+            'deskripsi'=>'required',
+            'id_kategori'=>'required',
+            'penulis'=>'required',
+            'foto'=>'required'
+        ],[
+            'judul.required'=>'judul tidak boleh kosong',
+            'deskripsi.required'=>'deskripsi tidak boleh kosong',
+            'id_kategori.required'=>'Kategori tidak boleh kosong',
+            'penulis.required'=>'penulis tidak boleh kosong',
+            'foto.required'=>'foto tidak boleh kosong',
+
         ]);
 
 
@@ -106,6 +118,13 @@ class ArtikelController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
+            'judul'=>'min:4',
+            'deskripsi'=>'min:4',
+            'penulis'=>'min:4',
+        ],[
+            'judul.min'=>'judul tidak boleh kosong',
+            'deskripsi.min'=>'deskripsi tidak boleh kosong',
+            'penulis.min'=>'penulis tidak boleh kosong',
 
         ]);
 
