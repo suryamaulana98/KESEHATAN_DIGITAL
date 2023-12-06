@@ -15,23 +15,23 @@
     <!-- google fonts pt-Sans -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/bootstrap.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/animate.min.css') }}">
     <!-- slider custom effects -->
-    <link rel="stylesheet" href="{{ asset('css/myslider.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/myslider.css') }}">
     <!-- magnific-popup -->
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/magnific-popup.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/slick.css') }}">
     <!-- reset css -->
-    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/reset.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('template_user/css/responsive.css') }}">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -944,19 +944,19 @@
         </div>
     </div>
     <!-- jquery min js -->
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/jquery.min.js') }}"></script>
     <!-- jquery easing js -->
-    <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/jquery.easing.1.3.js') }}"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/bootstrap.min.js') }}"></script>
     <!-- jquery mignific js -->
-    <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/magnific-popup.min.js') }}"></script>
     <!-- jquery slick js -->
-    <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/slick.min.js') }}"></script>
     <!-- jquery nicescroll -->
-    <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/jquery.nicescroll.min.js') }}"></script>
     <!-- jquery active js -->
-    <script type="text/javascript" src="{{ asset('js/active.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template_user/js/active.js') }}"></script>
 </body>
 
 
