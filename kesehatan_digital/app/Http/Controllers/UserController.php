@@ -42,7 +42,7 @@ User::create([
     'email' => $request->email,
     'password' => bcrypt($request->password),
     'id_kelas' => $request->id_kelas,
-    'role'=> 'Admin',
+    'role'=> 'admin',
     'nis' => $request->nis,
 ]);
 
