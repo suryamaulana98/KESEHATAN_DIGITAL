@@ -13,6 +13,8 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\profilAdminController;
 use App\Http\Controllers\ProfileUserController;
 use App\Http\Controllers\DashboardAdminController;
+use App\Http\Controllers\landingPageController;
+use App\Models\landingPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +31,9 @@ use App\Http\Controllers\DashboardAdminController;
 
 Route::get('/', function () {
         $user = User::all();
+        $landing = landingPage::all();
         $data = Artikel::with('kategori')->paginate('3');
-    return view('user.index_user',compact('user','data'));
+    return view('user.index_user',compact('user','data', 'landing'));
 })->name('home2');
 
 
@@ -49,17 +52,20 @@ Auth::routes();
     Route::delete('/destroy_ttd/{id}', [App\Http\Controllers\DapodikController::class, 'destroy_ttd'])->name('destroy_ttd');
     Route::get('/vaksin', [App\Http\Controllers\DapodikController::class, 'vaksin'])->name('vaksin');
     Route::resource('/artikelAdmin', ArtikelController::class);
+    Route::get('/cariArtikel', [App\Http\Controllers\ArtikelController::class, 'search'])->name('cariArtikel');
     Route::resource('/kelas', KelasController::class);
     Route::resource('/dashboardAdmin', DashboardAdminController::class);
     Route::resource('/userAdmin', UserController::class);
     Route::resource('/kategoriAdmin', KategoriController::class);
     Route::resource('/profilAdmin', profilAdminController::class);
+    Route::resource('/landingPage', landingPageController::class);
 });
 // ini bagian user
 Route::middleware(['role:user'])->group(function () {
     Route::resource('/home', HomeController::class);
     Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'show']);
     Route::put('/updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
+    Route::post('/komentar', [App\Http\Controllers\HomeController::class, 'komentar'])->name('komentar');
     });
 });
 
@@ -72,7 +78,7 @@ Route::get('error-403', function () {
 Route::get('/berita', [App\Http\Controllers\ArtikelController::class, 'berita'])->name('berita');
 Route::get('/detail-berita/{id}', [App\Http\Controllers\ArtikelController::class, 'detail_berita'])->name('detail_berita');
 
-Route::post('/komentar', [App\Http\Controllers\HomeController::class, 'komentar'])->name('komentar');
+
 Route::delete('/delete_komentar/{id}', [App\Http\Controllers\HomeController::class, 'delete_komentar'])->name('delete_komentar');
 
 Route::get('/about', [App\Http\Controllers\ArtikelController::class, 'about'])->name('about');

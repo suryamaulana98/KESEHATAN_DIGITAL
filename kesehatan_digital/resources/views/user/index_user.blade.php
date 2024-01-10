@@ -30,7 +30,9 @@
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <!-- style css -->
     <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!--[if lt IE 9]>
@@ -48,47 +50,42 @@
         <!-- start slider section -->
         <div class="Modern-Slider v2">
             <!-- Item -->
-            <div class="item">
-                <div class="info">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 v2 slider-content-area text-center">
-                                <div class="welcome-text">
-                                    <h1>UKS <span>SMAKENSA</span></h1>
-                                    <h4>Unit Kesehatan Sekolah (UKS) di SMK Negeri 1 Lumajang bertujuan untuk
-                                        meningkatkan kesadaran kesehatan dan memberikan layanan kesehatan dasar kepada
-                                        siswa. UKS biasanya melibatkan kegiatan seperti penyuluhan kesehatan,
-                                        pemeriksaan kesehatan rutin, kampanye kesehatan, dan kegiatan edukasi tentang
-                                        gaya hidup sehat. </h4>
-                                    <a href="#" class="v2 read-more">Join sekarang</a>
-                                    <a href="#" class="v2 read-more">baca selengkapnya</a>
+            @forelse ($landing as $item)
+                <div class="item">
+                    <div class="info">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 v2 slider-content-area text-center">
+                                    <div class="welcome-text">
+                                        <h1>UKS <span>{{ $item->judul }}</span></h1>
+                                        <h4>{{ $item->deskripsi }}</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- // Item -->
-            <!-- Item -->
-            <div class="item">
+                <!-- // Item -->
+                <!-- Item -->
+                {{-- <div class="item">
                 <div class="info">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 v2 slider-content-area text-center">
-                                <div class="welcome-text">
-                                    <h1>WELCOME TO <span>UKS SMKN 1 LUMAJANG</span></h1>
-                                    <h4>The School Health Unit (UKS) at SMK Negeri 1 Lumajang aims to increase health
-                                        awareness and provide basic health services to students. UKS usually involves
-                                        activities such as health education, routine health checks, health campaigns,
-                                        and educational activities about healthy lifestyles.</h4>
-                                    <a href="#" class="v2 read-more">GET STARTED NOW</a>
-                                    <a href="#" class="v2 read-more">LEARN MORE</a>
+                        
+                            <div class="row">
+                                <div class="col-xs-12 v2 slider-content-area text-center">
+                                    <div class="welcome-text">
+                                        <h1>WELCOME TO <span>UKS SMKN 1 LUMAJANG</span></h1>
+                                        <h4>{{ $item->judul }}</h4>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                      
                     </div>
                 </div>
-            </div>
+            </div> --}}
+            @empty
+            @endforelse
             <!-- // Item -->
         </div>
         <!-- end of slider section -->
@@ -145,7 +142,7 @@
     </section>
     <!-- end of features area -->
     <!-- start about us section -->
-    
+
     <!-- end of about us section -->
     <!-- start specialist area -->
     <!-- end of specialist  area -->
@@ -196,18 +193,18 @@
                 <!-- end of news slider area -->
                 <div class="col-sm-12 col-md-6">
                     <div class="nesws-media">
-                    @foreach ($data as $item)
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="media-heading">{{ $item->judul }}</h4>
-                                <p>{!! Str::limit($item->deskripsi, 200) !!}</p>
-                                <div class="about-news">
-                                    <a href="#">{{ $item->kategori->kategori }} <span>/</span></a>
-                                    <a href="{{ route('berita') }}">Baca Selengkapnya >></a>
+                        @foreach ($data as $item)
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">{{ $item->judul }}</h4>
+                                    <p>{!! Str::limit($item->deskripsi, 200) !!}</p>
+                                    <div class="about-news">
+                                        <a href="#">{{ $item->kategori->kategori }} <span>/</span></a>
+                                        <a href="{{ route('berita') }}">Baca Selengkapnya >></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>

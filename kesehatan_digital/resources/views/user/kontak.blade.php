@@ -71,7 +71,7 @@
                 <div class="col-sm-6 text-left">
                     <div class="contact-title">
 
-                        <h1>Cari<span>Kami Disini</span></h1>
+                        <h1>Cari Kami Disini</h1>
                     </div>
                     <div class="contact-map">
                         <div id="gmap"></div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-sm-6 margin-top-resposnive">
                     <div class="contact-title">
-                        <h1>Kontak<span>Tim Kami</span></h1>
+                        <h1>Kontak Tim Kami</h1>
                     </div>
                     <div class="row mt30 single-contact">
                         <div class="col-xs-2 contact-icon">

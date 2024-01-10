@@ -25,6 +25,7 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
@@ -58,7 +59,15 @@
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Artikel</h4>
+                            <div style="display: flex; justify-content: space-between;">
+                                <h4 class="card-title">Data Artikel</h4>
+                                <form action="{{ route('cariArtikel') }}" method="get">
+                                    <div class="form-group">
+                                        <input type="search" class="form-control" placeholder="Cari Artikel Disini..."
+                                            name="cariArtikel" id="search-input">
+                                    </div>
+                                </form>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -71,27 +80,35 @@
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="search-results">
                                         @foreach ($data as $item)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->judul }}</td>
-                                            <td>{{ $item->kategori->kategori }}</td>
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->judul }}</td>
+                                                <td>{{ $item->kategori->kategori }}</td>
                                                 <td>{{ $item->penulis }}</td>
-                                                <td><img src="{{ asset('foto/'.$item->foto) }}"  width="30px" height="30px">
+                                                <td><img src="{{ asset('foto/' . $item->foto) }}" width="30px"
+                                                        height="30px">
                                                 </td>
                                                 <td>
-                                                <form action="{{ route('artikelAdmin.destroy',$item->id) }}" method="POST" id="myId{{ $item->id }}">
-                                                    @csrf
-                                                    @method('delete') 
-                                                <a href="{{ route('artikelAdmin.edit',$item->id) }}" class="btn btn-outline-secondary btn-icon-text"> Edit <i class="mdi mdi-file-check btn-icon-append"></i>
-                                                </a> 
-                                                    <button type="submit" class="btn btn-outline-danger btn-icon-text">
-                                                    <i class="mdi mdi-delete btn-icon-prepend"></i> Delete</button> 
-                                                </form>  
+                                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                                        action="{{ route('artikelAdmin.destroy', $item->id) }}"
+                                                        method="POST" id="myId{{ $item->id }}">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <a href="{{ route('artikelAdmin.edit', $item->id) }}"
+                                                            class="btn btn-outline-success btn-icon-text"
+                                                            title="edit data"><i
+                                                                class="mdi mdi-file-check btn-icon-append"></i>
+                                                        </a>
+                                                        <button type="submit"
+                                                            class="btn btn-outline-danger btn-icon-text"
+                                                            title="hapus data">
+                                                            <i class="mdi mdi-delete btn-icon-prepend"></i></button>
+                                                    </form>
                                                 </td>
                                             </tr>
-                                            @endforeach
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -102,6 +119,56 @@
             @extends('partials.footer_admin')
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').keyup(function(event) {
+                event.preventDefault(); // Mencegah perilaku bawaan formulir
+
+                var searchTerm = $('#search-input').val();
+
+                $.ajax({
+                    url: "{{ route('cariArtikel') }}",
+                    type: "GET",
+                    data: {
+                        cariArtikel: searchTerm
+                    },
+                    success: function(response) {
+                        var resultsContainer = $('#search-results');
+                        resultsContainer.empty();
+
+                        $.each(response, function(index, data) {
+                            var editUrl = "/artikelAdmin/" + data.id + "/edit";
+                            var deleteUrl = "/artikelAdmin/" + data.id;
+                            var iteration = index + 1;
+                            var row = `<tr>
+                                <td>${iteration}</td>
+                                <td>${data.judul}</td>
+                                <td>${data.kategori.kategori}</td>
+                                <td>${data.penulis}</td>
+                                <td><img src="{{ asset('foto/') }}/${data.foto}" width="30px" height="30px"></td>
+                                <td>
+                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="${deleteUrl}" method="POST" id="myId${data.id}">
+                                        @csrf
+                                        @method('delete')
+                                        <a href="${editUrl}" class="btn btn-outline-success btn-icon-text" title="edit data">
+                                            <i class="mdi mdi-file-check btn-icon-append"></i>
+                                        </a>
+                                        <button type="submit" class="btn btn-outline-danger btn-icon-text" title="hapus data">
+                                            <i class="mdi mdi-delete btn-icon-prepend"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>`;
+
+                            resultsContainer.append(row);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="{{ asset('template_admin/assets/node_modules/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap tether Core JavaScript -->

@@ -51,7 +51,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">ARTIKEL</h4>
+                        <h4 class="text-themecolor">Landing Page</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-end">
                         <div class="d-flex justify-content-end align-items-center">
@@ -59,7 +59,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">Tambah Artikel</li>
+                                <li class="breadcrumb-item active">Tambah Landing Page</li>
                             </ol>
                         </div>
                     </div>
@@ -80,9 +80,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card card-body">
-                            <h4 class="card-title">Tambah Artikel</h4>
-                            <form action="{{ route('artikelAdmin.store') }}" method="POST"
-                                enctype="multipart/form-data" class="form-horizontal mt-4">
+                            <h4 class="card-title">Tambah Landing Page</h4>
+                            <form action="{{ route('landingPage.store') }}" method="POST" enctype="multipart/form-data"
+                                class="form-horizontal mt-4">
                                 @csrf
                                 <div class="form-group">
                                     <label class="form-label">Judul</label>
@@ -93,41 +93,21 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                                 <div class="form-group">
-                                    <label class="form-label">Kategori</label>
-                                    <select class="form-select col-12" name="id_kategori" id="inlineFormCustomSelect">
-                                        <option selected>--Pilih--</option>
-                                        @foreach ($data as $item)
-                                            <option value="{{ $item->id }}">{{ $item->kategori }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                @error('id_kategori')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-
-                                <div class="form-group">
-                                    <label class="form-label">Penulis</label>
-                                    <input type="text" name="penulis" class="form-control"
-                                        placeholder="Masukkan Penulis">
-                                </div>
-                                @error('penulis')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                                <div class="form-group">
-                                    <label class="form-label">Foto</label>
-                                    <input type="file" name="foto" class="form-control"
-                                        placeholder="Masukkan Penulis">
-                                </div>
-                                @error('foto')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                                <div class="form-group">
                                     <label class="form-label">Deskripsi</label>
                                     <textarea name="deskripsi" class="content form-control" rows="5"></textarea>
                                 </div>
                                 @error('deskripsi')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
+                                <div class="form-group">
+                                    <label class="form-label">Background</label>
+                                    <input type="file" name="background" class="form-control"
+                                        placeholder="Masukkan Penulis">
+                                </div>
+                                @error('background')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+
                                 <button class="btn btn-success" type="submit" style="float: right;">Submit</button>
                             </form>
                         </div>
@@ -144,7 +124,7 @@
                 <!-- Right sidebar -->
                 <!-- ============================================================== -->
                 <!-- .right-sidebar -->
-                <div class="right-sidebar">
+                {{-- <div class="right-sidebar">
                     <div class="slimscrollright">
                         <div class="rpanel-title"> Service Panel
                             <span>
@@ -187,8 +167,7 @@
                                         class="green-dark-theme">8</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" data-skin="skin-red-dark"
-                                        class="red-dark-theme">9</a>
+                                    <a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a>
                                 </li>
                                 <li>
                                     <a href="javascript:void(0)" data-skin="skin-blue-dark"
@@ -274,7 +253,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- ============================================================== -->
                 <!-- End Right sidebar -->
                 <!-- ============================================================== -->

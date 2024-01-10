@@ -81,39 +81,41 @@
                     <div class="col-sm-12">
                         <div class="card card-body">
                             <h4 class="card-title">Tambah Artikel</h4>
-                            <form action="{{ route('artikelAdmin.update',$data2->id) }}" method="POST"
+                            <form action="{{ route('artikelAdmin.update', $data2->id) }}" method="POST"
                                 enctype="multipart/form-data" class="form-horizontal mt-4">
                                 @csrf
                                 @method('put')
                                 <div class="form-group">
                                     <label class="form-label">Judul</label>
-                                    <input type="text" value="{{ $data2->judul }}" name="judul" class="form-control"
-                                        placeholder="Masukkan judul">
+                                    <input type="text" value="{{ $data2->judul }}" name="judul"
+                                        class="form-control" placeholder="Masukkan judul">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Kategori</label>
                                     <select class="form-select col-12" name="kategori" id="inlineFormCustomSelect">
-                                        <option value="{{ $data2->id_kategori }}">{{ $data2->kategori->kategori }}</option>
+                                        <option value="{{ $data2->id_kategori }}">{{ $data2->kategori->kategori }}
+                                        </option>
                                         @foreach ($data as $item)
-                                        <option value="{{ $item->id }}">{{ $item->kategori }}</option>
+                                            <option value="{{ $item->id }}">{{ $item->kategori }}</option>
                                         @endforeach
                                     </select>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">Penulis</label>
-                                    <input type="text" value="{{ $data2->penulis }}" name="penulis" class="form-control"
-                                        placeholder="Masukkan Penulis">
+                                    <input type="text" value="{{ $data2->penulis }}" name="penulis"
+                                        class="form-control" placeholder="Masukkan Penulis">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Foto</label>
                                     <input type="file" name="foto" class="form-control"
                                         placeholder="Masukkan Penulis">
-                                        <img src="{{ asset('foto/'.$data2->foto) }}"  width="10%" height="10%">
+                                    <img src="{{ asset('foto/' . $data2->foto) }}" class="mt-3" width="20%"
+                                        height="20%">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Deskripsi</label>
-                                    <textarea name="content"   class="content form-control" rows="5">{{ $data2->deskripsi }}</textarea>
+                                    <textarea name="content" class="content form-control" rows="5">{{ $data2->deskripsi }}</textarea>
                                 </div>
                                 <button class="btn btn-success" style="float: right;">Update</button>
                             </form>

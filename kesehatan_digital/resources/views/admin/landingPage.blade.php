@@ -47,31 +47,54 @@
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb justify-content-end">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Data Vaksin</li>
+                                <li class="breadcrumb-item active">Data Landing Page</li>
                             </ol>
-
+                            <a href="{{ route('landingPage.create') }}"
+                                class="btn btn-info d-none d-lg-block m-l-15 text-white">+ Tambah
+                                Landing Page</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Vaksin</h4>
+                            <h4 class="card-title">Data Landing Page</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Username</th>
-                                            <th>Status</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Background</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($data as $item)
+                                        @foreach ($landing as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->d_vaksin }}</td>
+                                                <td>{{ $item->judul }}</td>
+                                                <td>{{ $item->deskripsi }}</td>
+                                                <td><img src="{{ asset('foto/' . $item->background) }}" width="80px">
+                                                </td>
+                                                <td>
+                                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                                        action="{{ route('landingPage.destroy', $item->id) }}"
+                                                        method="POST" id="myId{{ $item->id }}">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <a href="{{ route('landingPage.edit', $item->id) }}"
+                                                            class="btn btn-outline-success btn-icon-text"
+                                                            title="edit data"><i
+                                                                class="mdi mdi-file-check btn-icon-append"></i>
+                                                        </a>
+                                                        <button type="submit"
+                                                            class="btn btn-outline-danger btn-icon-text"
+                                                            title="hapus data">
+                                                            <i class="mdi mdi-delete btn-icon-prepend"></i></button>
+                                                    </form>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

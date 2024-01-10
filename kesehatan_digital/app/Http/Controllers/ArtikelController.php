@@ -19,6 +19,11 @@ class ArtikelController extends Controller
         return view('admin.artikel',compact('data'));
     }
 
+    public function search(Request $request){
+        $searchItem = $request->input('cariArtikel');
+        $result = Artikel::where('judul', 'LIKE', '%'.$searchItem.'%')->with('kategori')->get();
+        return response()->json($result);
+    }
     
     public function berita(){
         $data = Artikel::with('kategori')->paginate('3');
@@ -64,7 +69,7 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $val = $request->validate([
             'judul'=>'required',
             'deskripsi'=>'required',
             'id_kategori'=>'required',
@@ -79,7 +84,6 @@ class ArtikelController extends Controller
 
         ]);
 
-
         $nm = $request->file('foto'); 
 
         $extension = $nm->getClientOriginalExtension();
@@ -88,8 +92,8 @@ class ArtikelController extends Controller
         
        $kat = new Artikel;
        $kat->judul = $request->judul;
-       $kat->id_kategori = $request->kategori;
-       $kat->deskripsi = $request->content;
+       $kat->id_kategori = $request->id_kategori;
+       $kat->deskripsi = $request->deskripsi;
        $kat->penulis = $request->penulis;
        $kat->foto = $namaFile;
             
