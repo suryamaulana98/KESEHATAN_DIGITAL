@@ -95,8 +95,8 @@ class landingPageController extends Controller
             if (File::exists(public_path().'/foto/'.$awal)){
                 File::delete(public_path().'/foto/'.$awal);
             }
-            $awal= $request->foto->hashName();
-            $request->foto->move(public_path().'/foto',$awal);
+            $awal= $request->background->hashName();
+            $request->background->move(public_path().'/foto',$awal);
         }
 
         $data = [

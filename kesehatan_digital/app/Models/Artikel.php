@@ -17,4 +17,9 @@ class Artikel extends Model
     {
         return $this->belongsTo(Kategori::class, 'id_kategori');
     }
+
+    public function komentar()
+{
+    return $this->hasMany(Komentar::class, 'id_artikel');
+}
 }

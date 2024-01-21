@@ -55,9 +55,9 @@
                     <div class="info">
                         <div class="container">
                             <div class="row">
-                                <div class="col-xs-12 v2 slider-content-area text-center">
+                                <div class="col-xs-12 v2  slider-content-area text-center">
                                     <div class="welcome-text">
-                                        <h1>UKS <span>{{ $item->judul }}</span></h1>
+                                        <h1>{{ $item->judul }}</h1>
                                         <h4>{{ $item->deskripsi }}</h4>
                                     </div>
                                 </div>
@@ -65,31 +65,65 @@
                         </div>
                     </div>
                 </div>
-                <!-- // Item -->
-                <!-- Item -->
-                {{-- <div class="item">
-                <div class="info">
-                    <div class="container">
-                        
-                            <div class="row">
-                                <div class="col-xs-12 v2 slider-content-area text-center">
-                                    <div class="welcome-text">
-                                        <h1>WELCOME TO <span>UKS SMKN 1 LUMAJANG</span></h1>
-                                        <h4>{{ $item->judul }}</h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                      
-                    </div>
-                </div>
-            </div> --}}
             @empty
             @endforelse
             <!-- // Item -->
         </div>
         <!-- end of slider section -->
     </section>
+
+    <script>
+        // Ambil data slider dari database dan simpan dalam variabel dataSlider
+        var dataSlider = {!! json_encode($landing) !!};
+        console.log(dataSlider); // Cek apakah dataSlider berisi data yang valid
+        // Ambil elemen slider
+        var slider = document.querySelector('.Modern-Slider.v2');
+
+        // Buat konten slider secara dinamis berdasarkan dataSlider
+        dataSlider.forEach(function(item) {
+            // Buat elemen <div> untuk setiap item slider
+            var slideItem = document.createElement('div');
+            slideItem.classList.add('item');
+
+            // Atur latar belakang slideItem menggunakan data dari database
+            var backgroundUrl = 'url("' + '{{ asset('foto/') }}' + item.background +
+                '") no-repeat center center / cover';
+            slideItem.style.background = backgroundUrl;
+
+            // Buat elemen <div> untuk info di dalam slideItem
+            var infoDiv = document.createElement('div');
+            infoDiv.classList.add('info');
+
+            // Buat elemen <div> untuk container di dalam infoDiv
+            var containerDiv = document.createElement('div');
+            containerDiv.classList.add('container');
+
+            // Buat elemen <div> untuk row di dalam containerDiv
+            var rowDiv = document.createElement('div');
+            rowDiv.classList.add('row');
+
+            // Buat elemen <div> untuk kolom di dalam rowDiv
+            var colDiv = document.createElement('div');
+            colDiv.classList.add('col-xs-12', 'v2', 'slider-content-area', 'text-center');
+
+            // Buat elemen <div> untuk welcome-text di dalam colDiv
+            var welcomeDiv = document.createElement('div');
+            welcomeDiv.classList.add('welcome-text');
+
+            // Tambahkan judul dan deskripsi dari database ke welcomeDiv
+            welcomeDiv.innerHTML = '<h1>' + item.judul + '</h1><h4>' + item.deskripsi + '</h4>';
+
+            // Susun elemen-elemen dalam hierarki yang sesuai
+            colDiv.appendChild(welcomeDiv);
+            rowDiv.appendChild(colDiv);
+            containerDiv.appendChild(rowDiv);
+            infoDiv.appendChild(containerDiv);
+            slideItem.appendChild(infoDiv);
+
+            // Tambahkan slideItem ke dalam slider
+            slider.appendChild(slideItem);
+        });
+    </script>
 
     <!-- end of get quote area -->
     <!-- start features area -->
@@ -169,25 +203,23 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
-                    <div class="version-second-news-slider">
-                        <div class="single-news-v2">
-                            <a href="news-1.html">
-                                <img src="img/blog-larg.png" alt="mdimran41">
-                            </a>
-                            <div class="news-content-title">
-                                <h2>Kesehatan Digital</h2>
-                                <p>27th December 2023 | WORDPRESS | ADMIN</p>
+                    <div class="version-second-news-slider owl-carousel">
+                        @forelse ($data as $item)
+                            <div class="single-news-v2">
+                                <a href="{{ route('detail_berita', $item->id) }}">
+                                    <img src="{{ asset('foto/' . $item->foto) }}" alt="mdimran41"
+                                        style="width: 570px; height: 560px;">
+                                </a>
+                                <div class="news-content-title">
+                                    <h2>{{ $item->judul }}</h2>
+                                    <p>Dibuat Tanggal : {{ $item->created_at->format('d F Y') }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="single-news-v2">
-                            <a href="news-2.blade.php">
-                                <img src="img/blog-larg.png" alt="mdimran41">
-                            </a>
-                            <div class="news-content-title">
-                                <h2>Artikel dan Event kesehatan</h2>
-                                <p>20th December 2023 | WORDPRESS | ADMIN</p>
+                        @empty
+                            <div class="single-news-v2">
+                                <p>Tidak ada berita yang tersedia.</p>
                             </div>
-                        </div>
+                        @endforelse
                     </div>
                 </div>
                 <!-- end of news slider area -->
@@ -195,10 +227,15 @@
                     <div class="nesws-media">
                         @foreach ($data as $item)
                             <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="{{ asset('foto/' . $item->foto) }}"
+                                        style="width: 170px; height: 173px;" alt="theimran.com">
+                                </a>
                                 <div class="media-body">
                                     <h4 class="media-heading">{{ $item->judul }}</h4>
-                                    <p>{!! Str::limit($item->deskripsi, 200) !!}</p>
+                                    <p>{!! Str::limit($item->deskripsi, 150) !!}</p>
                                     <div class="about-news">
+                                        <a href="#">{{ $item->komentar()->count() }} Komentar <span>/</span></a>
                                         <a href="#">{{ $item->kategori->kategori }} <span>/</span></a>
                                         <a href="{{ route('berita') }}">Baca Selengkapnya >></a>
                                     </div>
@@ -220,7 +257,7 @@
     <!-- end of latest news event section -->
     <!-- start band area -->
     <div class="brand-section v2 section-padding">
-        <div class="container">
+        <div class="container marquee">
             <div class="row text-center active-brand-slider">
                 <div class="col-sm-3">
                     <div class="single-brand">

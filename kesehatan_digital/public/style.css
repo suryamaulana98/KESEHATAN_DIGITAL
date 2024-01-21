@@ -1345,9 +1345,13 @@ button.NextArrowbrand:hover {
 /*end of menu area*/
 
 .Modern-Slider.v2 {
-    height: 610px;
-    position: relative;
-    background: url(img/banner.jpg) no-repeat center center / cover;
+    .item {
+        height: 610px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
 }
 
 .Modern-Slider.v2 .item .info {

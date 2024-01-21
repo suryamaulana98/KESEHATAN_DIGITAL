@@ -14,6 +14,7 @@ use App\Http\Controllers\profilAdminController;
 use App\Http\Controllers\ProfileUserController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\landingPageController;
+use App\Models\Komentar;
 use App\Models\landingPage;
 
 /*
@@ -32,7 +33,7 @@ use App\Models\landingPage;
 Route::get('/', function () {
         $user = User::all();
         $landing = landingPage::all();
-        $data = Artikel::with('kategori')->paginate('3');
+        $data = Artikel::with('kategori')->with('komentar')->paginate('3');
     return view('user.index_user',compact('user','data', 'landing'));
 })->name('home2');
 

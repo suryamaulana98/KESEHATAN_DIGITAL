@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Komentar;
+use App\Models\landingPage;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -32,8 +33,9 @@ class HomeController extends Controller
     {   
         $user = User::findOrFail($id);
         $user = User::all();
+        $landing = landingPage::all();
         $data = Artikel::with('kategori')->paginate('3');
-        return view('user.index_user', compact('user','data'));
+        return view('user.index_user', compact('user','data','landing'));
     }
 
 

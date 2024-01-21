@@ -75,7 +75,7 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->judul }}</td>
-                                                <td>{{ $item->deskripsi }}</td>
+                                                <td>{!! Str::limit($item->deskripsi, 50) !!}</td>
                                                 <td><img src="{{ asset('foto/' . $item->background) }}" width="80px">
                                                 </td>
                                                 <td>
