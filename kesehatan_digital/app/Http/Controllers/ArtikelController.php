@@ -25,10 +25,13 @@ class ArtikelController extends Controller
         return response()->json($result);
     }
     
-    public function berita(){
-        $data = Artikel::with('kategori')->paginate('3');
-        return view('user.news-2',compact('data'));
-    }
+public function berita(){
+    $data = Artikel::with('kategori')
+                   ->orderBy('created_at', 'asc')
+                   ->paginate(3);
+    return view('user.news-2', compact('data'));
+}
+
 
     public function kontak(){
         return view('user.kontak');

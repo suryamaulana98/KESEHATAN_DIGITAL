@@ -15,8 +15,7 @@ $(function () {
         url: "/getDataPerkembanganArtikel",
         method: "GET",
         success: function (data) {
-            // Kelompokkan data per minggu menggunakan Moment.js
-            var groupedData = groupDataByWeek(data); // Anda dapat mengganti fungsi ini dengan groupDataByMonth jika diperlukan
+            var groupedData = groupDataByWeek(data);
 
             Morris.Area({
                 element: "morris-area-chart",
