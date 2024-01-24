@@ -80,7 +80,10 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="progress" id="kategoriProgressBar">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $kategori }}%; height: 6px;" aria-valuenow="{{ $kategori }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-primary" role="progressbar"
+                                                style="width: {{ $kategori }}%; height: 6px;"
+                                                aria-valuenow="{{ $kategori }}" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
                                         </div>
                                         <script>
                                             // Simpan nilai counter dan inisialisasi progress bar
@@ -137,24 +140,28 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="progress" id="vaksinProgressBar">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $jumlahSudahVaksin }}%; height: 6px;" aria-valuenow="{{ $jumlahSudahVaksin }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-primary" role="progressbar"
+                                                style="width: {{ $jumlahSudahVaksin }}%; height: 6px;"
+                                                aria-valuenow="{{ $jumlahSudahVaksin }}" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <script>
-                                            var counterValue = {{ $jumlahSudahVaksin }};
-                                            var progressBar = $('#vaksinProgressBar .progress-bar');
-                                            function updateProgressBar() {
-                                                var percentage = (counterValue / 100) * 100;
-                                                progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
-                                                $('#vaksinCounter').text(counterValue);
-                                            }
+                                        var counterValue = {{ $jumlahSudahVaksin }};
+                                        var progressBar = $('#vaksinProgressBar .progress-bar');
+
+                                        function updateProgressBar() {
+                                            var percentage = (counterValue / 100) * 100;
+                                            progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
+                                            $('#vaksinCounter').text(counterValue);
+                                        }
+                                        updateProgressBar();
+                                        setInterval(function() {
+                                            counterValue += 5;
+                                            counterValue = Math.min(counterValue, 100);
                                             updateProgressBar();
-                                            setInterval(function() {
-                                                counterValue += 5;
-                                                counterValue = Math.min(counterValue, 100);
-                                                updateProgressBar();
-                                            }, 1000);
-                                        </script>
+                                        }, 1000);
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -177,11 +184,15 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="progress" id="artikelProgressBar">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $artikel }}%; height: 6px;" aria-valuenow="{{ $artikel }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-primary" role="progressbar"
+                                                style="width: {{ $artikel }}%; height: 6px;"
+                                                aria-valuenow="{{ $artikel }}" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
                                         </div>
                                         <script>
                                             var counterValue = {{ $artikel }};
                                             var progressBar = $('#artikelProgressBar .progress-bar');
+
                                             function updateProgressBar() {
                                                 var percentage = (counterValue / 100) * 100;
                                                 progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
@@ -217,24 +228,28 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="progress" id="userProgressBar">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $user }}%; height: 6px;" aria-valuenow="{{ $user }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-primary" role="progressbar"
+                                                style="width: {{ $user }}%; height: 6px;"
+                                                aria-valuenow="{{ $user }}" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
                                         </div>
                                     </div>
-                                      <script>
-                                            var counterValue = {{ $user }};
-                                            var progressBar = $('#userProgressBar .progress-bar');
-                                            function updateProgressBar() {
-                                                var percentage = (counterValue / 100) * 100;
-                                                progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
-                                                $('#userCounter').text(counterValue);
-                                            }
+                                    <script>
+                                        var counterValue = {{ $user }};
+                                        var progressBar = $('#userProgressBar .progress-bar');
+
+                                        function updateProgressBar() {
+                                            var percentage = (counterValue / 100) * 100;
+                                            progressBar.attr('aria-valuenow', counterValue).css('width', percentage + '%');
+                                            $('#userCounter').text(counterValue);
+                                        }
+                                        updateProgressBar();
+                                        setInterval(function() {
+                                            counterValue += 5;
+                                            counterValue = Math.min(counterValue, 100);
                                             updateProgressBar();
-                                            setInterval(function() {
-                                                counterValue += 5;
-                                                counterValue = Math.min(counterValue, 100);
-                                                updateProgressBar();
-                                            }, 1000);
-                                        </script>
+                                        }, 1000);
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -283,6 +298,7 @@
     <!-- This page plugins -->
     <!-- ============================================================== -->
     <!--morris JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="{{ asset('template_admin/assets/node_modules/raphael/raphael-min.js') }}"></script>
     <script src="{{ asset('template_admin/assets/node_modules/morrisjs/morris.min.js') }}"></script>
     <script src="{{ asset('template_admin/assets/node_modules/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
