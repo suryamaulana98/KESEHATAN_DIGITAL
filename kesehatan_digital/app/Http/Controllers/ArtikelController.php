@@ -15,7 +15,9 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $data  = Artikel::with('kategori')->get();
+        $data  = Artikel::with('kategori')
+        ->orderBy('created_at','asc')
+        ->get();
         return view('admin.artikel',compact('data'));
     }
 
