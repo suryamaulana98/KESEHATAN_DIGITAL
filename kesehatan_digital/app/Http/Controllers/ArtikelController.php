@@ -26,7 +26,7 @@ class ArtikelController extends Controller
     }
     
     public function berita(){
-        $data = Artikel::with('kategori')->paginate('3');
+        $data = Artikel::with('kategori')->latest()->paginate('3');
         return view('user.news-2',compact('data'));
     }
 

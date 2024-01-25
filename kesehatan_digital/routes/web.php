@@ -86,6 +86,10 @@ Route::get('/about', [App\Http\Controllers\ArtikelController::class, 'about'])->
 
 Route::get('/kontak', [App\Http\Controllers\ArtikelController::class, 'kontak'])->name('kontak');
 
+Route::get('/export-pdf', [App\Http\Controllers\DapodikController::class, 'exportPDF'])->name('pdf');
+
+Route::post('/import-excel', [App\Http\Controllers\DapodikController::class, 'importExcel'])->name('importExcel');
+
 
 
 

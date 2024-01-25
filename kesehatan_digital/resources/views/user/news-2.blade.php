@@ -5,7 +5,7 @@
 <!-- Mirrored from www.kazierfan.com/themes/medicre/medicre/news-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Oct 2023 02:17:23 GMT -->
 
 <head>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +44,7 @@
     @include('partials.topbar_user')
     <section class="home-area v2 single-title-area">
         <!-- navbare area -->
-        
+
         <!-- end of navbare area -->
         <!-- start single page title area -->
         <div class="single-page-title">
@@ -69,25 +69,27 @@
     <section class="v2news-page section-padding">
         <div class="container">
             @foreach ($data as $item)
-                
-            <div class="row v2single-post">
-                <div class="col-sm-6">
-                    <div class="department-img">
-                        <img src="{{ asset('foto/'.$item->foto) }}" style="width: 70%" alt="jigsawlab">
+                <div class="row v2single-post">
+                    <div class="col-sm-6">
+                        <div class="department-img">
+                            <img src="{{ asset('foto/' . $item->foto) }}"
+                                style="width: 541px; height: 461px; alt="jigsawlab">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 department-content">
+                        <h2 class="text-uppercase">{{ $item->judul }}</h2>
+                        <div class="date">
+                            <p>Penulis : <span>{{ $item->penulis }}</span> // Dibuat :
+                                <span>{{ $item->updated_at }}</span>
+                            </p>
+                        </div>
+                        <p>{!! Str::limit($item->deskripsi, 800) !!}</p>
+                        <a href="{{ route('detail_berita', $item->id) }}" class="read-more">BACA SELENGKAPNYA</a>
                     </div>
                 </div>
-                <div class="col-sm-6 department-content">
-                    <h2 class="text-uppercase">{{ $item->judul }}</h2>
-                    <div class="date">
-                        <p>Penulis : <span>{{ $item->penulis }}</span>   //   Dibuat : <span>{{ $item->updated_at }}</span></p>
-                    </div>
-                    <p>{!! Str::limit($item->deskripsi, 450) !!}</p>
-                    <a href="{{ route('detail_berita',$item->id) }}" class="read-more">BACA SELENGKAPNYA</a>
-                </div>
-            </div>
             @endforeach
-            </div>
-            <div class="row">
+        </div>
+        <div class="row">
             <div class="col-xs-12 text-center">
                 <nav aria-label="Page navigation">
                     <ul class="pagination">

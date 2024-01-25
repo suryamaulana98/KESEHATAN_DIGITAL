@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kelas;
+use Dompdf\Dompdf;
 use App\Models\Ttd;
 use App\Models\User;
+use App\Models\Kelas;
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\File;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class DapodikController extends Controller
 {
@@ -16,6 +21,44 @@ class DapodikController extends Controller
     {
         $data = User::where('role','user')->get();
         return view('admin.dapodik',compact('data'));
+    }
+
+    public function exportPDF(){
+        $user = User::where('role', 'user')->get();
+        
+        $html = view('admin.userPDF', compact('user'))->render();
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->render();
+        // Tampilkan pratinjau PDF di browser
+        $dompdf->stream('data-dapodik.pdf', ['Attachment' => false]);
+    }
+
+    public function importExcel(Request $request){
+
+        // $rows = $request->validate([
+        //     'excel_file' => 'required',
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        // ]);
+
+        $file = $request->file('excel_file');
+        $path = $file->path();
+
+        $spreadsheet = IOFactory::load($path);
+        $worksheet = $spreadsheet->getActiveSheet();
+        $rows = $worksheet->toArray();
+    
+        foreach ($rows as $row) {
+            User::create([
+                'name' => $row[0],
+                'email' => $row[1],
+                'password' => bcrypt($row[2]),
+            ]);
+        }
+    
+        return redirect()->back()->with('success', 'Data imported successfully.');
     }
 
     public function ttd(){

@@ -55,7 +55,47 @@
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Dapodik</h4>
+                            <div class="d-flex justify-content-between">
+                                <h4 class="card-title">Data Dapodik</h4>
+                                <div class="d-flex">
+                                    <a href="{{ route('pdf') }}"><button type="submit"
+                                            class="btn btn-danger me-3">Export
+                                            PDF</button></a>
+                                    <a href="{{ route('pdf') }}" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><button type="submit"
+                                            class="btn btn-success">Import
+                                            Excel</button></a>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Import Data Dapodik</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="{{ route('importExcel') }}" enctype="multipart/form-data"
+                                                method="post">
+                                                @csrf
+                                                <div class="form-group">
+                                                    <input type="file" name="excel_file" class="form-control">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -70,58 +110,79 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
-                                            
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>{{ $item->nis }}</td>
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->nis }}</td>
                                                 <td>{{ $item->tinggi_badan }}</td>
                                                 <td>{{ $item->berat_badan }}</td>
                                                 <td>
                                                     <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $item->id }}">
-                                                Update
-                                                </button>
+                                                    <button type="button" class="btn btn-primary"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal{{ $item->id }}">
+                                                        Update
+                                                    </button>
 
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Data Dapodik</h1>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form action="{{ route('dapodikAdmin.update',$item->id) }}" method="post">
-                                                        @csrf
-                                                        @method('put')
-                                                        <div class="form-group">
-                                                            <label class="form-label">Nama</label>
-                                                            <input type="text" value="{{ $item->name }}" name="berat_badan" class="form-control"
-                                                                disabled>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal{{ $item->id }}"
+                                                        tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                        Update Data Dapodik
+                                                                    </h1>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <form
+                                                                        action="{{ route('dapodikAdmin.update', $item->id) }}"
+                                                                        method="post">
+                                                                        @csrf
+                                                                        @method('put')
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">Nama</label>
+                                                                            <input type="text"
+                                                                                value="{{ $item->name }}"
+                                                                                name="berat_badan"
+                                                                                class="form-control" disabled>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">Berat
+                                                                                Badan</label>
+                                                                            <input type="text"
+                                                                                value="{{ $item->berat_badan }}"
+                                                                                name="berat_badan"
+                                                                                class="form-control"
+                                                                                placeholder="Masukkan Bb">
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">Tinggi
+                                                                                Badan</label>
+                                                                            <input type="text"
+                                                                                value="{{ $item->tinggi_badan }}"
+                                                                                name="tinggi_badan"
+                                                                                class="form-control"
+                                                                                placeholder="Masukkan tinggi">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close</button>
+                                                                    <button type="submit"
+                                                                        class="btn btn-primary">Update</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="form-label">Berat Badan</label>
-                                                            <input type="text" value="{{ $item->berat_badan }}" name="berat_badan" class="form-control"
-                                                                placeholder="Masukkan Bb">
-                                                        </div>
-                                                         <div class="form-group">
-                                                            <label class="form-label">Tinggi Badan</label>
-                                                            <input type="text" value="{{ $item->tinggi_badan }}" name="tinggi_badan" class="form-control"
-                                                                placeholder="Masukkan tinggi">
-                                                        </div>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-primary">Update</button>
-                                                    </form>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                </div>
                                                 </td>
                                             </tr>
-                                            @endforeach
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
