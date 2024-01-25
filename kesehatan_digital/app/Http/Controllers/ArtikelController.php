@@ -15,7 +15,9 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $data  = Artikel::with('kategori')->get();
+        $data  = Artikel::with('kategori')
+        ->orderBy('created_at','asc')
+        ->get();
         return view('admin.artikel',compact('data'));
     }
 
@@ -25,10 +27,13 @@ class ArtikelController extends Controller
         return response()->json($result);
     }
     
-    public function berita(){
-        $data = Artikel::with('kategori')->latest()->paginate('3');
-        return view('user.news-2',compact('data'));
-    }
+public function berita(){
+    $data = Artikel::with('kategori')
+                   ->orderBy('created_at', 'asc')
+                   ->paginate(3);
+    return view('user.news-2', compact('data'));
+}
+
 
     public function kontak(){
         return view('user.kontak');

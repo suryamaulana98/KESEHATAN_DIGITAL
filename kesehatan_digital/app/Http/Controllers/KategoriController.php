@@ -13,7 +13,7 @@ class KategoriController extends Controller
     public function index(Request $id)
     {
         $kategori = Kategori::findOrFail($id);
-        $kategori = Kategori::all();
+        $kategori = Kategori::orderBy('kategori','asc')->get();
         return view('admin.kategori', compact('kategori'));
     }
 

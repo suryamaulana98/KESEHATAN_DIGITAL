@@ -12,12 +12,14 @@ $(function () {
     });
     // Dashboard 1 Morris-chart
     $.ajax({
-        url: "/getDataPerkembanganArtikel", // Ganti dengan URL sesuai dengan route Anda
+        url: "/getDataPerkembanganArtikel",
         method: "GET",
         success: function (data) {
+            var groupedData = groupDataByWeek(data);
+
             Morris.Area({
                 element: "morris-area-chart",
-                data: data,
+                data: groupedData,
                 xkey: "period",
                 ykeys: ["jumlah_artikel"],
                 labels: ["Jumlah Artikel"],
@@ -33,6 +35,32 @@ $(function () {
             });
         },
     });
+
+    function groupDataByWeek(data) {
+        // Kelompokkan data per minggu
+        var groupedData = [];
+        var currentWeek = null;
+
+        data.forEach(function (item) {
+            var week = moment(item.period)
+                .startOf("isoWeek")
+                .format("YYYY-MM-DD");
+
+            if (currentWeek !== week) {
+                currentWeek = week;
+                groupedData.push({
+                    period: currentWeek,
+                    jumlah_artikel: item.jumlah_artikel,
+                });
+            } else {
+                // Jika minggu sama, agregat jumlah_artikel (Anda dapat memodifikasi logika ini)
+                groupedData[groupedData.length - 1].jumlah_artikel +=
+                    item.jumlah_artikel;
+            }
+        });
+
+        return groupedData;
+    }
     // Morris Area Chart
     Morris.Area({
         element: "morris-area-chart",
@@ -50,29 +78,28 @@ $(function () {
         lineColors: ["#00bfc7"],
         resize: true,
     });
-});    
-    // sparkline
-    var sparklineLogin = function() { 
-        $('#sales1').sparkline([20, 40, 30], {
-            type: 'pie',
-            height: '90',
-            resize: true,
-            sliceColors: ['#01c0c8', '#7d5ab6', '#ffffff']
-        });
-        $('#sparkline2dash').sparkline([6, 10, 9, 11, 9, 10, 12], {
-            type: 'bar',
-            height: '154',
-            barWidth: '4',
-            resize: true,
-            barSpacing: '10',
-            barColor: '#25a6f7'
-        });
-        
-    };    
-    var sparkResize;
- 
-        $(window).resize(function(e) {
-            clearTimeout(sparkResize);
-            sparkResize = setTimeout(sparklineLogin, 500);
-        });
-        sparklineLogin();
+});
+// sparkline
+var sparklineLogin = function () {
+    $("#sales1").sparkline([20, 40, 30], {
+        type: "pie",
+        height: "90",
+        resize: true,
+        sliceColors: ["#01c0c8", "#7d5ab6", "#ffffff"],
+    });
+    $("#sparkline2dash").sparkline([6, 10, 9, 11, 9, 10, 12], {
+        type: "bar",
+        height: "154",
+        barWidth: "4",
+        resize: true,
+        barSpacing: "10",
+        barColor: "#25a6f7",
+    });
+};
+var sparkResize;
+
+$(window).resize(function (e) {
+    clearTimeout(sparkResize);
+    sparkResize = setTimeout(sparklineLogin, 500);
+});
+sparklineLogin();
