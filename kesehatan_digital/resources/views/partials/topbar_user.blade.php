@@ -3,6 +3,13 @@
    <!-- end of topbar area -->
    <!-- start topbar area -->
    <!-- navbare area -->
+   <!-- Bootstrap CSS -->
+
+   <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
    <nav class="navbar navbar-area v2">
        <div class="container">
            <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +37,8 @@
                    <li class="{{ request()->routeIs('berita', 'detail_berita') ? 'current-menu-item' : '' }}">
                        <a href="{{ route('berita') }}">Berita</a>
                    </li>
-                   <li class="{{ request()->routeIs('kontak') ? 'current-menu-item' : '' }}"><a href="{{ route('kontak') }}">Kontak</a>
+                   <li class="{{ request()->routeIs('kontak') ? 'current-menu-item' : '' }}"><a
+                           href="{{ route('kontak') }}">Kontak</a>
 
                    </li>
                    <li><a href="#">Akun<span class="fa fa-angle-down"></span></a>
@@ -124,16 +132,23 @@
                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="myModal"
                                                    id="closeButton">Close</button>
                                                <button type="submit" class="btn btn-primary">Edit Profile</button>
+                                               <!-- Button trigger modal -->
+                                               <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                   data-target="#cetakKartuModal" id="cetakKartuButton">
+                                                   Cetak Kartu
+                                               </button>
+
                                            </div>
                                        </form>
                                    </div>
                                </div>
                            </div>
                        </div>
-
-
+                     
                        <!-- Script JavaScript -->
                        <script>
+                           
+
                            // Mendapatkan referensi tombol "Close" menggunakan ID
                            var closeButton = document.getElementById('closeButton');
 
@@ -161,6 +176,7 @@
 
                            // Fungsi untuk menyembunyikan modal
                            function hideModal() {
+                              var myModal = document.getElementById('myModal');
                                modal.style.display = "none";
                            }
 
@@ -176,7 +192,37 @@
                                    hideModal();
                                }
                            });
+                       
+                           // Event listener untuk tombol tampilkan modal "Cetak Kartu"
+                           var cetakKartuButton = document.getElementById("cetakKartuButton");
+                           cetakKartuButton.addEventListener("click", function() {
+                               hideMyModal(); // Menyembunyikan myModal sebelum menampilkan cetakKartuModal
+                               $('#cetakKartuModal').modal('show'); // Menampilkan cetakKartuModal
+                           });
                        </script>
+                          <!-- Modal -->
+                       <!-- New modal for "Cetak Kartu" -->
+                       <div class="modal fade" id="cetakKartuModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                           aria-hidden="true">
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <h1 class="modal-title fs-5" id="exampleModalLabel">Cetak Kartu</h1>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                           aria-label="Close"></button>
+                                   </div>
+                                   <div class="modal-body">
+                                       <input type="text">
+                                   </div>
+                                   <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary"
+                                           data-bs-dismiss="modal">Close</button>
+                                       <button type="button" class="btn btn-primary">Save changes</button>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+
 
                    @endauth
                </ul>
