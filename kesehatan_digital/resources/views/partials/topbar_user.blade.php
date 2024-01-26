@@ -8,7 +8,7 @@
    <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> --}}
 
    <nav class="navbar navbar-area v2">
        <div class="container">
@@ -133,8 +133,7 @@
                                                    id="closeButton">Close</button>
                                                <button type="submit" class="btn btn-primary">Edit Profile</button>
                                                <!-- Button trigger modal -->
-                                               <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                   data-target="#cetakKartuModal" id="cetakKartuButton">
+                                               <button type="button" class="btn btn-primary" id="cetakKartuButton">
                                                    Cetak Kartu
                                                </button>
 
@@ -144,11 +143,9 @@
                                </div>
                            </div>
                        </div>
-                     
+
                        <!-- Script JavaScript -->
                        <script>
-                           
-
                            // Mendapatkan referensi tombol "Close" menggunakan ID
                            var closeButton = document.getElementById('closeButton');
 
@@ -176,7 +173,7 @@
 
                            // Fungsi untuk menyembunyikan modal
                            function hideModal() {
-                              var myModal = document.getElementById('myModal');
+                               var myModal = document.getElementById('myModal');
                                modal.style.display = "none";
                            }
 
@@ -192,15 +189,39 @@
                                    hideModal();
                                }
                            });
-                       
-                           // Event listener untuk tombol tampilkan modal "Cetak Kartu"
-                           var cetakKartuButton = document.getElementById("cetakKartuButton");
-                           cetakKartuButton.addEventListener("click", function() {
-                               hideMyModal(); // Menyembunyikan myModal sebelum menampilkan cetakKartuModal
-                               $('#cetakKartuModal').modal('show'); // Menampilkan cetakKartuModal
+                       </script>
+
+                       <script>
+                           $(function() {
+                               $('#cetakKartuButton').on('click', function() {
+                                   // / Menutup modal dengan ID "myModal" jika ada
+                                   $('#myModal').modal('hide');
+
+                                   var modalHtml = `
+                <div class="modal fade" id="cetakKartuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cetak Kartu</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="cetakKartuModal" id="close">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+                                   $(modalHtml).modal('show');
+                               });
                            });
                        </script>
-                          <!-- Modal -->
+                       <!-- Modal -->
                        <!-- New modal for "Cetak Kartu" -->
                        <div class="modal fade" id="cetakKartuModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                            aria-hidden="true">
@@ -222,6 +243,7 @@
                                </div>
                            </div>
                        </div>
+
 
 
                    @endauth
