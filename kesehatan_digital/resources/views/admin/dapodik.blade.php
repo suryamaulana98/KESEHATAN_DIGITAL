@@ -180,6 +180,135 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary"
+                                                        data-bs-toggle="modal" data-bs-target="#modalcetak">
+                                                        Cetak kartu
+                                                    </button>
+
+                                                    <style>
+                                                        /* CSS untuk tampilan kartu pelajar di dalam modal */
+                                                        .cardd {
+                                                            width: 640px;
+                                                            height: 400px;
+                                                            margin: 0 auto;
+                                                            /* Posisikan kartu di tengah */
+                                                            background-image: url('{{ asset('img/background1.png') }}');
+                                                            /* Ganti 'background.jpg' dengan path gambar Anda */
+                                                            background-size: cover;
+                                                            border: 2px solid #17a2b8;
+                                                            /* Warna border kartu */
+                                                            border-radius: 10px;
+                                                            /* Rounding border kartu */
+                                                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                                            /* Efek bayangan kartu */
+                                                        }
+
+                                                        .card-title {
+                                                            font-size: 1px;
+                                                            font-weight: bold;
+                                                            margin-bottom: 0.5rem;
+                                                            /* Jarak antara judul dan konten */
+                                                        }
+
+                                                        .card-text {
+                                                            font-size: 14px;
+                                                            font-color: blue;
+                                                            font-weight: bold;
+                                                            margin-bottom: 0.1rem;
+                                                            /* Jarak antara konten */
+                                                        }
+
+                                                        /* CSS untuk modal */
+                                                        .modal-body {
+                                                            padding: 2rem;
+                                                            /* Padding konten modal */
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            min-height: 300px;
+                                                            /* Tinggi minimum konten modal */
+                                                        }
+
+                                                        .modal-footer {
+                                                            justify-content: center;
+                                                        }
+
+                                                        /* CSS untuk tombol cetak */
+                                                        #cetakPdfBtn {
+                                                            width: 100%;
+                                                        }
+
+
+                                                        /* CSS untuk konten di dalam modal */
+                                                        .modal-body,
+                                                        .modal-footer {
+                                                            background-color: rgba(255, 255, 255, 0.8);
+                                                            /* Warna latar belakang konten */
+                                                        }
+                                                    </style>
+                                                    <!-- Modal -->
+                                                    <!-- Modal -->
+                                                    <style>
+    /* CSS untuk tampilan cetak */
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .cardd, .cardd * {
+            visibility: visible;
+        }
+        .cardd {
+            left: 10px;
+            top: 10px;
+            position: 
+            absolute;
+        }
+        
+    }
+</style>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="modalcetak" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header bg-primary text-white">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">
+                                                                        Kartu Pelajar</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="cardd">
+                                                                        <div class="card-body">
+                                                                            <p class="card-text text-center" style="margin-top:28%; margin-right:-18%;">
+                                                                                {{ $item->name }}</p>
+                                                                            <p class="card-text" style="margin-left:55%;">
+                                                                                {{ $item->nis }}</p>
+                                                                            <p class="card-text" style="margin-left:55%;">
+                                                                                {{ $item->tinggi_badan }}</p>
+                                                                            <p class="card-text" style="margin-left:55%;">
+                                                                                {{ $item->berat_badan }}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Close</button>
+                                                                    <button type="button" id="cetakPdfBtn"
+                                                                        class="btn btn-primary">Cetak ke PDF</button>
+                                                                </div>
+                                                                <script>
+    document.getElementById('cetakPdfBtn').addEventListener('click', function () {
+        window.print();
+    });
+</script>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach

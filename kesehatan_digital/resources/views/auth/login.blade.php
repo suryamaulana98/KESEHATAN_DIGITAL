@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Login Kesehatan Digital</title>
 
     <!-- page css -->
     <link href="{{ asset('template_admin/inverse/dist/css/pages/login-register-lock.css') }}" rel="stylesheet">
@@ -41,54 +41,55 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper" class="login-register login-sidebar"
-        style="background-image:url(template_admin/assets/images/background/login-register.jpg);">
+        style="background-image:url(template_admin/assets/images/background/login.jpg);">
         <div class="login-box card">
             <div class="card-body">
                 <form class="form-horizontal form-material text-center" id="loginform" action="{{ route('login') }}"
                     method="POST">
                     @csrf
                     <a href="javascript:void(0)" class="db"><img
-                            src="{{ asset('template_admin/assets/images/logo-icon.png') }}" alt="Home" /><br /><img
-                            src="{{ asset('template_admin/assets/images/logo-text.png') }}" alt="Home" /></a>
-                    <div class="form-group m-t-40">
-                        <div class="col-xs-12">
-                            <input class="form-control" type="text" name="email" required=""
-                                placeholder="Email">
+                            src="{{ asset('template_admin/assets/images/logo-uks.jpg') }}"
+                            style="height: 60%; width:60%; margin-bottom:-5%" alt="Home" /><br />
+                        <div class="form-group m-t-40">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="text" name="email" required=""
+                                    placeholder="Email">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <input class="form-control" type="password" name="password" required=""
-                                placeholder="Password">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="password" name="password" required=""
+                                    placeholder="Password">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <div class="d-flex no-block align-items-center">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="customCheck1">
-                                    <label class="form-check-label" for="customCheck1">Remember me</label>
-                                </div>
-                                <div class="ms-auto">
-                                    <a href="javascript:void(0)" id="to-recover" class="text-muted"><i
-                                            class="fas fa-lock m-r-5"></i> Forgot pwd?</a>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="d-flex no-block align-items-center">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="customCheck1">
+                                        <label class="form-check-label" for="customCheck1">Remember me</label>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0)" id="to-recover" class="text-muted"><i
+                                                class="fas fa-lock m-r-5"></i> Forgot pwd?</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group text-center m-t-20">
-                        <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg w-100 text-uppercase btn-rounded text-white"
-                                type="submit">Log In</button>
+                        <div class="form-group text-center m-t-20">
+                            <div class="col-xs-12">
+                                <button class="btn btn-info btn-lg w-100 text-uppercase btn-rounded text-white"
+                                    type="submit">Log In</button>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group m-b-0">
-                        <div class="col-sm-12 text-center">
-                            Don't have an account? <a href="{{ route('register') }}" class="text-primary m-l-5"><b>Sign
-                                    Up</b></a>
+                        <div class="form-group m-b-0">
+                            <div class="col-sm-12 text-center">
+                                Don't have an account? <a href="{{ route('register') }}"
+                                    class="text-primary m-l-5"><b>Sign
+                                        Up</b></a>
+                            </div>
                         </div>
-                    </div>
                 </form>
                 <form class="form-horizontal" id="recoverform"
                     action="https://eliteadmin.themedesigner.in/demos/bt4/inverse/index.html">

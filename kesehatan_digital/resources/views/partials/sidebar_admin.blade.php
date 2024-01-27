@@ -10,7 +10,7 @@
                 <div>
                     <img src="{{ asset('template_admin/assets/images/users/2.jpg') }}" alt="user-img" class="img-circle">
                 </div>
-                <div class="dropdown">
+                <div class="dropdown">  
                     <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu"
                         data-bs-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">{{ Auth::user()->name }}
