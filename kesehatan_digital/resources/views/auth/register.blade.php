@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Register</title>
 
     <!-- page css -->
     <link href="{{ asset('template_admin/inverse/dist/css/pages/login-register-lock.css') }}" rel="stylesheet">
@@ -49,9 +49,8 @@
                     @csrf
                     <div class="text-center">
                         <a href="javascript:void(0)" class="db"><img
-                                src="{{ asset('template_admin/assets/images/logo-icon.png') }}"
-                                alt="Home" /><br /><img
-                                src="{{ asset('template_admin/assets/images/logo-text.png') }}" alt="Home" /></a>
+                                src="{{ asset('template_admin/assets/images/logo1.png') }}" alt="Home" /><br /><img
+                                src="{{ asset('template_admin/assets/images/logo2.png') }}" style="margin-right: -8%;" alt="Home" /></a>
                     </div>
                     <h3 class="box-title m-t-40 m-b-0">Registrasikan Diri Anda</h3><small>Buat akunmu dan nikmati
                         hasilnya.</small>

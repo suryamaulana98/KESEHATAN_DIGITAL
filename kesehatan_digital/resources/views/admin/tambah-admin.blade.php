@@ -13,7 +13,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Tambah admin</title>
     <!-- Custom CSS -->
     <link href="{{ asset('template_admin/inverse/dist/css/style.min.css') }}" rel="stylesheet">
     <!-- page css -->

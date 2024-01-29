@@ -13,7 +13,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Edit admin</title>
     <!-- Custom CSS -->
     <link href="{{ asset('template_admin/inverse/dist/css/style.min.css') }}" rel="stylesheet">
     <!-- page css -->
@@ -81,26 +81,26 @@
                     <div class="col-sm-12">
                         <div class="card card-body">
                             <h4 class="card-title">Tambah Admin</h4>
-                            <form action="{{ route('userAdmin.update',$data->id) }}" method="POST"
+                            <form action="{{ route('userAdmin.update', $data->id) }}" method="POST"
                                 enctype="multipart/form-data" class="form-horizontal mt-4">
                                 @csrf
                                 @method('put')
                                 <div class="form-group">
                                     <label class="form-label">Nama</label>
-                                    <input type="text" value="{{ $data->name }}" name="name" class="form-control"
-                                        placeholder="Masukkan Nama">
+                                    <input type="text" value="{{ $data->name }}" name="name"
+                                        class="form-control" placeholder="Masukkan Nama">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">NIS</label>
-                                    <input type="text" value="{{ $data->nis }}" name="nis" class="form-control"
-                                        placeholder="Masukkan NIS">
+                                    <input type="text" value="{{ $data->nis }}" name="nis"
+                                        class="form-control" placeholder="Masukkan NIS">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
-                                    <input type="email" value="{{ $data->email }}" name="email" class="form-control"
-                                        placeholder="Masukkan Email">
+                                    <input type="email" value="{{ $data->email }}" name="email"
+                                        class="form-control" placeholder="Masukkan Email">
                                 </div>
 
                                 <div class="form-group">
@@ -114,7 +114,7 @@
                                     <select class="form-select col-12" name="id_kelas" id="inlineFormCustomSelect">
                                         <option value="{{ $data->id_kelas }}">{{ $data->kelas->kelas }}</option>
                                         @foreach ($kelas as $item)
-                                        <option value="{{ $item->id_kelas }}">{{$item->kelas }}</option>
+                                            <option value="{{ $item->id_kelas }}">{{ $item->kelas }}</option>
                                         @endforeach
                                     </select>
                                 </div>

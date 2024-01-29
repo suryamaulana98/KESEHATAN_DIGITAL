@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('template_admin/assets/images/favicon.png') }}">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Profil admin</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="{{ asset('template_admin/assets/node_modules/morrisjs/morris.css') }}" rel="stylesheet">

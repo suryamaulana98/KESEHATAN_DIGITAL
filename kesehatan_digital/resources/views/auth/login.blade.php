@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Login</title>
 
     <!-- page css -->
     <link href="{{ asset('template_admin/inverse/dist/css/pages/login-register-lock.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
     <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
-            <p class="loader__label">Elite admin</p>
+            <p class="loader__label">LOGIN</p>
         </div>
     </div>
     <!-- ============================================================== -->
@@ -48,8 +48,8 @@
                     method="POST">
                     @csrf
                     <a href="javascript:void(0)" class="db"><img
-                            src="{{ asset('template_admin/assets/images/logo-icon.png') }}" alt="Home" /><br /><img
-                            src="{{ asset('template_admin/assets/images/logo-text.png') }}" alt="Home" /></a>
+                            src="{{ asset('template_admin/assets/images/logo1.png') }}" alt="Home" /><br /><img
+                            src="{{ asset('template_admin/assets/images/logo2.png') }}" alt="Home" style="margin-right: -8%;" /></a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
                             <input class="form-control" type="text" name="email" required=""
