@@ -76,7 +76,9 @@ class DapodikController extends Controller
 
         Ttd::create([
             'id_kelas'=>$request->id_kelas,
-            'status'=>$request->status
+            'status'=>$request->status,
+            'jumlah'=>$request->jumlah,
+
         ]);
         return redirect('ttd')->with('success','Berhasil Menambah Ttd');
     }

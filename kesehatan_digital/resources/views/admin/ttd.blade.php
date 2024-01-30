@@ -28,7 +28,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     
 <![endif]-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </head>
 
 <body class="skin-default fixed-layout">
@@ -51,68 +53,74 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Data Ttd</li>
                             </ol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Tambah
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">+ Tambah
                                 Ttd</button>
-            
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Ttd</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="{{ route('create_ttd') }}" method="POST">
-                        @csrf
-                                <div class="form-group">
-                                    <label class="form-label" style="float: left;">Kelas</label>
-                                    <select class="form-select col-12" name="id_kelas" id="inlineFormCustomSelect">
-                                        <option selected>--Pilih--</option>
-                                        @foreach ($data as $item)
-                                            
-                                        <option value="{{ $item->id }}">{{ $item->kelas }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                        <div style="float: left; margin-right: 10px;">
-                            <label class="form-check-label" style="margin-left: 5px;" for="flexRadioDefault1">
-                                Status
-                            </label><br>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="sudah">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    SUDAH
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value="belum">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    BELUM
-                                </label>
-                            </div>
-                        </div>
 
-                        <script>
-                            const radioButtons = document.querySelectorAll('input[name="status"]');
-                            radioButtons.forEach(button => {
-                                button.addEventListener('change', () => {
-                                    radioButtons.forEach(otherButton => {
-                                        otherButton.checked = false;
-                                    });
-                                    button.checked = true;
-                                });
-                            });
-                        </script>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Simpan</button>
-                                </div>            
-        </form>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Ttd</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="{{ route('create_ttd') }}" method="POST">
+                                                @csrf
+                                                <div class="mb-3 row">
+                                                    <label for="inlineFormCustomSelect"
+                                                        class="col-sm-3 col-form-label">Kelas</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-select" name="id_kelas"
+                                                            id="inlineFormCustomSelect">
+                                                            <option selected>--Pilih--</option>
+                                                            @foreach ($data as $item)
+                                                                <option value="{{ $item->id }}">{{ $item->kelas }}
+                                                                </option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-3 col-form-label">Status</label>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="status" id="flexRadioDefault1" value="sudah">
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                SUDAH
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="status" id="flexRadioDefault2" value="belum">
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                BELUM
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label for="jumlah" class="col-sm-3 col-form-label">Jumlah
+                                                        Obat</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" name="jumlah" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -127,28 +135,34 @@
                                             <th>No</th>
                                             <th>Kelas</th>
                                             <th>Status</th>
+                                            <th>Jumlah</th>
                                             <th>Tanggal</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($ttd as $item)
-                                            
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->kelas->kelas }}</td>
-                                            <td>{{ $item->status }}</td>
-                                            <td>{{ $item->created_at }}</td>
-                                                <td> <form action="{{ route('destroy_ttd',$item->id) }}" method="POST" id="myId{{ $item->id }}">
-                                                    @csrf
-                                                    @method('delete') 
-                                                </a> 
-                                                    <button type="submit" class="btn btn-outline-danger btn-icon-text">
-                                                    <i class="mdi mdi-delete btn-icon-prepend"></i> Delete</button> 
-                                                </form> </td>
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->kelas->kelas }}</td>
+                                                <td>{{ $item->status }}</td>
+                                                <td>{{ $item->jumlah }}</td>
+                                                <td>{{ $item->created_at }}</td>
+                                                <td>
+                                                    <form action="{{ route('destroy_ttd', $item->id) }}"
+                                                        method="POST" id="myId{{ $item->id }}">
+                                                        @csrf
+                                                        @method('delete')
+                                                        </a>
+                                                        <button type="submit"
+                                                            class="btn btn-outline-danger btn-icon-text">
+                                                            <i class="mdi mdi-delete btn-icon-prepend"></i>
+                                                            Delete</button>
+                                                    </form>
+                                                </td>
                                             </tr>
-                                            @endforeach
-                                        
+                                        @endforeach
+
                                     </tbody>
                                 </table>
                             </div>

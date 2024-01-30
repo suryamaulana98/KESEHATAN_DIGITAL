@@ -13,6 +13,7 @@ class Ttd extends Model
     protected $fillable = [
         'id_kelas',
         'status',
+        'jumlah'
     ];
 
     public function kelas()
