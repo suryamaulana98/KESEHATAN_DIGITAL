@@ -256,47 +256,7 @@
     </section>
     <!-- end of latest news event section -->
     <!-- start band area -->
-    <div class="brand-section v2 section-padding">
-        <div class="container marquee">
-            <div class="row text-center active-brand-slider">
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand2.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand2-2.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand2-3.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand4-4.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand5-5.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand6-6.png" alt="Jigsawlab">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="single-brand">
-                        <img src="img/brand2-3.png" alt="Jigsawlab">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- end of brand area -->
     @include('partials.footer_user')
 

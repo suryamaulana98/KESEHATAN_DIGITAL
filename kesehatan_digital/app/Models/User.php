@@ -29,6 +29,10 @@ class User extends Authenticatable
         'tinggi_badan',
         'berat_badan',
         'd_vaksin',
+        'nisn',
+        'tanggal_lahir',
+        'jenis_kelamin',
+        'foto',
     ];
 
     public function kelas(){

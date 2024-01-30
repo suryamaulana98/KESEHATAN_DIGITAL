@@ -65,6 +65,7 @@ Auth::routes();
 Route::middleware(['role:user'])->group(function () {
     Route::resource('/home', HomeController::class);
     Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'show']);
+    Route::get('/profil/{id}', [App\Http\Controllers\HomeController::class, 'profil'])->name('profilUser');
     Route::put('/updateProfile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
     Route::post('/komentar', [App\Http\Controllers\HomeController::class, 'komentar'])->name('komentar');
     });
@@ -87,6 +88,8 @@ Route::get('/about', [App\Http\Controllers\ArtikelController::class, 'about'])->
 Route::get('/kontak', [App\Http\Controllers\ArtikelController::class, 'kontak'])->name('kontak');
 
 Route::get('/export-pdf', [App\Http\Controllers\DapodikController::class, 'exportPDF'])->name('pdf');
+
+Route::get('/kartu-pelajar-pdf/{id}', [App\Http\Controllers\HomeController::class, 'cetakPdf'])->name('kartuPdf');
 
 Route::post('/import-excel', [App\Http\Controllers\DapodikController::class, 'importExcel'])->name('importExcel');
 

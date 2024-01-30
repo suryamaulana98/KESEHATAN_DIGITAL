@@ -21,6 +21,10 @@ return new class extends Migration
             $table->foreign('id_kelas')->references('id')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('role')->default('user');
             $table->string('nis')->nullable();
+            $table->string('nisn')->nullable();
+            $table->string('tanggal_lahir')->nullable();
+            $table->string('foto')->nullable();
+            $table->enum('jenis_kelamin', ['Laki - Laki','Perempuan'])->nullable();
             $table->string('tinggi_badan')->nullable();
             $table->string('berat_badan')->nullable();
             $table->enum('d_vaksin', ['Vaksin Pertama','Vaksin Kedua','Vaksin Ketiga'])->nullable();

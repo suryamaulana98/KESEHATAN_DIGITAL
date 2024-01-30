@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Dompdf\Dompdf;
+use App\Models\User;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Komentar;
 use App\Models\landingPage;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -60,15 +62,39 @@ class HomeController extends Controller
 
 
     public function show($id){
-        $user = User::findOrFail($id);
+        $user = User::with('kelas')->findOrFail($id);
         return view('partials.topbar_user', compact('user'));
+    }
+
+    public function profil(Request $id){
+        $user = User::with('kelas');
+        return view('user.test', compact('user'));
+    }
+    
+
+    public function cetakPdf($id){
+        $user = User::with('kelas')->findOrFail($id);
+        
+        $html = view('user.kartuPelajarPdf', compact('user'))->render();
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->render();
+        // Tampilkan pratinjau PDF di browser
+        $dompdf->stream('kartu-pelajar.pdf', ['Attachment' => false]);
     }
 
     public function updateProfile(Request $request){
 
          $this->validate($request,[
-            
+            'foto' => 'image'
         ]);
+
+        $nm = $request->file('foto'); 
+
+        $extension = $nm->getClientOriginalExtension();
+        $namaFile = hash('sha256', time() . rand(100, 999)) . '.' . $extension;
+        $nm->move(public_path().'/foto', $namaFile);
 
         // $user = User::findOrFail($id);
          User::query()
@@ -79,7 +105,11 @@ class HomeController extends Controller
             'nis' => $request->nis,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-           'd_vaksin' => $request->d_vaksin,
+            'd_vaksin' => $request->d_vaksin,
+            'nisn' =>$request->nisn,
+            'tanggal_lahir' =>$request->tanggal_lahir,
+            'jenis_kelamin' =>$request->jenis_kelamin,
+            'foto' =>  $namaFile
         ]);
 
 
