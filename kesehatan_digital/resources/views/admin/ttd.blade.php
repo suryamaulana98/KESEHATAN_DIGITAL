@@ -195,7 +195,7 @@
     <!-- Popup message jquery -->
     <script src="{{ asset('template_admin/assets/node_modules/toast-master/js/jquery.toast.js') }}"></script>
     <!-- Chart JS -->
-    <script src="{{ asset('template_admin/inverse/dist/js/dashboard1.js') }}"></script>
+    <script src="{{ asset('template_admin/inverse/dist/js/dashboard.js') }}"></script>
     <script src="{{ asset('template_admin/assets/node_modules/toast-master/js/jquery.toast.js') }}"></script>
 </body>
 
