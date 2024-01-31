@@ -21,15 +21,28 @@
                         </div>
                         <div class="col-md-6">
                             <div class="footer-recent-post">
-                                <!-- Hapus elemen-elemen recent post -->
+                                <div class="footer-about">
+                                    <div id="map" style="height: 300px;"></div>
+                                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn4uayw359fjMh4P9i2rKKZYHzXaqTRNs"></script>
+                                    <script>
+                                        function initializeMap() {
+                                            var mapOptions = {
+                                                center: new google.maps.LatLng(-8.125476455146003, 113.21802761636664), // Change these coordinates
+                                                zoom: 30
+                                            };
+                                            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                                        }
+                                
+                                        google.maps.event.addDomListener(window, 'load', initializeMap);
+                                    </script>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
             <div class="col-sm-12">
                 <div class="media-carea-contact">
-                    <!-- Hapus formulir kontak dan inputannya -->
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn4uayw359fjMh4P9i2rKKZYHzXaqTRNs"></script>
                 </div>
             </div>
         </div>

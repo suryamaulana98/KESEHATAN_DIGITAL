@@ -45,8 +45,12 @@
         <div class="login-box card">
             <div class="card-body">
                 <form class="form-horizontal form-material" id="loginform" action="{{ route('register') }}"
-                    method="POST">
+                    method="POST" enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" name="foto"  id="">
+                    @error('foto')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
                     <div class="text-center">
                         <a href="javascript:void(0)" class="db"><img
                                 src="{{ asset('template_admin/assets/images/logo1.png') }}" alt="Home" /><br /><img
@@ -59,12 +63,18 @@
                             <input class="form-control" type="text" required="" name="name"
                                 placeholder="Masukan Nama">
                         </div>
+                        @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <input class="form-control" type="text" required="" name="email"
                                 placeholder="Masukan Email">
                         </div>
+                        @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
