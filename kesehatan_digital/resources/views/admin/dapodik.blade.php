@@ -182,10 +182,10 @@
                                                     </div>
 
                                                     <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary"
-                                                        data-bs-toggle="modal" data-bs-target="#modalcetak">
+                                                    <a href="#" class="btn btn-primary"
+                                                        data-bs-toggle="modal" data-bs-target="#modalcetak{{ $item->id }}">
                                                         Cetak kartu
-                                                    </button>
+                                                    </a>
 
                                                     <style>
                                                         /* CSS untuk tampilan kartu pelajar di dalam modal */
@@ -273,7 +273,7 @@
                                                     </style>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="modalcetak" tabindex="-1"
+                                                    <div class="modal fade" id="modalcetak{{ $item->id }}" tabindex="-1"
                                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog modal-lg">
                                                             <div class="modal-content">
@@ -313,11 +313,11 @@
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary"
                                                                         data-bs-dismiss="modal">Close</button>
-                                                                    <button type="button" id="cetakPdfBtn"
+                                                                    <button type="button" id="cetakPdfBtn{{ $item->id }}"
                                                                         class="btn btn-primary">Cetak ke PDF</button>
                                                                 </div>
                                                                 <script>
-                                                                    document.getElementById('cetakPdfBtn').addEventListener('click', function() {
+                                                                    document.getElementById('cetakPdfBtn{{ $item->id }}').addEventListener('click', function() {
                                                                         window.print();
                                                                     });
                                                                 </script>

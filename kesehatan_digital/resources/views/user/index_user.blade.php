@@ -55,7 +55,7 @@
                     <div class="info">
                         <div class="container">
                             <div class="row">
-                                <div class="col-xs-12 v2  slider-content-area text-center">
+                                <div class="col-xs-12 v2   slider-content-area text-center">
                                     <div class="welcome-text">
                                         <h1>{{ $item->judul }}</h1>
                                         <h4>{{ $item->deskripsi }}</h4>

@@ -70,9 +70,7 @@
                 <div class="modal-header bg-primary text-white">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-
-                    <div >
+                <div class="modal-body"> <div >
                         <img class="cardd" src="data:image/svg+xml;base64,<?php echo base64_encode(file_get_contents(public_path('img/background1.png'))); ?>" width="120">
                         <div class="card-body">
 

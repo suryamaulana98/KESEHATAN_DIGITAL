@@ -1350,15 +1350,28 @@ button.NextArrowbrand:hover {
         position: relative;
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: cover;
+        background-size: contain;
         background-image: url('img/sekolahh.jpeg');
     }
-}
 
-.Modern-Slider.v2 .item .info {
-    background: rgba(0, 0, 0, .75);
-    z-index: 1;
+     /* Tambahkan aturan untuk tampilan mobile */
+    @media screen and (max-width: 768px) {
+        .item {
+            background-size: cover; /* Mengisi latar belakang sepenuhnya tanpa mempertahankan aspek rasio */
+        }
+    }
 }
+ 
+
+    .Modern-Slider.v2 .item .info {
+        background: rgba(0, 0, 0, .75);
+        z-index: 1;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        
+    }
+    
 
 .v2 .welcome-text {
     background-color: transparent;
