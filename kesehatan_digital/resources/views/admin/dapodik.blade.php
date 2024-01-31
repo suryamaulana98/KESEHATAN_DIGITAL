@@ -247,10 +247,7 @@
                                                             background-color: rgba(255, 255, 255, 0.8);
                                                             /* Warna latar belakang konten */
                                                         }
-                                                    </style>
-                                                    <!-- Modal -->
-                                                    <!-- Modal -->
-                                                    <style>
+                                                    
                                                         /* CSS untuk tampilan cetak */
                                                         @media print {
                                                             body * {
@@ -269,6 +266,14 @@
                                                                     absolute;
                                                             }
 
+                                                        }   
+                                                        .card-details {
+                                                            list-style-type: none;
+                                                            padding: 0;
+                                                        }
+
+                                                        .card-details li {
+                                                            margin-bottom: 2px; 
                                                         }
                                                     </style>
 
@@ -287,26 +292,15 @@
                                                                 <div class="modal-body">
                                                                     <div class="cardd">
                                                                         <div class="card-body">
-                                                                            <img src="{{ asset('foto/' . $item->foto) }}"
-                                                                                style="border-radius: 80%; width:26%;height:26%; margin-bottom:-63%; margin-left: 2%;">
-                                                                            <p class="card-text text-center"
-                                                                                style="margin-top:24%; margin-right:-18%;">
-                                                                                {{ $item->name }}</p>
-                                                                            <p class="card-text"
-                                                                                style="margin-left:55%;">
-                                                                                {{ $item->nisn }}</p>
-                                                                            <p class="card-text"
-                                                                                style="margin-left:55%;">
-                                                                                {{ $item->nis }}</p>
-                                                                            <p class="card-text"
-                                                                                style="margin-left:55%;">
-                                                                                {{ $item->kelas->kelas }}</p>
-                                                                            <p class="card-text"
-                                                                                style="margin-left:55%;">
-                                                                                {{ $item->tanggal_lahir }}</p>
-                                                                            <p class="card-text"
-                                                                                style="margin-left:55%;">
-                                                                                {{ $item->jenis_kelamin }}</p>
+                                                                          <ul class="card-details">
+                                                                                <li><img src="{{ asset('foto/' . $item->foto) }}" style="border-radius: 80%; width:26%;height:26%; margin-bottom:-63%; margin-left: 2%;"></li>
+                                                                                <li class="card-text text-center" style="margin-top:24%; margin-right:-18%;">{{ $item->name }}</li>
+                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->nisn }}</li>
+                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->nis }}</li>
+                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->kelas->kelas }}</li>
+                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->tanggal_lahir }}</li>
+                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->jenis_kelamin }}</li>
+                                                                            </ul>
                                                                         </div>
                                                                     </div>
                                                                 </div>
