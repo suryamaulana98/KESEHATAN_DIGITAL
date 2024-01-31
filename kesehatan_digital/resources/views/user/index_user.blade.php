@@ -72,7 +72,7 @@
         <!-- end of slider section -->
     </section>
 
-    <script>
+    {{-- <script>
         // Ambil data slider dari database dan simpan dalam variabel dataSlider
         var dataSlider = {!! json_encode($landing) !!};
         console.log(dataSlider); // Cek apakah dataSlider berisi data yang valid
@@ -123,7 +123,7 @@
             // Tambahkan slideItem ke dalam slider
             slider.appendChild(slideItem);
         });
-    </script>
+    </script> --}}
 
     <!-- end of get quote area -->
     <!-- start features area -->

@@ -180,7 +180,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-primary"
                                                         data-bs-toggle="modal" data-bs-target="#modalcetak">
@@ -251,23 +251,26 @@
                                                     <!-- Modal -->
                                                     <!-- Modal -->
                                                     <style>
-    /* CSS untuk tampilan cetak */
-    @media print {
-        body * {
-            visibility: hidden;
-        }
-        .cardd, .cardd * {
-            visibility: visible;
-        }
-        .cardd {
-            left: 10px;
-            top: 10px;
-            position: 
-            absolute;
-        }
-        
-    }
-</style>
+                                                        /* CSS untuk tampilan cetak */
+                                                        @media print {
+                                                            body * {
+                                                                visibility: hidden;
+                                                            }
+
+                                                            .cardd,
+                                                            .cardd * {
+                                                                visibility: visible;
+                                                            }
+
+                                                            .cardd {
+                                                                left: 10px;
+                                                                top: 10px;
+                                                                position:
+                                                                    absolute;
+                                                            }
+
+                                                        }
+                                                    </style>
 
                                                     <!-- Modal -->
                                                     <div class="modal fade" id="modalcetak" tabindex="-1"
@@ -284,14 +287,26 @@
                                                                 <div class="modal-body">
                                                                     <div class="cardd">
                                                                         <div class="card-body">
-                                                                            <p class="card-text text-center" style="margin-top:28%; margin-right:-18%;">
+                                                                            <img src="{{ asset('foto/' . $item->foto) }}"
+                                                                                style="border-radius: 80%; width:26%;height:26%; margin-bottom:-63%; margin-left: 2%;">
+                                                                            <p class="card-text text-center"
+                                                                                style="margin-top:24%; margin-right:-18%;">
                                                                                 {{ $item->name }}</p>
-                                                                            <p class="card-text" style="margin-left:55%;">
+                                                                            <p class="card-text"
+                                                                                style="margin-left:55%;">
+                                                                                {{ $item->nisn }}</p>
+                                                                            <p class="card-text"
+                                                                                style="margin-left:55%;">
                                                                                 {{ $item->nis }}</p>
-                                                                            <p class="card-text" style="margin-left:55%;">
-                                                                                {{ $item->tinggi_badan }}</p>
-                                                                            <p class="card-text" style="margin-left:55%;">
-                                                                                {{ $item->berat_badan }}</p>
+                                                                            <p class="card-text"
+                                                                                style="margin-left:55%;">
+                                                                                {{ $item->kelas->kelas }}</p>
+                                                                            <p class="card-text"
+                                                                                style="margin-left:55%;">
+                                                                                {{ $item->tanggal_lahir }}</p>
+                                                                            <p class="card-text"
+                                                                                style="margin-left:55%;">
+                                                                                {{ $item->jenis_kelamin }}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -302,10 +317,10 @@
                                                                         class="btn btn-primary">Cetak ke PDF</button>
                                                                 </div>
                                                                 <script>
-    document.getElementById('cetakPdfBtn').addEventListener('click', function () {
-        window.print();
-    });
-</script>
+                                                                    document.getElementById('cetakPdfBtn').addEventListener('click', function() {
+                                                                        window.print();
+                                                                    });
+                                                                </script>
                                                             </div>
                                                         </div>
                                                     </div>

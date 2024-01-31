@@ -167,6 +167,9 @@
                 top: 10px;
                 position:
                     absolute;
+                background-image: url('/img/background1.png');
+                   /* Tetapkan gambar latar belakang untuk mencetak */
+                background-size: cover;
             }
 
         }
@@ -339,6 +342,7 @@
                 <div class="modal-body">
                     <div class="cardd">
                         <div class="card-body">
+                            <img src="{{ asset('foto/' . Auth::user()->foto) }}" style="border-radius: 80%; width:25%;height:25%; margin-bottom:-65%; margin-left: 5%;" alt="">
                             <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 185px;">
                                 {{ Auth::user()->name }}</p>
                             <p class="card-text text-uppercase" style="margin-left:340px; ">

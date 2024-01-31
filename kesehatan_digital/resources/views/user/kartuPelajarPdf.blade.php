@@ -13,8 +13,8 @@
             height: 400px;
             margin: 0 auto;
             /* Posisikan kartu di tengah */
-            background-image: url('{{ asset('img/background1.png') }}');
-            /* Ganti 'background.jpg' dengan path gambar Anda */
+            background-image: url('../img/background1.png');
+            /* Ganti 'background1.png' dengan nama gambar latar belakang Anda */
             background-size: cover;
             border: 2px solid #17a2b8;
             /* Warna border kartu */
@@ -27,7 +27,7 @@
         .card-title {
             font-size: 1px;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.1rem;
             /* Jarak antara judul dan konten */
         }
 
@@ -37,21 +37,6 @@
             font-weight: bold;
             margin-bottom: 0.1rem;
             /* Jarak antara konten */
-        }
-
-
-
-        /* CSS untuk tombol cetak */
-        #cetakPdfBtn {
-            width: 100%;
-        }
-
-
-        /* CSS untuk konten di dalam modal */
-        .modal-body,
-        .modal-footer {
-            background-color: rgba(255, 255, 255, 0.8);
-            /* Warna latar belakang konten */
         }
 
         /* CSS untuk tampilan cetak */
@@ -68,14 +53,13 @@
             .cardd {
                 left: 10px;
                 top: 10px;
-                position:
-                    absolute;
+                position: absolute;
+                background-image: url('../img/background1.png');
+                /* Tetapkan gambar latar belakang untuk mencetak */
+                background-size: cover;
             }
-
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 </head>
 
 <body>
@@ -87,20 +71,26 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="cardd">
+
+                    <div >
+                        <img class="cardd" src="data:image/svg+xml;base64,<?php echo base64_encode(file_get_contents(public_path('img/background1.png'))); ?>" width="120">
                         <div class="card-body">
-                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 185px;">
+
+                            {{-- <img src="{{ asset('img/' . Auth::user()->foto) }}"
+                                style="border-radius: 80%; width:25%;height:25%; margin-bottom:-65%; margin-left: 5%;"
+                                alt=""> --}}
+                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: -215px;">
                                 {{ Auth::user()->name }}</p>
-                            <p class="card-text text-uppercase" style="margin-left:340px; ">
+                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 5px;">
                                 {{ Auth::user()->nisn }}</p>
-                            <p class="card-text text-uppercase" style="margin-left:340px; ">
+                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 5px;">
                                 {{ Auth::user()->nis }}</p>
-                            <p class="card-text text-uppercase" style="margin-left:340px; ">
+                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 4px;">
                                 {{ Auth::user()->kelas->kelas }}</p>
-                            <p class="card-text text-uppercase" style="margin-left:340px;">
-                                {{ Auth::user()->tanggal_lahir }}
+                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 4px;">
+                                {{ Auth::user()->tanggal_lahir }}   
                             </p>
-                            <p class="card-text text-uppercase" style="margin-left:340px;">
+                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 4px;">
                                 {{ Auth::user()->jenis_kelamin }}</p>
                         </div>
                     </div>
