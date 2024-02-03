@@ -127,7 +127,22 @@
                 <div class="col-12 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data Tablet Tambah Darah</h4>
+                            <div class="d-flex justify-content-between">
+                                <h4 class="card-title">Data Tablet Tambah Darah</h4>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-success text-white me-3"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                        <span class="mdi mdi-file-excel"></span> Import Excel
+                                    </button>
+
+                                    <button type="button" class="btn btn-danger text-white">
+                                        <a href="{{ route('pdf-ttd') }}" class="text-white"><span
+                                                class="mdi mdi-file-pdf"></span> Export
+                                            Pdf</a>
+                                    </button>
+                                </div>
+                            </div>
+
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -171,6 +186,32 @@
                 </div>
             </div>
             @extends('partials.footer_admin')
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Import Data TTD</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('importTtd') }}" enctype="multipart/form-data" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <input type="file" name="ttd_file" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save
+                                changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 

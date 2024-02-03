@@ -6,6 +6,7 @@ use Dompdf\Dompdf;
 use App\Models\Ttd;
 use App\Models\User;
 use App\Models\Kelas;
+use App\Models\siswaUks;
 use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
@@ -34,6 +35,17 @@ class DapodikController extends Controller
         // Tampilkan pratinjau PDF di browser
         $dompdf->stream('data-dapodik.pdf', ['Attachment' => false]);
     }
+    public function exportPdfTtd(){
+        $user = Ttd::get();
+        
+        $html = view('admin.ttdPdf', compact('user'))->render();
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->render();
+        // Tampilkan pratinjau PDF di browser
+        $dompdf->stream('data-ttd.pdf', ['Attachment' => false]);
+    }
 
     public function importExcel(Request $request){
 
@@ -55,6 +67,32 @@ class DapodikController extends Controller
                 'name' => $row[0],
                 'email' => $row[1],
                 'password' => bcrypt($row[2]),
+            ]);
+        }
+    
+        return redirect()->back()->with('success', 'Data imported successfully.');
+    }
+
+    public function importExcelTtd(Request $request){
+
+        // $rows = $request->validate([
+        //     'excel_file' => 'required',
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        // ]);
+
+        $file = $request->file('ttd_file');
+        $path = $file->path();
+
+        $spreadsheet = IOFactory::load($path);
+        $worksheet = $spreadsheet->getActiveSheet();
+        $rows = $worksheet->toArray();
+    
+        foreach ($rows as $row) {
+            Ttd::create([
+                'id_kelas' => $row[0],
+                'status' => $row[1],
+                'jumlah' => $row[2],
             ]);
         }
     
@@ -89,6 +127,30 @@ class DapodikController extends Controller
 
         return redirect()->back()->with('success','Berhasil Menghapus Ttd');
 
+    }
+
+    public function siswaSakitUks(){
+        $kelas = Kelas::all();
+        $siswa = siswaUks::with('kelas')->get();
+        return view('admin.siswaSakitUks', compact('siswa', 'kelas'));
+    }
+
+    function tambahSiswaSakit(Request $request){
+        $siswa = $request->validate([
+            'name' => 'required',
+            'id_kelas' => 'required',
+            'keterangan' => 'required',
+        ]);
+
+        // dd($siswa);
+
+        siswaUks::create([
+            'name' => $request->name,
+            'id_kelas' => $request->id_kelas,
+            'keterangan' => $request->keterangan,
+        ]);
+
+        return redirect()->back()->with('success', 'Sukses Menambah Data Baru!!');
     }
 
     public function kelas(){

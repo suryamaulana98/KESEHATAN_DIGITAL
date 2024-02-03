@@ -73,14 +73,7 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a class="{{ request()->is('ttd') ? 'active' : '' }}" href="{{ route('ttd') }}"
-                        aria-expanded="false">
-                        <i class="fa-solid fa-tablets"></i>
-                        <span class="hide-menu">Ttd
-                        </span>
-                    </a>
-                </li>
+
                 <li>
                     <a class="{{ request()->is('kelas.index') ? 'active' : '' }}" href="{{ route('kelas.index') }}"
                         aria-expanded="false">
@@ -89,14 +82,7 @@
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a class="{{ request()->is('vaksin') ? 'active' : '' }}" href="{{ route('vaksin') }}"
-                        aria-expanded="false">
-                        <i class="fa-solid fa-virus-covid"></i>
-                        <span class="hide-menu">Vaksinasi
-                        </span>
-                    </a>
-                </li>
+
                 {{-- <li>
                     <a class="{{ request()->is('landingPage.index') ? 'active' : '' }}"
                         href="{{ route('landingPage.index') }}" aria-expanded="false">
@@ -105,6 +91,35 @@
                         </span>
                     </a>
                 </li> --}}
+                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                            class="ti-bar-chart-alt"></i><span class="hide-menu">Manajemen UKS</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li>
+                            <a class="{{ request()->is('vaksin') ? 'active' : '' }}" href="{{ route('vaksin') }}"
+                                aria-expanded="false">
+
+                                <span class="hide-menu">Vaksinasi
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{{ request()->is('ttd') ? 'active' : '' }}" href="{{ route('ttd') }}"
+                                aria-expanded="false">
+
+                                <span class="hide-menu">Ttd
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{{ request()->is('siswaUks') ? 'active' : '' }}" href="{{ route('siswaUks') }}"
+                                aria-expanded="false">
+
+                                <span class="hide-menu">Siswa Sakit
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
                             class="ti-bar-chart-alt"></i><span class="hide-menu">Lainya</span></a>
                     <ul aria-expanded="false" class="collapse">

@@ -47,14 +47,15 @@
                 <form class="form-horizontal form-material" id="loginform" action="{{ route('register') }}"
                     method="POST" enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" name="foto"  id="">
+                    <input type="hidden" name="foto" id="">
                     @error('foto')
-    <div class="alert alert-danger">{{ $message }}</div>
-@enderror
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     <div class="text-center">
                         <a href="javascript:void(0)" class="db"><img
                                 src="{{ asset('template_admin/assets/images/logo1.png') }}" alt="Home" /><br /><img
-                                src="{{ asset('template_admin/assets/images/logo2.png') }}" style="margin-right: -8%;" alt="Home" /></a>
+                                src="{{ asset('template_admin/assets/images/logo2.png') }}" style="margin-right: -8%;"
+                                alt="Home" /></a>
                     </div>
                     <h3 class="box-title m-t-40 m-b-0">Registrasikan Diri Anda</h3><small>Buat akunmu dan nikmati
                         hasilnya.</small>
@@ -64,8 +65,8 @@
                                 placeholder="Masukan Nama">
                         </div>
                         @error('name')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
@@ -73,8 +74,8 @@
                                 placeholder="Masukan Email">
                         </div>
                         @error('email')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
@@ -91,7 +92,7 @@
                     <div class="form-group">
                         <select class="form-select" name="id_kelas" aria-label="Default select example">
                             <option selected disabled>----Pilih Kelas----</option>
-                            @foreach ($register as $item)
+                            @foreach ($kelas as $item)
                                 <option value="{{ $item->id }}">{{ $item->kelas }}</option>
                             @endforeach
                         </select>

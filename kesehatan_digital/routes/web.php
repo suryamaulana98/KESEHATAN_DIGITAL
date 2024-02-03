@@ -54,6 +54,8 @@ Auth::routes();
     Route::get('/vaksin', [App\Http\Controllers\DapodikController::class, 'vaksin'])->name('vaksin');
     Route::resource('/artikelAdmin', ArtikelController::class);
     Route::get('/cariArtikel', [App\Http\Controllers\ArtikelController::class, 'search'])->name('cariArtikel');
+    Route::get('/siswa-sakit-uks', [App\Http\Controllers\DapodikController::class, 'siswaSakitUks'])->name('siswaUks');
+    Route::post('/tambah-siswa-sakit-uks', [App\Http\Controllers\DapodikController::class, 'tambahSiswaSakit'])->name('tambahSiswaUks');
     Route::resource('/kelas', KelasController::class);
     Route::resource('/dashboardAdmin', DashboardAdminController::class);
     Route::resource('/userAdmin', UserController::class);
@@ -92,6 +94,11 @@ Route::get('/export-pdf', [App\Http\Controllers\DapodikController::class, 'expor
 Route::get('/kartu-pelajar-pdf/{id}', [App\Http\Controllers\HomeController::class, 'cetakPdf'])->name('kartuPdf');
 
 Route::post('/import-excel', [App\Http\Controllers\DapodikController::class, 'importExcel'])->name('importExcel');
+
+Route::post('/import-excel-ttd', [App\Http\Controllers\DapodikController::class, 'importExcelTtd'])->name('importTtd');
+
+Route::get('/export-pdf-ttd', [App\Http\Controllers\DapodikController::class, 'exportPdfTtd'])->name('pdf-ttd');
+
 
 
 
