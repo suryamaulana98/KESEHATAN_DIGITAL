@@ -315,6 +315,15 @@
                                                                                 <li class="card-text"
                                                                                     style="margin-left:55%;">
                                                                                     {{ $item->nis }}</li>
+                                                                                @if ($item->kelas !== null)
+                                                                                    <li class="card-text"
+                                                                                        style="margin-left: 55%;">
+                                                                                        {{ $item->kelas->kelas }}
+                                                                                    </li>
+                                                                                @elseif($item->kelas === null)
+                                                                                    <li class="card-text"
+                                                                                        style="margin-left: 55%;"></li>
+                                                                                @endif
                                                                                 <li class="card-text"
                                                                                     style="margin-left:55%;">
                                                                                     {{ $item->tanggal_lahir }}</li>

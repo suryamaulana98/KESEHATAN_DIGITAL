@@ -351,6 +351,13 @@
                                 {{ Auth::user()->nisn }}</p>
                             <p class="card-text text-uppercase" style="margin-left:340px; ">
                                 {{ Auth::user()->nis }}</p>
+                            @if (Auth::user()->kelas !== null)
+                                <p cclass="card-text text-uppercase" style="margin-left:340px; ">
+                                    {{ Auth::user()->kelas->kelas }}
+                                </p>
+                            @elseif(Auth::user()->kelas === null)
+                                <p class="card-text text-uppercase" style="margin-left:340px; "></p>
+                            @endif
                             <p class="card-text text-uppercase" style="margin-left:340px; ">
                                 {{ Auth::user()->kelas->kelas }}</p>
                             <p class="card-text text-uppercase" style="margin-left:340px;">
