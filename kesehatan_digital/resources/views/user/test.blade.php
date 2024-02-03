@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Profile Siswa</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Medicare | Responsive HTML5 Template</title>
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon" />
     <!-- google fonts lato -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -226,23 +225,22 @@
                     <div class="card-body p-2" style="padding: 12px;">
 
                         <div class="form-group">
-                            <label class="form-label"><span class="help">Masukan
-                                    Username</span></label>
-                            <input type="text" class="form-control" name="name"
+                            <label class="form-label"><span class="help">Nama Lengkap</span></label>
+                            <input type="text" placeholder="Masukkan Nama Lengkap" class="form-control" name="name"
                                 value="{{ old('name', Auth::user()->name) }}">
                         </div>
 
                         <div class="row gx-5 mb-3 form-group">
 
                             <div class="col-md-6">
-                                <label class="mb-1" for="inputFirstName">Masukan NISN</label>
-                                <input type="text" class="form-control" name="nisn"
+                                <label class="mb-1"  for="inputFirstName">NISN</label>
+                                <input type="text" placeholder="Masukkan Nisn" class="form-control" name="nisn"
                                     value="{{ old('nisn', Auth::user()->nisn) }}">
                             </div>
 
                             <div class="col-md-6">
-                                <label class=" mb-1" for="inputLastName">Masukan NIS</label>
-                                <input type="text" class="form-control" name="nis"
+                                <label class=" mb-1" for="inputLastName">NIS</label>
+                                <input type="text" placeholder="Masukkan Nis" class="form-control" name="nis"
                                     value="{{ old('nis', Auth::user()->nis) }}">
                             </div>
                         </div>
@@ -250,27 +248,55 @@
                         <div class="row gx-3 mb-3">
 
                             <div class="col-md-6 form-group">
-                                <label class=" mb-1" for="inputOrgName">Masukan Tinggi Badan</label>
-                                <input type="text" class="form-control" name="tinggi_badan"
+                                <label class=" mb-1" for="inputOrgName">Tinggi Badan</label>
+                                <input type="text" class="form-control" placeholder="CM" name="tinggi_badan"
                                     value="{{ old('tinggi_badan', Auth::user()->tinggi_badan) }}">
                             </div>
 
                             <div class="col-md-6 form-group">
-                                <label class=" mb-1" for="inputLocation">Masukan Berat Badan</label>
-                                <input type="text" class="form-control" name="berat_badan"
+                                <label class=" mb-1" for="inputLocation">Berat Badan</label>
+                                <input type="text" class="form-control" placeholder="KG" name="berat_badan"
                                     value="{{ old('berat_badan', Auth::user()->berat_badan) }}">
+                            </div>
+                        </div>
+                        <div class="row gx-3 mb-3">
+
+                            <div class="col-md-6 form-group">
+                                <label class=" mb-1" for="inputOrgName">Lingkar Kepala</label>
+                                <input type="number" class="form-control" placeholder="Masukkan Lingkar Kepala" name="lingkar_kepala"
+                                    value="{{ old('lingkar_kepala', Auth::user()->lingkar_kepala) }}">
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label class=" mb-1" for="inputLocation">Jumlah Saudara</label>
+                                <input type="number" class="form-control" placeholder="Masukkan Jumlah Saudara Kandung" name="jumlah_saudara"
+                                    value="{{ old('jumlah_saudara', Auth::user()->jumlah_saudara) }}">
+                            </div>
+                        </div>
+                        <div class="row gx-3 mb-3">
+
+                            <div class="col-md-6 form-group">
+                                <label class=" mb-1" for="inputOrgName">Jarak Rumah Ke Sekolah</label>
+                                <input type="number" class="form-control" placeholder="KM" name="jarak_rumah"
+                                    value="{{ old('jarak_rumah', Auth::user()->jarak_rumah) }}">
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label class=" mb-1" for="inputLocation">Waktu Tempuh Ke Sekolah</label>
+                                <input type="time" class="form-control" placeholder="Menit" name="waktu_tempuh"
+                                    value="{{ old('waktu_tempuh', Auth::user()->waktu_tempuh) }}">
                             </div>
                         </div>
 
                         <div class="mb-3 form-group">
-                            <label class=" mb-1" for="inputEmailAddress">Masukan Email</label>
-                            <input type="text" class="form-control" name="email"
+                            <label class=" mb-1" for="inputEmailAddress">Email</label>
+                            <input type="text" class="form-control" placeholder="Masukkan Email Yang valid" name="email"
                                 value="{{ old('email', Auth::user()->email) }}">
                         </div>
 
                         <div class="mb-3 form-group">
-                            <label class=" mb-1" for="inputEmailAddress">Masukan Tanggal Lahir</label>
-                            <input type="text" class="form-control" name="tanggal_lahir"
+                            <label class=" mb-1" for="inputEmailAddress">Tanggal Lahir</label>
+                            <input type="date" class="form-control" placeholder="Masukka Tanggal lahir" name="tanggal_lahir"
                                 value="{{ old('tanggal_lahir', Auth::user()->tanggal_lahir) }}">
                         </div>
 
@@ -278,7 +304,7 @@
 
                             <div class="col-md-6">
                                 <div class="mb-3 form-group">
-                                    <label class=" mb-1" for="inputEmailAddress">Pilih Data Vaksin</label>
+                                    <label class=" mb-1" for="inputEmailAddress">Pilih Data Vaksin Covid-19</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="d_vaksin"
                                             id="vaksin_pertama" value="Vaksin Pertama"

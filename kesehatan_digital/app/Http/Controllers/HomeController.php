@@ -90,11 +90,15 @@ class HomeController extends Controller
             'foto' => 'image'
         ]);
 
-        $nm = $request->file('foto'); 
+        $namaFile = null;
+        if($request->hasFile('foto')){
+            $nm = $request->file('foto'); 
+    
+            $extension = $nm->getClientOriginalExtension();
+            $namaFile = hash('sha256', time() . rand(100, 999)) . '.' . $extension;
+            $nm->move(public_path().'/foto', $namaFile);
 
-        $extension = $nm->getClientOriginalExtension();
-        $namaFile = hash('sha256', time() . rand(100, 999)) . '.' . $extension;
-        $nm->move(public_path().'/foto', $namaFile);
+        }
 
         // $user = User::findOrFail($id);
          User::query()
@@ -109,6 +113,10 @@ class HomeController extends Controller
             'nisn' =>$request->nisn,
             'tanggal_lahir' =>$request->tanggal_lahir,
             'jenis_kelamin' =>$request->jenis_kelamin,
+            'lingkar_kepala' =>$request->lingkar_kepala,
+            'jumlah_saudara' =>$request->jumlah_saudara,
+            'jarak_rumah' =>$request->jarak_rumah,
+            'waktu_tempuh' =>$request->waktu_tempuh,
             'foto' =>  $namaFile
         ]);
 

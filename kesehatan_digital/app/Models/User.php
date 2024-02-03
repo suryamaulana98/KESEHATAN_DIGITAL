@@ -33,6 +33,10 @@ class User extends Authenticatable
         'tanggal_lahir',
         'jenis_kelamin',
         'foto',
+        'lingkar_kepala',
+        'jarak_rumah',
+        'waktu_tempuh',
+        'jumlah_saudara'
     ];
 
     public function kelas(){
