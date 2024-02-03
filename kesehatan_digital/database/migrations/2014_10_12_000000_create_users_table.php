@@ -27,6 +27,10 @@ return new class extends Migration
             $table->enum('jenis_kelamin', ['Laki - Laki','Perempuan'])->nullable();
             $table->string('tinggi_badan')->nullable();
             $table->string('berat_badan')->nullable();
+            $table->string('lingkar_kepala')->nullable();
+            $table->string('jarak_rumah')->nullable();
+            $table->string('waktu_tempuh')->nullable();
+            $table->string('jumlah_saudara')->nullable();
             $table->enum('d_vaksin', ['Vaksin Pertama','Vaksin Kedua','Vaksin Ketiga'])->nullable();
             $table->rememberToken();
             $table->timestamps();
