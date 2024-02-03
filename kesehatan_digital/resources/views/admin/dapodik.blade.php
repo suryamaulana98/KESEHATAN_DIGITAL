@@ -103,6 +103,7 @@
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Nis</th>
+                                            <th>Kelas</th>
                                             <th>Tinggi</th>
                                             <th>Berat</th>
                                             <th>Aksi</th>
@@ -114,6 +115,13 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->nis }}</td>
+                                                @if ($item->kelas !== null)
+                                                    <td>
+                                                        {{ $item->kelas->kelas }}
+                                                    </td>
+                                                @elseif($item->kelas === null)
+                                                    <td></td>
+                                                @endif
                                                 <td>{{ $item->tinggi_badan }}</td>
                                                 <td>{{ $item->berat_badan }}</td>
                                                 <td>
@@ -182,8 +190,8 @@
                                                     </div>
 
                                                     <!-- Button trigger modal -->
-                                                    <a href="#" class="btn btn-primary"
-                                                        data-bs-toggle="modal" data-bs-target="#modalcetak{{ $item->id }}">
+                                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#modalcetak{{ $item->id }}">
                                                         Cetak kartu
                                                     </a>
 
@@ -247,7 +255,7 @@
                                                             background-color: rgba(255, 255, 255, 0.8);
                                                             /* Warna latar belakang konten */
                                                         }
-                                                    
+
                                                         /* CSS untuk tampilan cetak */
                                                         @media print {
                                                             body * {
@@ -266,20 +274,22 @@
                                                                     absolute;
                                                             }
 
-                                                        }   
+                                                        }
+
                                                         .card-details {
                                                             list-style-type: none;
                                                             padding: 0;
                                                         }
 
                                                         .card-details li {
-                                                            margin-bottom: 2px; 
+                                                            margin-bottom: 2px;
                                                         }
                                                     </style>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="modalcetak{{ $item->id }}" tabindex="-1"
-                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal fade" id="modalcetak{{ $item->id }}"
+                                                        tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                        aria-hidden="true">
                                                         <div class="modal-dialog modal-lg">
                                                             <div class="modal-content">
                                                                 <div class="modal-header bg-primary text-white">
@@ -292,14 +302,25 @@
                                                                 <div class="modal-body">
                                                                     <div class="cardd">
                                                                         <div class="card-body">
-                                                                          <ul class="card-details">
-                                                                                <li><img src="{{ asset('foto/' . $item->foto) }}" style="border-radius: 80%; width:26%;height:26%; margin-bottom:-63%; margin-left: 2%;"></li>
-                                                                                <li class="card-text text-center" style="margin-top:24%; margin-right:-18%;">{{ $item->name }}</li>
-                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->nisn }}</li>
-                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->nis }}</li>
-                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->kelas->kelas }}</li>
-                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->tanggal_lahir }}</li>
-                                                                                <li class="card-text" style="margin-left:55%;">{{ $item->jenis_kelamin }}</li>
+                                                                            <ul class="card-details">
+                                                                                <li><img src="{{ asset('foto/' . $item->foto) }}"
+                                                                                        style="border-radius: 80%; width:26%;height:26%; margin-bottom:-63%; margin-left: 2%;">
+                                                                                </li>
+                                                                                <li class="card-text text-center"
+                                                                                    style="margin-top:24%; margin-right:-18%;">
+                                                                                    {{ $item->name }}</li>
+                                                                                <li class="card-text"
+                                                                                    style="margin-left:55%;">
+                                                                                    {{ $item->nisn }}</li>
+                                                                                <li class="card-text"
+                                                                                    style="margin-left:55%;">
+                                                                                    {{ $item->nis }}</li>
+                                                                                <li class="card-text"
+                                                                                    style="margin-left:55%;">
+                                                                                    {{ $item->tanggal_lahir }}</li>
+                                                                                <li class="card-text"
+                                                                                    style="margin-left:55%;">
+                                                                                    {{ $item->jenis_kelamin }}</li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
@@ -307,7 +328,8 @@
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary"
                                                                         data-bs-dismiss="modal">Close</button>
-                                                                    <button type="button" id="cetakPdfBtn{{ $item->id }}"
+                                                                    <button type="button"
+                                                                        id="cetakPdfBtn{{ $item->id }}"
                                                                         class="btn btn-primary">Cetak ke PDF</button>
                                                                 </div>
                                                                 <script>
