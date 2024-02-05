@@ -107,7 +107,7 @@
                                                onsubmit="return confirm('Apakah Anda Yakin ?');" method="POST"
                                                id="logout-form">
                                                @csrf
-                                               <button type="submit" class="dropdown-item d-none">Logout</button>
+                                               <button type="submit" style="background: none">Logout</button>
                                            </form>
                                        </a>
                                    </li>

@@ -25,7 +25,7 @@
                                 method="POST" id="logout-form">
                                 @csrf
                                 <button type="submit" class="dropdown-item"><i
-                                        class="fa fa-power-off"></i>Logout</button>
+                                        class="fa fa-power-off"></i> Logout</button>
                             </form>
                         </a>
 
