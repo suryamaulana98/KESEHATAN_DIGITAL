@@ -226,14 +226,14 @@
 
                         <div class="form-group">
                             <label class="form-label"><span class="help">Nama Lengkap</span></label>
-                            <input type="text" placeholder="Masukkan Nama Lengkap" class="form-control" name="name"
-                                value="{{ old('name', Auth::user()->name) }}">
+                            <input type="text" placeholder="Masukkan Nama Lengkap" class="form-control"
+                                name="name" value="{{ old('name', Auth::user()->name) }}">
                         </div>
 
                         <div class="row gx-5 mb-3 form-group">
 
                             <div class="col-md-6">
-                                <label class="mb-1"  for="inputFirstName">NISN</label>
+                                <label class="mb-1" for="inputFirstName">NISN</label>
                                 <input type="text" placeholder="Masukkan Nisn" class="form-control" name="nisn"
                                     value="{{ old('nisn', Auth::user()->nisn) }}">
                             </div>
@@ -263,13 +263,15 @@
 
                             <div class="col-md-6 form-group">
                                 <label class=" mb-1" for="inputOrgName">Lingkar Kepala</label>
-                                <input type="number" class="form-control" placeholder="Masukkan Lingkar Kepala" name="lingkar_kepala"
+                                <input type="number" class="form-control" placeholder="Masukkan Lingkar Kepala"
+                                    name="lingkar_kepala"
                                     value="{{ old('lingkar_kepala', Auth::user()->lingkar_kepala) }}">
                             </div>
 
                             <div class="col-md-6 form-group">
                                 <label class=" mb-1" for="inputLocation">Jumlah Saudara</label>
-                                <input type="number" class="form-control" placeholder="Masukkan Jumlah Saudara Kandung" name="jumlah_saudara"
+                                <input type="number" class="form-control"
+                                    placeholder="Masukkan Jumlah Saudara Kandung" name="jumlah_saudara"
                                     value="{{ old('jumlah_saudara', Auth::user()->jumlah_saudara) }}">
                             </div>
                         </div>
@@ -290,14 +292,14 @@
 
                         <div class="mb-3 form-group">
                             <label class=" mb-1" for="inputEmailAddress">Email</label>
-                            <input type="text" class="form-control" placeholder="Masukkan Email Yang valid" name="email"
-                                value="{{ old('email', Auth::user()->email) }}">
+                            <input type="text" class="form-control" placeholder="Masukkan Email Yang valid"
+                                name="email" value="{{ old('email', Auth::user()->email) }}">
                         </div>
 
                         <div class="mb-3 form-group">
                             <label class=" mb-1" for="inputEmailAddress">Tanggal Lahir</label>
-                            <input type="date" class="form-control" placeholder="Masukka Tanggal lahir" name="tanggal_lahir"
-                                value="{{ old('tanggal_lahir', Auth::user()->tanggal_lahir) }}">
+                            <input type="date" class="form-control" placeholder="Masukka Tanggal lahir"
+                                name="tanggal_lahir" value="{{ old('tanggal_lahir', Auth::user()->tanggal_lahir) }}">
                         </div>
 
                         <div class="row gx-3 mb-3 form-group">
@@ -384,8 +386,6 @@
                             @elseif(Auth::user()->kelas === null)
                                 <p class="card-text text-uppercase" style="margin-left:340px; "></p>
                             @endif
-                            <p class="card-text text-uppercase" style="margin-left:340px; ">
-                                {{ Auth::user()->kelas->kelas }}</p>
                             <p class="card-text text-uppercase" style="margin-left:340px;">
                                 {{ Auth::user()->tanggal_lahir }}
                             </p>
