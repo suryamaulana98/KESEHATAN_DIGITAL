@@ -190,7 +190,7 @@
                         <h4 class="card-header">Profile Picture</h4>
                         <div class="card-body text-center" style="margin-top: 30px;">
                             <img id="previewImg" class="img-account-profile rounded-circle mb-2"
-                                src="{{ asset('foto/' . Auth::user()->foto) }}" alt>
+                                src="{{ asset('foto/' . Auth::user()->foto) }}" style="width: 12rem; height: 12rem;" alt>
                             <div class="small font-italic text-muted mb-4" style="margin-bottom: 10px;">JPG or PNG no
                                 larger than 5 MB</div>
                             <button class="btn btn-primary" name="foto" type="button" style="margin-right: 5px;"
