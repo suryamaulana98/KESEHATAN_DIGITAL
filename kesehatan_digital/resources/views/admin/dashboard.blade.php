@@ -71,23 +71,23 @@
                                         <div class="d-flex no-block align-items-center">
                                             <div>
                                                 <h3><i class="icon-grid"></i></h3>
-                                                <p class="text-muted">Data Kategori</p>
+                                                <p class="text-muted">Siswa Sakit UKS</p>
                                             </div>
                                             <div class="ms-auto">
-                                                <h2 class="counter text-primary">{{ $kategori }}</h2>
+                                                <h2 class="counter text-primary">{{ $siswaSakit }}</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="progress" id="kategoriProgressBar">
                                             <div class="progress-bar bg-primary" role="progressbar"
-                                                style="width: {{ $kategori }}%; height: 6px;"
-                                                aria-valuenow="{{ $kategori }}" aria-valuemin="0"
+                                                style="width: {{ $siswaSakit }}%; height: 6px;"
+                                                aria-valuenow="{{ $siswaSakit }}" aria-valuemin="0"
                                                 aria-valuemax="100"></div>
                                         </div>
                                         <script>
                                             // Simpan nilai counter dan inisialisasi progress bar
-                                            var counterValue = {{ $kategori }};
+                                            var counterValue = {{ $siswaSakit }};
                                             var progressBar = $('#kategoriProgressBar .progress-bar');
 
                                             // Fungsi untuk mengupdate nilai dan lebar progress bar

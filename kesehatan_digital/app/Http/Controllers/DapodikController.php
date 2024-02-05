@@ -129,30 +129,7 @@ class DapodikController extends Controller
 
     }
 
-    public function siswaSakitUks(){
-        $kelas = Kelas::all();
-        $siswa = siswaUks::with('kelas')->get();
-        return view('admin.siswaSakitUks', compact('siswa', 'kelas'));
-    }
-
-    function tambahSiswaSakit(Request $request){
-        $siswa = $request->validate([
-            'name' => 'required',
-            'id_kelas' => 'required',
-            'keterangan' => 'required',
-        ]);
-
-        // dd($siswa);
-
-        siswaUks::create([
-            'name' => $request->name,
-            'id_kelas' => $request->id_kelas,
-            'keterangan' => $request->keterangan,
-        ]);
-
-        return redirect()->back()->with('success', 'Sukses Menambah Data Baru!!');
-    }
-
+  
     public function kelas(){
         return view('admin.kelas');
     }

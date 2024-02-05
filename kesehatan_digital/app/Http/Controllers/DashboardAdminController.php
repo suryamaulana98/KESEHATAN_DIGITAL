@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Artikel;
 use App\Models\Kategori;
+use App\Models\siswaUks;
 use Illuminate\Http\Request;
 
 class DashboardAdminController extends Controller
@@ -17,8 +18,9 @@ class DashboardAdminController extends Controller
         $artikel = Artikel::count();
         $jumlahSudahVaksin = User::whereIn('d_vaksin', ['ketiga', 'pertama', 'kedua'])->count();
         $user = User::count();
-        $kategori = Kategori::count();
-        return view('admin.dashboard',compact('artikel','jumlahSudahVaksin','user','kategori'));
+        $hariIni = date("Y-m-d");
+        $siswaSakit = siswaUks::whereDate('created_at', $hariIni)->count();
+        return view('admin.dashboard',compact('artikel','jumlahSudahVaksin','user','siswaSakit'));
     }
 
     /**

@@ -14,6 +14,7 @@ use App\Http\Controllers\profilAdminController;
 use App\Http\Controllers\ProfileUserController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\landingPageController;
+use App\Http\Controllers\SiswaSakitController;
 use App\Models\Komentar;
 use App\Models\landingPage;
 
@@ -54,9 +55,8 @@ Auth::routes();
     Route::get('/vaksin', [App\Http\Controllers\DapodikController::class, 'vaksin'])->name('vaksin');
     Route::resource('/artikelAdmin', ArtikelController::class);
     Route::get('/cariArtikel', [App\Http\Controllers\ArtikelController::class, 'search'])->name('cariArtikel');
-    Route::get('/siswa-sakit-uks', [App\Http\Controllers\DapodikController::class, 'siswaSakitUks'])->name('siswaUks');
-    Route::post('/tambah-siswa-sakit-uks', [App\Http\Controllers\DapodikController::class, 'tambahSiswaSakit'])->name('tambahSiswaUks');
     Route::resource('/kelas', KelasController::class);
+    Route::resource('/siswaSakitUks', SiswaSakitController::class);
     Route::resource('/dashboardAdmin', DashboardAdminController::class);
     Route::resource('/userAdmin', UserController::class);
     Route::resource('/kategoriAdmin', KategoriController::class);

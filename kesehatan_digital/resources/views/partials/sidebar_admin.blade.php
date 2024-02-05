@@ -111,8 +111,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{ request()->is('siswaUks') ? 'active' : '' }}" href="{{ route('siswaUks') }}"
-                                aria-expanded="false">
+                            <a class="{{ request()->is('siswaSakitUks.index') ? 'active' : '' }}"
+                                href="{{ route('siswaSakitUks.index') }}" aria-expanded="false">
 
                                 <span class="hide-menu">Siswa Sakit
                                 </span>

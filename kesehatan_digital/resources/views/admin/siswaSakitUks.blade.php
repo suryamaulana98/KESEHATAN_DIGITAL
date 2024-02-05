@@ -68,7 +68,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="{{ route('tambahSiswaUks') }}" method="post">
+                                <form action="{{ route('siswaSakitUks.store') }}" method="post">
                                     @csrf
                                     <div class="form-group">
                                         <label class="form-label"><span class="help">Nama Siswa</span></label>
@@ -106,18 +106,36 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edit Kelas</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit Data Siswa</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('kelas.update', $item->id) }}" method="post">
+                                    <form action="{{ route('siswaSakitUks.update', $item->id) }}" method="post">
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                                            <label class="form-label"><span class="help">Nama Kelas</span></label>
-                                            <input type="text" class="form-control" name="kelas"
-                                                value="{{ old('kelas', $item->kelas) }}">
+                                            <label class="form-label"><span class="help">Nama Siswa</span></label>
+                                            <input type="text" class="form-control" name="name"
+                                                value="{{ old('name', $item->name) }}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label"><span class="help">Pilih Kelas
+                                                    Siswa</span></label>
+                                            <select class="form-select" name="id_kelas"
+                                                aria-label="Default select example">
+                                                <option value="{{ $item->id_kelas }}">{{ $item->kelas->kelas }}
+                                                </option>
+                                                @foreach ($kelas as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->kelas }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Keterangan</label>
+                                            <textarea name="keterangan" class="content form-control" rows="5"
+                                                value="{{ old('keterangan', $item->keterangan) }}">{!! $item->keterangan !!}</textarea>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
@@ -155,11 +173,11 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->name }}</td>
-                                                <td>{{ $item->kelas }}</td>
+                                                <td>{{ $item->kelas->kelas }}</td>
                                                 <td>{{ $item->keterangan }}</td>
                                                 <td>
                                                     <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                        action="{{ route('kelas.destroy', $item->id) }}"
+                                                        action="{{ route('siswaSakitUks.destroy', $item->id) }}"
                                                         method="POST">
                                                         <a href="#exampleModal22{{ $item->id }}"
                                                             class="btn btn-sm btn-primary" data-bs-toggle="modal"
