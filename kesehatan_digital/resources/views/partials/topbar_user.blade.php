@@ -11,13 +11,6 @@
                width: 640px;
                height: 400px;
                margin: 0 auto;
-               background-image: url('/img/background1.png');
-               /* Ubah path sesuai dengan folder publik */
-               background-size: contain;
-               background-repeat: no-repeat;
-               border: 2px solid #17a2b8;
-               border-radius: 10px;
-               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
            }
 
            @media print {

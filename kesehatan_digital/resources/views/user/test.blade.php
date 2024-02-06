@@ -107,17 +107,6 @@
         .cardd {
             width: 640px;
             height: 400px;
-            margin: 0 auto;
-            /* Posisikan kartu di tengah */
-            background-image: url('{{ asset('img/background1.png') }}');
-            /* Ganti 'background.jpg' dengan path gambar Anda */
-            background-size: cover;
-            border: 2px solid #17a2b8;
-            /* Warna border kartu */
-            border-radius: 10px;
-            /* Rounding border kartu */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Efek bayangan kartu */
         }
 
         .card-title {
@@ -127,13 +116,95 @@
             /* Jarak antara judul dan konten */
         }
 
-        .card-text {
-            font-size: 15px;
-            color: #05486b;
-            font-weight: bold;
-            margin-bottom: 0.1rem;
-            /* Jarak antara konten */
+        @media screen and (max-width: 768px) {
+            .bg-container {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                border: 2px solid #17a2b8;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+            #content-wrapper {
+                display: flex;
+                justify-content: space-between;
+                width: 40rem;
+                height: 22rem;
+                align-items:center;
+                position: relative;
+                /* background: rgba(0, 0, 0, .5); */
+            }
+
+            #content-wrapper img {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 100%;
+            }
+
+            #content-wrapper li {
+                list-style: none;
+            }
+
+            #content-wrapper .col {
+                width: 35%;
+            }
+
+            .card-text {
+                font-size: 1rem;
+                color: #05486b;
+                font-weight: bold;
+                margin-bottom: 0.1rem;
+                /* Jarak antara konten */
+            }
         }
+
+        @media screen and (min-width: 1200px) {
+            .bg-container {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 64rem;
+                border: 2px solid #17a2b8;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+            #content-wrapper {
+                display: flex;
+                justify-content: space-between;
+                height: 44rem;
+                align-items:center;
+                position: relative;
+                /* background: rgba(0, 0, 0, .5); */
+            }
+
+            #content-wrapper .col {
+                width: 40%;
+            }
+
+            #content-wrapper img {
+                width: 16rem;
+                height: 16rem;
+                border-radius: 100%;
+            }
+
+            #content-wrapper li {
+                list-style: none;
+            }
+
+            .card-text {
+                font-size: 15px;
+                color: #05486b;
+                font-weight: bold;
+                margin-bottom: 0.1rem;
+                /* Jarak antara konten */
+            }
+        }
+
 
 
 
@@ -370,32 +441,44 @@
                 <div class="modal-body">
                     <div class="cardd">
                         <div class="card-body">
-                            <img src="{{ asset('foto/' . Auth::user()->foto) }}"
-                                style="border-radius: 80%; width:25%;height:49%; margin-bottom:-64%; margin-left: 4.4%;"
-                                alt="">
-                            <p class="card-text text-uppercase" style="margin-left:340px; margin-top: 165px;">
-                                {{ Auth::user()->name }}</p>
-                            <p class="card-text text-uppercase" style="margin-left:340px; ">
-                                {{ Auth::user()->nisn }}</p>
-                            <p class="card-text text-uppercase" style="margin-left:340px; ">
-                                {{ Auth::user()->nis }}</p>
-                            @if (Auth::user()->kelas !== null)
-                                <p cclass="card-text text-uppercase" style="margin-left:340px; ">
-                                    {{ Auth::user()->kelas->kelas }}
-                                </p>
-                            @elseif(Auth::user()->kelas === null)
-                                <p class="card-text text-uppercase" style="margin-left:340px; "></p>
-                            @endif
-                            <p class="card-text text-uppercase" style="margin-left:340px;">
-                                {{ Auth::user()->tanggal_lahir }}
-                            </p>
-                            <p class="card-text text-uppercase" style="margin-left:340px;">
-                                {{ Auth::user()->jenis_kelamin }}</p>
+                            <div class="bg-container">
+                                <img src="{{ asset('img/background1.png') }}" alt="">
+                            </div>
+                            <div class="row d-flex" id="content-wrapper">
+                                <div class="col">
+                                    <img src="{{ asset('foto/' . Auth::user()->foto) }}" alt="">
+                                </div>
+                                <div class="col" id="data-siswa">
+                                    <br><br><br>
+                                    <li>
+                                        <p class="card-text text-uppercase">{{ Auth::user()->name }}</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-text text-uppercase">{{ Auth::user()->nisn }}</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-text text-uppercase">{{ Auth::user()->nis }}</p>
+                                    </li>
+                                    @if (Auth::user()->kelas !== null)
+                                        <li>
+                                            <p class="card-text text-uppercase">{{ Auth::user()->kelas->kelas }}</p>
+                                        </li>
+                                    @elseif(Auth::user()->kelas === null)
+                                        <li>-</li>
+                                    @endif
+                                    <li>
+                                        <p class="card-text text-uppercase">{{ Auth::user()->tanggal_lahir }}</p>
+                                    </li>
+                                    <li>
+                                        <p class="card-text text-uppercase">{{ Auth::user()->jenis_kelamin }}</p>
+                                    </li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    <button type="button" class="btn btn-block btn-secondary" data-bs-dismiss="modal"
                         onclick="closeModal()">Close</button>
                     <a href="{{ route('kartuPdf', Auth::user()->id) }}"><button type="submit" id="cetakPdfBtn"
                             class="btn btn-primary">Cetak ke
