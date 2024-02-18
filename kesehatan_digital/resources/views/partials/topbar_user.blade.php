@@ -85,8 +85,8 @@
                        @auth
                            <li>
                                <a href="#">
-                                   <img src="{{ asset('img/testimonial-1.png') }}" class="rounded"
-                                       style="margin-left: 20px;" width="50px" srcset="">
+                                   <img src="{{ asset('foto/' . Auth::user()->foto) }}" class="rounded-circle"
+                                       style="margin-left: 20px; width: 48px; height: 48px;"srcset="">
                                </a>
                                <ul>
                                    <li>
